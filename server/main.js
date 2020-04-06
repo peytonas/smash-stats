@@ -1,13 +1,13 @@
 import express from 'express'
 import cors from 'cors'
 import bp from 'body-parser'
-import DbContext from "./db/dbconfig"
+import DbConfig from "./db/DbConfig"
 
 const port = process.env.PORT || 3000
 
 let server = express()
 
-DbContext.connect()
+DbConfig.connect()
 
 server.use(express.static(__dirname + '/../client/dist'))
 
@@ -24,6 +24,10 @@ server.use(cors(corsOptions))
 
 server.use(bp.urlencoded({ extended: true }))
 server.use(bp.json())
+
+import CharactersController from './controllers/CharactersController'
+
+server.use('/api/characters', new CharactersController().router)
 
 server.use((error, req, res, next) => {
   console.error(error);
