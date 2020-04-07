@@ -3,6 +3,10 @@ img{
   width: 100px;
 }
 
+p{
+  cursor: pointer;
+}
+
 /* *{
   border: 1px solid red
 } */
