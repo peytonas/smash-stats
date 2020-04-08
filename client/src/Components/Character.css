@@ -3,8 +3,12 @@ img{
   width: 100px;
 }
 
-p{
+.col-2{
   cursor: pointer;
+}
+
+.overflow{
+  overflow: scroll;
 }
 
 /* *{
