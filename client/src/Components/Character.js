@@ -8,8 +8,9 @@ class Character extends Component {
   async viewStats(characterStats) {
     console.log(characterStats);
     swal.fire({
-      title: `<span style="color:#de4337;font-size:.8rem" className="overflow">
-      <span style="font-size:1.5rem">${characterStats.name}</span> </br> 
+      title: `<span style="color:#de4337;font-size:.7rem" className="overflow">
+      <span style="font-size:1.5rem; font-weight:bold">${characterStats.name}</span> </br> 
+      Series: ${characterStats.series}</br>
       Weight: ${characterStats.weight} </br> 
       Walk Speed: ${characterStats.walkSpeed}</br>
       Run Speed: ${characterStats.runSpeed}</br>
@@ -19,6 +20,7 @@ class Character extends Component {
       Forward Roll Lag: ${characterStats.forwardRollLag}</br>
       Backward Roll Lag: ${characterStats.backRollLag}</br>
       Spot Dodge Start: ${characterStats.spotDodgeStart}</br>
+      Spot Dodge Lag: ${characterStats.spotDodgeLag}</br>
       Air Dodge Lag: ${characterStats.airDodgeLag}</br>
       Neutral Special: ${characterStats.neutralSpecial}</br>
       Side Special: ${characterStats.sideSpecial}</br>
@@ -60,8 +62,8 @@ class Character extends Component {
   render() {
     const { name, imgUrl } = this.props.character
     return (
-      <div className="col-2 text-center" onClick={this.viewStats.bind(this, this.props.character)}>
-        <img src={imgUrl} alt="character icon" className="mb-1 mt-n3" />
+      <div className="cards mb-1" onClick={this.viewStats.bind(this, this.props.character)}>
+        <img src={imgUrl} alt="character icon" className="mt-n1" />
         <p>{name}</p>
       </div>
     )

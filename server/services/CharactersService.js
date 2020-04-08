@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const _schema = new Schema(
   {
     name: { type: String, required: true },
-    description: { type: String, required: true },
+    series: { type: String, required: true },
     imgUrl: { type: String },
     walkSpeed: { type: Number, required: true },
     runSpeed: { type: Number, required: true },
@@ -15,6 +15,7 @@ const _schema = new Schema(
     forwardRollLag: { type: Number, required: true },
     backRollLag: { type: Number, required: true },
     spotDodgeStart: { type: Number, required: true },
+    spotDodgeLag: { type: Number, required: true },
     airDodgeLag: { type: Number, required: true },
     neutral: { type: Number, required: true },
     upTilt: { type: Number, required: true },

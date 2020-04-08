@@ -21,11 +21,17 @@ class App extends Component {
 
   render() {
     return (
-      <div id="characters">
+      <div id="characters" className="container-fluid">
         <div className="row justify-content-center bg-dark text-danger">
-          <h1 className="border border-danger rounded mt-2">SMASH STATS</h1>
+          <div className="col-4 text-center">
+            <h1 className="mt-2 border border-danger rounded pl-1 pr-1">SMASH STATS</h1>
+          </div>
         </div>
-        <Characters characters={this.state.characters} />
+        <div className="row justify-content-end bg-dark text-danger">
+          <div className="col-2 text-center">
+            <Characters characters={this.state.characters} />
+          </div>
+        </div>
       </div>
     )
   }
