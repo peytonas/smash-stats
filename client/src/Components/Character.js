@@ -3,8 +3,6 @@ import swal from 'sweetalert2'
 import './Character.css'
 import PropTypes from 'prop-types'
 
-
-
 class Character extends Component {
 
   async viewStats(characterStats) {

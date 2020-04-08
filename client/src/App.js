@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div id="characters">
         <div className="row justify-content-center bg-dark text-danger">
-          <h1 className="border border-danger rounded mt-1">SMASH STATS</h1>
+          <h1 className="border border-danger rounded mt-2">SMASH STATS</h1>
         </div>
         <Characters characters={this.state.characters} />
       </div>
