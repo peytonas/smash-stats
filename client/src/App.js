@@ -28,12 +28,14 @@ class App extends Component {
           </div>
         </div>
         <div className="row justify-content-between text-danger">
-          <div className="col-2 ml-2">
+          <div className="col-2 text-left">
             <h6><b>Choose your character:</b></h6>
             <div className="name-scroll bg-info rounded">
               <CharacterSelect characters={this.state.characters} />
             </div>
-            <h5 className="ml-5 mt-n2"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
+            <div className="text-center">
+              <h5 className="mt-n1"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
+            </div>
           </div>
           <div className="col-5 text-center text-danger mt-3">
             <h2>MATCHUP</h2>
@@ -45,7 +47,7 @@ class App extends Component {
         </div>
         <div className="row justify-content-end text-danger">
           <div className="col-2 text-center">
-            <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
+            <h5 className="mt-n1"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
         </div>
       </div>
