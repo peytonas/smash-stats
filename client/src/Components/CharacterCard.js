@@ -62,7 +62,7 @@ class CharacterCard extends Component {
   render() {
     const { name, imgUrl } = this.props.character
     return (
-      <div className="cards mb-1" onClick={this.viewStats.bind(this, this.props.character)}>
+      <div className="cards mb-1 text-danger" onClick={this.viewStats.bind(this, this.props.character)}>
         <img src={imgUrl} alt="character icon" className="mt-n1" />
         <p>{name}</p>
       </div>

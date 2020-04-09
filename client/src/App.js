@@ -43,28 +43,30 @@ class App extends Component {
   render() {
     return (
       <div id="characters" className="container-fluid">
-        <div className="row justify-content-center text-danger">
+        <div className="row justify-content-center text-success">
           <div className="col-4 text-center">
-            <h1 className="mt-2 border border-danger rounded pl-1 pr-1">SMASH STATS</h1>
+            <h1 className="mt-2 border border-success rounded pl-1 pr-1">SMASH STATS</h1>
           </div>
         </div>
-        <div className="row justify-content-between text-danger">
+        <div className="row justify-content-between text-success">
           <div className="col-2 text-left">
             <h6><b>Choose two:</b></h6>
             <div className="name-scroll bg-info rounded">
               <CharacterSelect characters={this.state.characters} callBack={this.selectedNames} />
             </div>
             <div className="text-center">
-              <button className="btn fab btn-danger mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
+              <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
               <h5 className="mt-n4"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
             </div>
           </div>
-          <div className="col-5 text-center text-danger mt-3">
-            <h2>MATCHUP</h2>
+          <div className="col-5 text-center text-success mt-3">
+            <div className="row justify-content-center">
+              <h2 className="text-primary">MATCHUP</h2>
+            </div>
             <Matchup callBack={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
           </div>
           <div className="col-2 text-center">
-            <h6><b>character stats:</b></h6>
+            <h6 className="text-danger"><b>character stats:</b></h6>
             <CharacterCards characters={this.state.characters} />
           </div>
         </div>
