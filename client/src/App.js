@@ -22,23 +22,30 @@ class App extends Component {
   render() {
     return (
       <div id="characters" className="container-fluid">
-        <div className="row justify-content-center bg-dark text-danger">
+        <div className="row justify-content-center text-danger">
           <div className="col-4 text-center">
             <h1 className="mt-2 border border-danger rounded pl-1 pr-1">SMASH STATS</h1>
           </div>
         </div>
-        <div className="row justify-content-between bg-dark text-danger">
-          <div className="col-3 ml-2">
-            <h5><b>Choose your character:</b></h5>
-            <div className="name-scroll">
+        <div className="row justify-content-between text-danger">
+          <div className="col-2 ml-2">
+            <h6><b>Choose your character:</b></h6>
+            <div className="name-scroll bg-info rounded">
               <CharacterSelect characters={this.state.characters} />
             </div>
             <h5 className="ml-5 mt-n2"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
+          <div className="col-5 text-center text-danger mt-3">
+            <h2>MATCHUP</h2>
+          </div>
           <div className="col-2 text-center">
-            <h4>character stats:</h4>
-            <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
+            <h6><b>character stats:</b></h6>
             <CharacterCards characters={this.state.characters} />
+          </div>
+        </div>
+        <div className="row justify-content-end text-danger">
+          <div className="col-2 text-center">
+            <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ class CharacterName extends Component {
   render() {
     const { name } = this.props.character
     return (
-      <p onClick={this.selectCharacter.bind(this, this.props.character.name)}>{name}</p>
+      <p onClick={this.selectCharacter.bind(this, this.props.character.name)} className="ml-1"><b>{name}</b></p>
     )
   }
 }

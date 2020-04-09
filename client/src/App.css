@@ -12,7 +12,7 @@
 }
 
 .col-2{
-  max-height: 88vh;
+  max-height: 69vh;
   overflow: scroll;
 }
 
@@ -20,6 +20,7 @@
   max-height: 45vh;
   overflow: scroll;
   cursor: pointer;
+  border: 2px solid #de4337;
 }
 
 i{
@@ -65,6 +66,7 @@ i{
   -webkit-animation-name: pulse;
   animation-name: pulse;
 }
+
 /* *{
   border: 1px solid red;
 } */
