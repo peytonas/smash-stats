@@ -10,6 +10,7 @@ class CharacterSelect extends Component {
 
   sendNames = (playerChoice, opponentChoice) => {
     this.props.callBack(playerChoice, opponentChoice)
+    this.setState({ characters: [] })
   }
 
   selectedName = (characterId) => {

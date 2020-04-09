@@ -26,6 +26,11 @@ class App extends Component {
       })
   }
 
+  resetChoices() {
+    this.setState({ playerChoice: {} })
+    this.setState({ opponentChoice: {} })
+  }
+
   componentDidMount() {
     Axios.get('http://localhost:3000/api/characters')
       .then(res => {
@@ -45,17 +50,18 @@ class App extends Component {
         </div>
         <div className="row justify-content-between text-danger">
           <div className="col-2 text-left">
-            <h6><b>Choose your character:</b></h6>
+            <h6><b>Choose two:</b></h6>
             <div className="name-scroll bg-info rounded">
               <CharacterSelect characters={this.state.characters} callBack={this.selectedNames} />
             </div>
             <div className="text-center">
-              <h5 className="mt-n1"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
+              <button className="btn fab btn-danger mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
+              <h5 className="mt-n4"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
             </div>
           </div>
           <div className="col-5 text-center text-danger mt-3">
             <h2>MATCHUP</h2>
-            <Matchup callBack={this.selectedNames} />
+            <Matchup callBack={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
           </div>
           <div className="col-2 text-center">
             <h6><b>character stats:</b></h6>
