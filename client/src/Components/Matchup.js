@@ -19,7 +19,6 @@ class Matchup extends Component {
       </div>
     )
   }
-
 }
 
 export default Matchup

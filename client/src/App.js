@@ -50,7 +50,7 @@ class App extends Component {
         </div>
         <div className="row justify-content-between text-success">
           <div className="col-2 text-left">
-            <h6><b>Choose two:</b></h6>
+            <h6><b>choose two:</b></h6>
             <div className="name-scroll bg-info rounded">
               <CharacterSelect characters={this.state.characters} callBack={this.selectedNames} />
             </div>
