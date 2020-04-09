@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Character from './Character'
+import CharacterCard from './CharacterCard'
 import PropTypes from 'prop-types'
 
-class Characters extends Component {
+class CharacterCards extends Component {
   render() {
     return this.props.characters.map((character) => (
-      <Character
+      <CharacterCard
         key={character.id}
         character={character}
       />
@@ -13,8 +13,8 @@ class Characters extends Component {
   }
 }
 
-Characters.propTypes = {
+CharacterCards.propTypes = {
   characters: PropTypes.array.isRequired
 }
 
-export default Characters;
+export default CharacterCards;

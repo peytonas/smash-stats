@@ -9,6 +9,15 @@
 
 .row{
   max-height: 88vh;
+}
+
+.col-2{
+  max-height: 88vh;
+  overflow: scroll;
+}
+
+.name-scroll{
+  max-height: 28vh;
   overflow: scroll;
 }
 

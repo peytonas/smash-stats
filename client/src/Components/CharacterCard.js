@@ -3,7 +3,7 @@ import swal from 'sweetalert2'
 import './Character.css'
 import PropTypes from 'prop-types'
 
-class Character extends Component {
+class CharacterCard extends Component {
 
   async viewStats(characterStats) {
     console.log(characterStats);
@@ -70,9 +70,9 @@ class Character extends Component {
   }
 }
 
-Character.propTypes = {
+CharacterCard.propTypes = {
   character: PropTypes.object.isRequired
 }
 
 
-export default Character
+export default CharacterCard

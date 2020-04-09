@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import './App.css';
 import './SNES-bootstrap.css'
-import Characters from './Components/Characters'
+import CharacterCards from './Components/CharacterCards'
+import CharacterSelect from './Components/CharacterSelect'
 
 class App extends Component {
   state = {
@@ -15,7 +16,6 @@ class App extends Component {
         this.setState({ characters: res.data });
       }).catch(function (error) {
         console.log(error);
-
       })
   }
 
@@ -27,9 +27,16 @@ class App extends Component {
             <h1 className="mt-2 border border-danger rounded pl-1 pr-1">SMASH STATS</h1>
           </div>
         </div>
-        <div className="row justify-content-end bg-dark text-danger">
+        <div className="row justify-content-between bg-dark text-danger">
+          <div className="col-3 ml-2">
+            <h5><b>Choose your character:</b></h5>
+            <div className="name-scroll">
+              <CharacterSelect characters={this.state.characters} />
+            </div>
+            <h5 className="ml-5 mt-n2"><i className="fas fa-sort-down"></i></h5>
+          </div>
           <div className="col-2 text-center">
-            <Characters characters={this.state.characters} />
+            <CharacterCards characters={this.state.characters} />
           </div>
         </div>
       </div>
