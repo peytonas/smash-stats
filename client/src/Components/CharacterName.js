@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 
 class CharacterName extends Component {
 
-  async selectCharacter(characterName) {
-    console.log(characterName);
+  selectCharacter = (character) => {
+    this.props.callBack(character)
   }
 
   render() {
     const { name } = this.props.character
     return (
-      <p onClick={this.selectCharacter.bind(this, this.props.character.name)} className="ml-1"><b>{name}</b></p>
+      <p onClick={this.selectCharacter.bind(this, this.props.character._id)} className="ml-1"><b>{name}</b></p>
     )
   }
 }

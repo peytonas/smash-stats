@@ -4,10 +4,26 @@ import './App.css';
 import './SNES-bootstrap.css'
 import CharacterCards from './Components/CharacterCards'
 import CharacterSelect from './Components/CharacterSelect'
+import Matchup from './Components/Matchup'
 
 class App extends Component {
   state = {
-    characters: []
+    characters: [],
+    playerChoice: {},
+    opponentChoice: {}
+  }
+
+  selectedNames = (playerId, opponentId) => {
+    console.log("Player:", playerId, "Opponent:"
+      , opponentId);
+    Axios.get(`http://localhost:3000/api/characters/${playerId}`)
+      .then(res => {
+        this.setState({ playerChoice: res.data });
+      })
+    Axios.get(`http://localhost:3000/api/characters/${opponentId}`)
+      .then(res => {
+        this.setState({ opponentChoice: res.data });
+      })
   }
 
   componentDidMount() {
@@ -31,7 +47,7 @@ class App extends Component {
           <div className="col-2 text-left">
             <h6><b>Choose your character:</b></h6>
             <div className="name-scroll bg-info rounded">
-              <CharacterSelect characters={this.state.characters} />
+              <CharacterSelect characters={this.state.characters} callBack={this.selectedNames} />
             </div>
             <div className="text-center">
               <h5 className="mt-n1"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
@@ -39,6 +55,7 @@ class App extends Component {
           </div>
           <div className="col-5 text-center text-danger mt-3">
             <h2>MATCHUP</h2>
+            <Matchup callBack={this.selectedNames} />
           </div>
           <div className="col-2 text-center">
             <h6><b>character stats:</b></h6>

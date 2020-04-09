@@ -4,11 +4,27 @@ import CharacterName from './CharacterName'
 
 class CharacterSelect extends Component {
 
+  state = {
+    characters: []
+  }
+
+  sendNames = (playerChoice, opponentChoice) => {
+    this.props.callBack(playerChoice, opponentChoice)
+  }
+
+  selectedName = (characterId) => {
+    this.state.characters.push(characterId)
+    console.log(characterId);
+    if (this.state.characters.length === 2 || this.state.characters.length >= 2) {
+      alert("picked your characters")
+      this.sendNames(this.state.characters[0], this.state.characters[1])
+    }
+  }
   render() {
     return this.props.characters.map((character) => (
       (<CharacterName
         key={character.id}
-        character={character} />)
+        character={character} callBack={this.selectedName} />)
     ))
   }
 }
