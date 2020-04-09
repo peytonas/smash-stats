@@ -33,9 +33,11 @@ class App extends Component {
             <div className="name-scroll">
               <CharacterSelect characters={this.state.characters} />
             </div>
-            <h5 className="ml-5 mt-n2"><i className="fas fa-sort-down"></i></h5>
+            <h5 className="ml-5 mt-n2"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
           <div className="col-2 text-center">
+            <h4>character stats:</h4>
+            <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
             <CharacterCards characters={this.state.characters} />
           </div>
         </div>
