@@ -19,6 +19,7 @@
 .name-scroll{
   max-height: 28vh;
   overflow: scroll;
+  cursor: pointer;
 }
 
 /* *{
