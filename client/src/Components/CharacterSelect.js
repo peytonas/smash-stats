@@ -17,7 +17,6 @@ class CharacterSelect extends Component {
     this.state.characters.push(characterId)
     console.log(characterId);
     if (this.state.characters.length === 2 || this.state.characters.length >= 2) {
-      alert("picked your characters")
       this.sendNames(this.state.characters[0], this.state.characters[1])
     }
   }

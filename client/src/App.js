@@ -4,7 +4,7 @@ import './App.css';
 import './SNES-bootstrap.css'
 import CharacterCards from './Components/CharacterCards'
 import CharacterSelect from './Components/CharacterSelect'
-import Matchup from './Components/Matchup'
+import Matchup from './Components/Matchup.js'
 
 class App extends Component {
   state = {
@@ -45,7 +45,7 @@ class App extends Component {
       <div id="characters" className="container-fluid">
         <div className="row justify-content-center text-success">
           <div className="col-4 text-center">
-            <h1 className="mt-2 border border-success rounded pl-1 pr-1">SMASH STATS</h1>
+            <h1 className="size mt-2 border border-success rounded pl-1 pr-1">SMASH STATS</h1>
           </div>
         </div>
         <div className="row justify-content-between text-success">
@@ -60,13 +60,10 @@ class App extends Component {
             </div>
           </div>
           <div className="col-5 text-center text-success mt-3">
-            <div className="row justify-content-center">
-              <h2 className="text-primary">MATCHUP</h2>
-            </div>
             <Matchup callBack={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
           </div>
           <div className="col-2 text-center">
-            <h6 className="text-danger"><b>character stats:</b></h6>
+            <h6 className="text-danger text-left"><b>character stats:</b></h6>
             <CharacterCards characters={this.state.characters} />
           </div>
         </div>

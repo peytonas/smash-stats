@@ -9,12 +9,15 @@ class Matchup extends Component {
     return (
       <div className="row justify-content-between text-primary">
         <div className="col-4 text-center">
-          <p>{this.props.player.name}</p>
-          <img src={this.props.player.imgUrl} alt="character icon" className="mt-n1" />
+          <h5 className="text-danger"><b>{this.props.player.name}</b></h5>
+          <img src={this.props.player.imgUrl} className="mt-n1" />
+        </div>
+        <div className="col-2 text-center align-self-center">
+          <h1 className="vs text-danger">vs</h1>
         </div>
         <div className="col-4 text-center">
-          <p>{this.props.opponent.name}</p>
-          <img src={this.props.opponent.imgUrl} alt="character icon" className="mt-n1" />
+          <h5 className="text-danger"><b>{this.props.opponent.name}</b></h5>
+          <img src={this.props.opponent.imgUrl} className="mt-n1" />
         </div>
       </div>
     )
