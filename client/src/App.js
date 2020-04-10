@@ -65,7 +65,6 @@ class App extends Component {
           <div className="col-2 text-center">
             <h6 className="text-danger text-left"><b>character stats:</b></h6>
             <div className="card-scroll">
-
               <CharacterCards characters={this.state.characters} />
             </div>
           </div>
