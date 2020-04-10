@@ -20,8 +20,8 @@
 }
 
 .col-2{
-  max-height: 69vh;
-  overflow: scroll;
+  /* max-height: 69vh; */
+  /* overflow: scroll; */
 }
 
 .fa-trash-alt{
@@ -41,6 +41,12 @@
   overflow: scroll;
   cursor: pointer;
   border: 2px solid #4f43ae;
+}
+
+.card-scroll{
+  max-height: 66vh;
+  overflow: scroll;
+  cursor: pointer;
 }
 
 i{
