@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .container-fluid{
   background-color: #211a21;
   min-height: 100vh;

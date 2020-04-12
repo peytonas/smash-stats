@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import swal from 'sweetalert2'
 import './App.css';
 import './SNES-bootstrap.css'
 import CharacterCards from './Components/CharacterCards'
@@ -14,8 +15,6 @@ class App extends Component {
   }
 
   selectedNames = (playerId, opponentId) => {
-    console.log("Player:", playerId, "Opponent:"
-      , opponentId);
     Axios.get(`http://localhost:3000/api/characters/${playerId}`)
       .then(res => {
         this.setState({ playerChoice: res.data });
@@ -24,6 +23,24 @@ class App extends Component {
       .then(res => {
         this.setState({ opponentChoice: res.data });
       })
+  }
+
+  viewInfo() {
+    swal.fire({
+      title: `<span style="color:#de4337;font-size:1.1rem">
+              <span style="font-size:1.6rem; font-weight:bold">A note on the numbers:</span> </br> 
+              &middot; Most of the stats seen here are official numbers based on the most recent SSBU patch notes and other official or semi-official websites. </br>
+              &middot; Any statistics that were made up of multiple numbers (multi-hit attacks, damage over time, etc...) were
+              averaged, based on my best interpretation to arrive at a single number. </br>
+              &middot; Any statistics that included sweet-spots, sour-spots, clean vs late damage, etc... I used the
+              sweet-spot/clean damage. </br>
+              &middot; Any other "discrepancies" came down to a need for rounding and wanting to give each statistic a single number to work with. </br>
+              <span style="font-size:1rem";>Feedback on how to improve their interpretations is welcome!</span>
+              </span>`,
+      background: "#211a21",
+      backdrop: "rgba(33,26,33,0.3)",
+      showConfirmButton: false
+    });
   }
 
   resetChoices() {
@@ -43,8 +60,11 @@ class App extends Component {
   render() {
     return (
       <div id="characters" className="container-fluid">
-        <div className="row justify-content-center text-success">
-          <div className="col-4 text-center">
+        <div className="row text-success">
+          <div className="col-1 align-self-center">
+            <i className="far fa-question-circle pointer" onClick={this.viewInfo.bind(this)}></i>
+          </div>
+          <div className=" offset-3 col-4 text-center">
             <h1 className="size mt-2 border border-success rounded pl-1 pr-1">SMASH STATS</h1>
           </div>
         </div>
@@ -52,7 +72,7 @@ class App extends Component {
           <div className="col-2 text-left">
             <h6><b>choose two:</b></h6>
             <div className="name-scroll bg-info rounded">
-              <CharacterSelect characters={this.state.characters} callBack={this.selectedNames} />
+              <CharacterSelect characters={this.state.characters} characterPasser={this.selectedNames} />
             </div>
             <div className="text-center">
               <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
