@@ -17,7 +17,7 @@ class CharacterCard extends Component {
       Air Speed: ${characterStats.airSpeed}</br>
       Falling Speed: ${characterStats.fallingSpeed}</br>
       Forward Roll Lag: ${characterStats.forwardRollLag}</br>
-      Backward Roll Lag: ${characterStats.backRollLag}</br>
+      Back Roll Lag: ${characterStats.backRollLag}</br>
       Spot Dodge Start: ${characterStats.spotDodgeStart}</br>
       Spot Dodge Lag: ${characterStats.spotDodgeLag}</br>
       Air Dodge Lag: ${characterStats.airDodgeLag}</br>
@@ -29,7 +29,6 @@ class CharacterCard extends Component {
       Up Tilt: ${characterStats.upTilt}</br>
       Down Tilt: ${characterStats.downTilt}</br>
       Forward Tilt: ${characterStats.forwardTilt}</br>
-      Up Tilt: ${characterStats.upTilt}</br>
       Dash Attack: ${characterStats.dashAttack}</br>
       Up Smash: ${characterStats.upSmash}</br>
       Down Smash: ${characterStats.downSmash}</br>

@@ -81,17 +81,14 @@ class App extends Component {
           </div>
           <div className="col-5 text-center text-success mt-3">
             <Matchup callBack={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
+            <h5><i className="fas fa-sort-down pulse text-primary" title="scroll down!"></i></h5>
           </div>
-          <div className="col-2 text-center">
+          <div className="col-2 text-center text-danger col-height">
             <h6 className="text-danger text-left"><b>character stats:</b></h6>
             <div className="card-scroll">
               <CharacterCards characters={this.state.characters} />
             </div>
-          </div>
-        </div>
-        <div className="row justify-content-end text-danger">
-          <div className="col-2 text-center">
-            <h5 className="mt-n1"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
+            <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
         </div>
       </div>

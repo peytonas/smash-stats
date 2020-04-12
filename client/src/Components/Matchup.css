@@ -1,7 +1,21 @@
-.display-none{
-  display: none;
-}
-
 .vs{
   font-size: 4rem;
+}
+
+.overflow{
+  overflow: scroll;
+}
+
+.stat-size{
+  font-size: .75rem;
+  font-weight: bold;
+}
+
+.stat-scroll{
+  max-height: 59vh;
+  overflow: scroll;
+}
+
+.text-green{
+  color: #28a745;
 }

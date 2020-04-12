@@ -16,7 +16,6 @@ class CharacterSelect extends Component {
     characters: []
   }
 
-
   sendNames = (playerChoice, opponentChoice) => {
     this.props.characterPasser(playerChoice, opponentChoice)
     this.setState({ characters: [] })
