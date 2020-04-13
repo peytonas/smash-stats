@@ -48,10 +48,6 @@
   cursor: pointer;
 }
 
-.disclaimer-text{
-  font-size: .01rem;
-}
-
 i{
   animation: shake 1s;
   animation-iteration-count: infinite;

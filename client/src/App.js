@@ -35,7 +35,8 @@ class App extends Component {
               &middot; Any statistics that included sweet-spots, sour-spots, clean vs late damage, etc... I used the
               sweet-spot/clean damage. </br>
               &middot; Any other "discrepancies" came down to a need for rounding and wanting to give each statistic a single number to work with. </br>
-              <span style="font-size:1rem";>Feedback on how to improve their interpretations is welcome!</span>
+              <span style="font-size:1rem";>Feedback on how to improve their interpretations is welcome!</span> </br>
+             <span style="font-size:.5rem"> Disclaimer: I do not own any of the characters, images, or statistics found here.</span>
               </span>`,
       background: "#211a21",
       backdrop: "rgba(33,26,33,0.3)",
@@ -90,9 +91,6 @@ class App extends Component {
             </div>
             <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
-        </div>
-        <div className="row text-primary">
-          <p className="col-3 disclaimer-text mt-3">I do not own any of the characters or statistics found here.</p>
         </div>
       </div>
     )
