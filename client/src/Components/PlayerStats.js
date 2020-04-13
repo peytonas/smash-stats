@@ -15,11 +15,11 @@ class PlayerStats extends Component {
           {player.name && <p className={player.dashSpeed >= opponent.dashSpeed ? "text-green border-green" : "text-danger border-danger"}>{player.dashSpeed}</p>}
           {player.name && <p className={player.airSpeed >= opponent.airSpeed ? "text-green border-green" : "text-danger border-danger"}>{player.airSpeed}</p>}
           {player.name && <p className={player.fallingSpeed >= opponent.fallingSpeed ? "text-green border-green" : "text-danger border-danger"}>{player.fallingSpeed}</p>}
-          {player.name && <p className={player.forwardRollLag >= opponent.forwardRollLag ? "text-green border-green" : "text-danger border-danger"}>{player.forwardRollLag}</p>}
-          {player.name && <p className={player.backRollLag >= opponent.backRollLag ? "text-green border-green" : "text-danger border-danger"}>{player.backRollLag}</p>}
+          {player.name && <p className={opponent.forwardRollLag >= player.forwardRollLag ? "text-green border-green" : "text-danger border-danger"}>{player.forwardRollLag}</p>}
+          {player.name && <p className={opponent.backRollLag >= player.backRollLag ? "text-green border-green" : "text-danger border-danger"}>{player.backRollLag}</p>}
           {player.name && <p className={player.spotDodgeStart >= opponent.spotDodgeStart ? "text-green border-green" : "text-danger border-danger"}>{player.spotDodgeStart}</p>}
-          {player.name && <p className={player.spotDodgeLag >= opponent.spotDodgeLag ? "text-green border-green" : "text-danger border-danger"}>{player.spotDodgeLag}</p>}
-          {player.name && <p className={player.airDodgeLag >= opponent.airDodgeLag ? "text-green border-green" : "text-danger border-danger"}>{player.airDodgeLag}</p>}
+          {player.name && <p className={opponent.spotDodgeLag >= player.spotDodgeLag ? "text-green border-green" : "text-danger border-danger"}>{player.spotDodgeLag}</p>}
+          {player.name && <p className={opponent.airDodgeLag >= player.airDodgeLag ? "text-green border-green" : "text-danger border-danger"}>{player.airDodgeLag}</p>}
           {player.name && <p className={player.neutralSpecial >= opponent.neutralSpecial ? "text-green border-green" : "text-danger border-danger"}>{player.neutralSpecial}</p>}
           {player.name && <p className={player.sideSpecial >= opponent.sideSpecial ? "text-green border-green" : "text-danger border-danger"}>{player.sideSpecial}</p>}
           {player.name && <p className={player.upSpecial >= opponent.upSpecial ? "text-green border-green" : "text-danger border-danger"}>{player.upSpecial}</p>}
