@@ -5,46 +5,46 @@ class MatchupStats extends Component {
     return (
       <div className="col-3 text-center">
         <div className="stat-size">
-          <p>Series</p>
-          <p>Weight</p>
-          <p>Walk Speed</p>
-          <p>Run Speed</p>
-          <p>Dash Speed</p>
-          <p>Air Speed</p>
-          <p>Falling Speed</p>
-          <p>Forward Roll Lag</p>
-          <p>Back Roll Lag</p>
-          <p>Spot Dodge Start</p>
-          <p>Spot Dodge Lag</p>
-          <p>Air Dodge Lag</p>
-          <p>Neutral Special</p>
-          <p>Side Special</p>
-          <p>Up Special</p>
-          <p>Down Special</p>
-          <p>Neutral Attack</p>
-          <p>Up Tilt</p>
-          <p>Down Tilt</p>
-          <p>Forward Tilt</p>
-          <p>Dash Attack</p>
-          <p>Up Smash</p>
-          <p>Down Smash</p>
-          <p>Forward Smash</p>
-          <p>Neutral Air</p>
-          <p>Up Air</p>
-          <p>Down Air</p>
-          <p>Forward Air</p>
-          <p>Back Air</p>
-          <p>Grab Air</p>
-          <p>Pummel</p>
-          <p>Forward Throw</p>
-          <p>Back Throw</p>
-          <p>Up Throw</p>
-          <p>Down Throw</p>
-          <p>Front Floor Attack</p>
-          <p>Back Floor Attack</p>
-          <p>Trip Floor Attack</p>
-          <p>Edge Attack</p>
-          <p>Final Smash</p>
+          <p className="clear-border">Series</p>
+          <p className="clear-border">Weight</p>
+          <p className="clear-border">Walk Speed</p>
+          <p className="clear-border">Run Speed</p>
+          <p className="clear-border">Dash Speed</p>
+          <p className="clear-border">Air Speed</p>
+          <p className="clear-border">Falling Speed</p>
+          <p className="clear-border">Forward Roll Lag</p>
+          <p className="clear-border">Back Roll Lag</p>
+          <p className="clear-border">Spot Dodge Start</p>
+          <p className="clear-border">Spot Dodge Lag</p>
+          <p className="clear-border">Air Dodge Lag</p>
+          <p className="clear-border">Neutral Special</p>
+          <p className="clear-border">Side Special</p>
+          <p className="clear-border">Up Special</p>
+          <p className="clear-border">Down Special</p>
+          <p className="clear-border">Neutral Attack</p>
+          <p className="clear-border">Up Tilt</p>
+          <p className="clear-border">Down Tilt</p>
+          <p className="clear-border">Forward Tilt</p>
+          <p className="clear-border">Dash Attack</p>
+          <p className="clear-border">Up Smash</p>
+          <p className="clear-border">Down Smash</p>
+          <p className="clear-border">Forward Smash</p>
+          <p className="clear-border">Neutral Air</p>
+          <p className="clear-border">Up Air</p>
+          <p className="clear-border">Down Air</p>
+          <p className="clear-border">Forward Air</p>
+          <p className="clear-border">Back Air</p>
+          <p className="clear-border">Grab Air</p>
+          <p className="clear-border">Pummel</p>
+          <p className="clear-border">Forward Throw</p>
+          <p className="clear-border">Back Throw</p>
+          <p className="clear-border">Up Throw</p>
+          <p className="clear-border">Down Throw</p>
+          <p className="clear-border">Front Floor Attack</p>
+          <p className="clear-border">Back Floor Attack</p>
+          <p className="clear-border">Trip Floor Attack</p>
+          <p className="clear-border">Edge Attack</p>
+          <p className="clear-border">Final Smash</p>
         </div>
       </div>
     )

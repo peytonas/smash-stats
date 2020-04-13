@@ -14,19 +14,19 @@ class Matchup extends Component {
         <div className="row justify-content-between text-primary">
           <div className="col-4 text-center">
             <h6><b>{player.name}</b></h6>
-            <img src={player.imgUrl} className="mt-n1" />
+            {player.name && <img src={player.imgUrl} className="mt-n1" />}
           </div>
           <div className="col-2 text-center">
             <h1 className="vs text-danger">vs</h1>
           </div>
           <div className="col-4 text-center">
             <h6><b>{opponent.name}</b></h6>
-            <img src={opponent.imgUrl} className="mt-n1" />
+            {opponent.name && <img src={opponent.imgUrl} className="mt-n1" />}
           </div>
         </div>
         <div className="row justify-content-between text-primary stat-scroll">
           <PlayerStats player={player} opponent={opponent} />
-          <MatchupStats />
+          <MatchupStats player={player} opponent={opponent} />
           <OpponentStats player={player} opponent={opponent} />
         </div>
       </div>

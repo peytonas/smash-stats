@@ -7,15 +7,27 @@
 }
 
 .stat-size{
-  font-size: .75rem;
+  font-size: .7rem;
   font-weight: bold;
 }
 
 .stat-scroll{
-  max-height: 59vh;
+  max-height: 60vh;
   overflow: scroll;
 }
 
 .text-green{
   color: #28a745;
+}
+
+.border-green{
+  border: 2px solid #28a745;
+}
+
+.border-danger{
+  border: 2px solid #de4337;
+}
+
+.clear-border{
+  border: 2px solid transparent;
 }

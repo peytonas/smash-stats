@@ -7,46 +7,46 @@ class OpponentStats extends Component {
     return (
       <div className="col-4 text-center">
         <div className="stat-size">
-          <p>{opponent.series}</p>
-          <p className={opponent.weight >= player.weight ? "text-green" : "text-danger"}>{opponent.weight}</p>
-          <p className={opponent.walkSpeed >= player.walkSpeed ? "text-green" : "text-danger"}>{opponent.walkSpeed}</p>
-          <p className={opponent.runSpeed >= player.runSpeed ? "text-green" : "text-danger"}>{opponent.runSpeed}</p>
-          <p className={opponent.dashSpeed >= player.dashSpeed ? "text-green" : "text-danger"}>{opponent.dashSpeed}</p>
-          <p className={opponent.airSpeed >= player.airSpeed ? "text-green" : "text-danger"}>{opponent.airSpeed}</p>
-          <p className={opponent.fallingSpeed >= player.fallingSpeed ? "text-green" : "text-danger"}>{opponent.fallingSpeed}</p>
-          <p className={opponent.forwardRollLag >= player.forwardRollLag ? "text-green" : "text-danger"}>{opponent.forwardRollLag}</p>
-          <p className={opponent.backRollLag >= player.backRollLag ? "text-green" : "text-danger"}>{opponent.backRollLag}</p>
-          <p className={opponent.spotDodgeStart >= player.spotDodgeStart ? "text-green" : "text-danger"}>{opponent.spotDodgeStart}</p>
-          <p className={opponent.spotDodgeLag >= player.spotDodgeLag ? "text-green" : "text-danger"}>{opponent.spotDodgeLag}</p>
-          <p className={opponent.airDodgeLag >= player.airDodgeLag ? "text-green" : "text-danger"}>{opponent.airDodgeLag}</p>
-          <p className={opponent.neutralSpecial >= player.neutralSpecial ? "text-green" : "text-danger"}>{opponent.neutralSpecial}</p>
-          <p className={opponent.sideSpecial >= player.sideSpecial ? "text-green" : "text-danger"}>{opponent.sideSpecial}</p>
-          <p className={opponent.upSpecial >= player.upSpecial ? "text-green" : "text-danger"}>{opponent.upSpecial}</p>
-          <p className={opponent.downSpecial >= player.downSpecial ? "text-green" : "text-danger"}>{opponent.downSpecial}</p>
-          <p className={opponent.neutral >= player.neutral ? "text-green" : "text-danger"}>{opponent.neutral}</p>
-          <p className={opponent.upTilt >= player.upTilt ? "text-green" : "text-danger"}>{opponent.upTilt}</p>
-          <p className={opponent.downTilt >= player.downTilt ? "text-green" : "text-danger"}>{opponent.downTilt}</p>
-          <p className={opponent.forwardTilt >= player.forwardTilt ? "text-green" : "text-danger"}>{opponent.forwardTilt}</p>
-          <p className={opponent.dashAttack >= player.dashAttack ? "text-green" : "text-danger"}>{opponent.dashAttack}</p>
-          <p className={opponent.upSmash >= player.upSmash ? "text-green" : "text-danger"}>{opponent.upSmash}</p>
-          <p className={opponent.downSmash >= player.downSmash ? "text-green" : "text-danger"}>{opponent.downSmash}</p>
-          <p className={opponent.forwardSmash >= player.forwardSmash ? "text-green" : "text-danger"}>{opponent.forwardSmash}</p>
-          <p className={opponent.nair >= player.nair ? "text-green" : "text-danger"}>{opponent.nair}</p>
-          <p className={opponent.uair >= player.uair ? "text-green" : "text-danger"}>{opponent.uair}</p>
-          <p className={opponent.dair >= player.dair ? "text-green" : "text-danger"}>{opponent.dair}</p>
-          <p className={opponent.fair >= player.fair ? "text-green" : "text-danger"}>{opponent.fair}</p>
-          <p className={opponent.bair >= player.bair ? "text-green" : "text-danger"}>{opponent.bair}</p>
-          <p className={opponent.zair >= player.zair ? "text-green" : "text-danger"}>{opponent.zair}</p>
-          <p className={opponent.pummel >= player.pummel ? "text-green" : "text-danger"}>{opponent.pummel}</p>
-          <p className={opponent.forwardThrow >= player.forwardThrow ? "text-green" : "text-danger"}>{opponent.forwardThrow}</p>
-          <p className={opponent.backThrow >= player.backThrow ? "text-green" : "text-danger"}>{opponent.backThrow}</p>
-          <p className={opponent.upThrow >= player.upThrow ? "text-green" : "text-danger"}>{opponent.upThrow}</p>
-          <p className={opponent.downThrow >= player.downThrow ? "text-green" : "text-danger"}>{opponent.downThrow}</p>
-          <p className={opponent.floorAttackFront >= player.floorAttackFront ? "text-green" : "text-danger"}>{opponent.floorAttackFront}</p>
-          <p className={opponent.floorAttackBack >= player.floorAttackBack ? "text-green" : "text-danger"}>{opponent.floorAttackBack}</p>
-          <p className={opponent.floorAttackTrip >= player.floorAttackTrip ? "text-green" : "text-danger"}>{opponent.floorAttackTrip}</p>
-          <p className={opponent.edgeAttack >= player.edgeAttack ? "text-green" : "text-danger"}>{opponent.edgeAttack}</p>
-          <p className={opponent.finalSmash >= player.finalSmash ? "text-green" : "text-danger"}>{opponent.finalSmash}</p>
+          {opponent.name && <p>{opponent.series}</p>}
+          {opponent.name && <p className={opponent.weight >= player.weight ? "text-green border-green" : "text-danger border-danger"}>{opponent.weight}</p>}
+          {opponent.name && <p className={opponent.walkSpeed >= player.walkSpeed ? "text-green border-green" : "text-danger border-danger"}>{opponent.walkSpeed}</p>}
+          {opponent.name && <p className={opponent.runSpeed >= player.runSpeed ? "text-green border-green" : "text-danger border-danger"}>{opponent.runSpeed}</p>}
+          {opponent.name && <p className={opponent.dashSpeed >= player.dashSpeed ? "text-green border-green" : "text-danger border-danger"}>{opponent.dashSpeed}</p>}
+          {opponent.name && <p className={opponent.airSpeed >= player.airSpeed ? "text-green border-green" : "text-danger border-danger"}>{opponent.airSpeed}</p>}
+          {opponent.name && <p className={opponent.fallingSpeed >= player.fallingSpeed ? "text-green border-green" : "text-danger border-danger"}>{opponent.fallingSpeed}</p>}
+          {opponent.name && <p className={opponent.forwardRollLag >= player.forwardRollLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardRollLag}</p>}
+          {opponent.name && <p className={opponent.backRollLag >= player.backRollLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.backRollLag}</p>}
+          {opponent.name && <p className={opponent.spotDodgeStart >= player.spotDodgeStart ? "text-green border-green" : "text-danger border-danger"}>{opponent.spotDodgeStart}</p>}
+          {opponent.name && <p className={opponent.spotDodgeLag >= player.spotDodgeLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.spotDodgeLag}</p>}
+          {opponent.name && <p className={opponent.airDodgeLag >= player.airDodgeLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.airDodgeLag}</p>}
+          {opponent.name && <p className={opponent.neutralSpecial >= player.neutralSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutralSpecial}</p>}
+          {opponent.name && <p className={opponent.sideSpecial >= player.sideSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.sideSpecial}</p>}
+          {opponent.name && <p className={opponent.upSpecial >= player.upSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSpecial}</p>}
+          {opponent.name && <p className={opponent.downSpecial >= player.downSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSpecial}</p>}
+          {opponent.name && <p className={opponent.neutral >= player.neutral ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutral}</p>}
+          {opponent.name && <p className={opponent.upTilt >= player.upTilt ? "text-green border-green" : "text-danger border-danger"}>{opponent.upTilt}</p>}
+          {opponent.name && <p className={opponent.downTilt >= player.downTilt ? "text-green border-green" : "text-danger border-danger"}>{opponent.downTilt}</p>}
+          {opponent.name && <p className={opponent.forwardTilt >= player.forwardTilt ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardTilt}</p>}
+          {opponent.name && <p className={opponent.dashAttack >= player.dashAttack ? "text-green border-green" : "text-danger border-danger"}>{opponent.dashAttack}</p>}
+          {opponent.name && <p className={opponent.upSmash >= player.upSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSmash}</p>}
+          {opponent.name && <p className={opponent.downSmash >= player.downSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSmash}</p>}
+          {opponent.name && <p className={opponent.forwardSmash >= player.forwardSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmash}</p>}
+          {opponent.name && <p className={opponent.nair >= player.nair ? "text-green border-green" : "text-danger border-danger"}>{opponent.nair}</p>}
+          {opponent.name && <p className={opponent.uair >= player.uair ? "text-green border-green" : "text-danger border-danger"}>{opponent.uair}</p>}
+          {opponent.name && <p className={opponent.dair >= player.dair ? "text-green border-green" : "text-danger border-danger"}>{opponent.dair}</p>}
+          {opponent.name && <p className={opponent.fair >= player.fair ? "text-green border-green" : "text-danger border-danger"}>{opponent.fair}</p>}
+          {opponent.name && <p className={opponent.bair >= player.bair ? "text-green border-green" : "text-danger border-danger"}>{opponent.bair}</p>}
+          {opponent.name && <p className={opponent.zair >= player.zair ? "text-green border-green" : "text-danger border-danger"}>{opponent.zair}</p>}
+          {opponent.name && <p className={opponent.pummel >= player.pummel ? "text-green border-green" : "text-danger border-danger"}>{opponent.pummel}</p>}
+          {opponent.name && <p className={opponent.forwardThrow >= player.forwardThrow ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardThrow}</p>}
+          {opponent.name && <p className={opponent.backThrow >= player.backThrow ? "text-green border-green" : "text-danger border-danger"}>{opponent.backThrow}</p>}
+          {opponent.name && <p className={opponent.upThrow >= player.upThrow ? "text-green border-green" : "text-danger border-danger"}>{opponent.upThrow}</p>}
+          {opponent.name && <p className={opponent.downThrow >= player.downThrow ? "text-green border-green" : "text-danger border-danger"}>{opponent.downThrow}</p>}
+          {opponent.name && <p className={opponent.floorAttackFront >= player.floorAttackFront ? "text-green border-green" : "text-danger border-danger"}>{opponent.floorAttackFront}</p>}
+          {opponent.name && <p className={opponent.floorAttackBack >= player.floorAttackBack ? "text-green border-green" : "text-danger border-danger"}>{opponent.floorAttackBack}</p>}
+          {opponent.name && <p className={opponent.floorAttackTrip >= player.floorAttackTrip ? "text-green border-green" : "text-danger border-danger"}>{opponent.floorAttackTrip}</p>}
+          {opponent.name && <p className={opponent.edgeAttack >= player.edgeAttack ? "text-green border-green" : "text-danger border-danger"}>{opponent.edgeAttack}</p>}
+          {opponent.name && <p className={opponent.finalSmash >= player.finalSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.finalSmash}</p>}
         </div>
       </div>
     )
