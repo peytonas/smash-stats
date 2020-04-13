@@ -4,7 +4,7 @@ class MatchupStats extends Component {
   render() {
     return (
       <div className="col-3 text-center">
-        <div className="stat-size">
+        <div className="stat-size mt-n1">
           <p className="clear-border">Series</p>
           <p className="clear-border">Weight</p>
           <p className="clear-border">Walk Speed</p>
