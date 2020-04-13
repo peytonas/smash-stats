@@ -91,6 +91,9 @@ class App extends Component {
             <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
         </div>
+        <div className="row text-primary">
+          <p className="col-3 disclaimer-text mt-3">I do not own any of the characters or statistics found here.</p>
+        </div>
       </div>
     )
   }
