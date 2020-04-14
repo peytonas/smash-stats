@@ -21,11 +21,11 @@ class App extends Component {
       timeout: 3000,
       withCredentials: true
     })
-    api.get(`http://localhost:3000/api/characters/${playerId}`)
+    api.get(`/characters/${playerId}`)
       .then(res => {
         this.setState({ playerChoice: res.data });
       })
-    api.get(`http://localhost:3000/api/characters/${opponentId}`)
+    api.get(`/characters/${opponentId}`)
       .then(res => {
         this.setState({ opponentChoice: res.data });
       })
@@ -56,7 +56,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Axios.get('http://localhost:3000/api/characters')
+    let base = window.location.host.includes('localhost:8080') ? '//localhost:3000/' : '/'
+    let api = Axios.create({
+      baseURL: base + 'api/',
+      timeout: 3000,
+      withCredentials: true
+    })
+    api.get(`/characters`)
       .then(res => {
         this.setState({ characters: res.data });
       }).catch(function (error) {
