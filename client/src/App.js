@@ -36,7 +36,7 @@ class App extends Component {
               sweet-spot/clean damage. </br>
               &middot; Any other "discrepancies" came down to a need for rounding and wanting to give each statistic a single number to work with. </br>
               <span style="font-size:1rem";>Feedback on how to improve their interpretations is welcome!</span> </br>
-             <span style="font-size:.5rem"> Disclaimer: I do not own any of the characters, images, or statistics found here.</span>
+             <span style="font-size:.5rem">I do not own any of the characters, images, or statistics found here.</span>
               </span>`,
       background: "#211a21",
       backdrop: "rgba(33,26,33,0.3)",
