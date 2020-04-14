@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 class CharacterName extends Component {
 
-  selectCharacter = (character) => {
-    this.props.characterPasser(character)
+  selectCharacter = (characterId) => {
+    this.props.characterPasser(characterId)
   }
 
   render() {
