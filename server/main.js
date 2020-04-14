@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import bp from 'body-parser'
+const path = require('path');
 import DbConfig from "./db/DbConfig"
 
 const port = process.env.PORT || 5000
@@ -38,5 +39,13 @@ server.use('*', (req, res, next) => {
   res.status(404).send("Route not found")
 })
 
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  server.use(express.static(path.join(__dirname, 'client/build')));
+  // Handle React routing, return all requests to React app
+  server.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
 
 server.listen(port, () => { console.log(`Server is running on port: ${port}`) })
