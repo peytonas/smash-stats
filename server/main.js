@@ -9,7 +9,7 @@ let server = express()
 
 DbConfig.connect()
 
-server.use(express.static(__dirname + 'client/build'))
+server.use(express.static(__dirname + '/../client/build'))
 
 let whitelist = ['http://localhost:3000', 'https://ssb-stats.herokuapp.com'];
 let corsOptions = {
