@@ -7,8 +7,7 @@
     "debug": "node index.js",
     "start": "node index.js",
     "dev": "node index.js",
-    "setup": "npm install",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "setup": "npm install"
   },
   "author": "Boise Codeworks",
   "license": "ISC",
