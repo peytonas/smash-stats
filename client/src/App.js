@@ -53,6 +53,8 @@ class App extends Component {
   resetChoices() {
     this.setState({ playerChoice: {} })
     this.setState({ opponentChoice: {} })
+    console.log(__dirname);
+
   }
 
   componentDidMount() {
