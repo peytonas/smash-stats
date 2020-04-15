@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import CharacterName from './CharacterName'
+import './CharacterSelect.css'
 import swal from 'sweetalert2'
 
 const Toast = swal.mixin({
@@ -13,7 +14,7 @@ const Toast = swal.mixin({
 class CharacterSelect extends Component {
 
   state = {
-    characters: []
+    characters: [],
   }
 
   sendNames = (playerChoice, opponentChoice) => {

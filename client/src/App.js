@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     characters: [],
     playerChoice: {},
-    opponentChoice: {}
+    opponentChoice: {},
   }
 
   selectedNames = (playerId, opponentId) => {
