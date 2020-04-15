@@ -13,7 +13,7 @@ mongoose.connection.on('error', err => {
 export default class DbConfig {
   static async connect() {
     try {
-      let status = await mongoose.connect(process.env.CONNECTION_STRING) //TODO Make sure you set this in .env
+      let status = await mongoose.connect("mongodb+srv://peytonas:63A466ee@@peytonas-el9km.mongodb.net/smash-stats?retryWrites=true&w=majority") //TODO Make sure you set this in .env
       console.log("CONNECTED")
       return status
     } catch (e) {
