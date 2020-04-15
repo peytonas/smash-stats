@@ -11,7 +11,7 @@ DbConfig.connect()
 
 server.use(express.static(__dirname + '/../client/build'))
 
-let whitelist = ['http://localhost:3000', 'https://ssb-stats.herokuapp.com'];
+let whitelist = ['http://localhost:5000', 'https://ssb-stats.herokuapp.com'];
 let corsOptions = {
   origin: function (origin, callback) {
     let originIsWhitelisted = whitelist.indexOf(origin) !== -1;

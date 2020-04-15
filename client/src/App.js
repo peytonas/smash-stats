@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   selectedNames = (playerId, opponentId) => {
-    let base = window.location.host.includes('localhost:3000') ? '//localhost:5000/' : '/'
+    let base = window.location.host.includes('localhost:5000') ? '//localhost:5000/' : '/'
     let api = Axios.create({
       baseURL: base + 'api/',
       timeout: 3000,
@@ -53,12 +53,10 @@ class App extends Component {
   resetChoices() {
     this.setState({ playerChoice: {} })
     this.setState({ opponentChoice: {} })
-    console.log(__dirname);
-
   }
 
   componentDidMount() {
-    let base = window.location.host.includes('localhost:3000') ? '//localhost:5000/' : '/'
+    let base = window.location.host.includes('localhost:5000') ? '//localhost:5000/' : '/'
     let api = Axios.create({
       baseURL: base + 'api/',
       timeout: 3000,
