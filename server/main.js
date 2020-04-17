@@ -3,7 +3,7 @@ import cors from 'cors'
 import bp from 'body-parser'
 import DbConfig from "./db/DbConfig"
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3000
 
 let server = express()
 
@@ -11,7 +11,7 @@ DbConfig.connect()
 
 server.use(express.static(__dirname + '/../client/build'))
 
-let whitelist = ['http://localhost:5000', 'https://ssb-stats.herokuapp.com'];
+let whitelist = ['http://localhost:8080', 'https://ssb-stats.herokuapp.com'];
 let corsOptions = {
   origin: function (origin, callback) {
     let originIsWhitelisted = whitelist.indexOf(origin) !== -1;
