@@ -1,15 +1,35 @@
-import express from 'express'
-import cors from 'cors'
-import bp from 'body-parser'
+const express = require('express')
+const cors = require('cors')
+const bp = require('body-parser')
+const compression = require('compression')
+const morgan = require('morgan')
+const path = require('path')
 import DbConfig from "./db/DbConfig"
 
-const port = process.env.PORT || 3000
+const normalizePort = port => parseInt(port, 10)
+const port = normalizePort(process.env.PORT || 3000)
 
 let server = express()
+const dev = server.get('env') !== 'production'
 
 DbConfig.connect()
 
-server.use(express.static(__dirname + '/../client/build'))
+if (!dev) {
+  server.disable('x-powered-by')
+  // @ts-ignore
+  server.use(compression())
+  // @ts-ignore
+  server.use(morgan('common'))
+  server.use(express.static(__dirname + '/../client/build'))
+  server.use('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
+  })
+}
+
+if (dev) {
+  // @ts-ignore
+  server.use(morgan('dev'))
+}
 
 let whitelist = ['http://localhost:8080', 'https://ssb-stats.herokuapp.com'];
 let corsOptions = {
@@ -19,6 +39,7 @@ let corsOptions = {
   },
   credentials: true
 };
+// @ts-ignore
 server.use(cors(corsOptions))
 
 
