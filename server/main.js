@@ -12,10 +12,7 @@ const dev = server.get('env') !== 'production'
 
 DbConfig.connect()
 
-server.use(express.static('client/build'))
-server.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-})
+server.use(express.static(__dirname + '/../client/build'))
 
 let whitelist = ['http://localhost:8080', 'https://fierce-garden-50211.herokuapp.com'];
 let corsOptions = {
