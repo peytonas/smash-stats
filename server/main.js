@@ -1,14 +1,12 @@
 const express = require('express')
 const cors = require('cors')
 const bp = require('body-parser')
-const path = require('path')
 import DbConfig from "./db/DbConfig"
 
 
 const port = process.env.PORT || 3000
 
 let server = express()
-const dev = server.get('env') !== 'production'
 
 DbConfig.connect()
 
