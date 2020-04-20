@@ -20,9 +20,9 @@ if (!dev) {
   server.use(compression())
   // @ts-ignore
   server.use(morgan('common'))
-  server.use(express.static(__dirname + '/../client/build'))
+  server.use(express.static('client/build'))
   server.use('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname + '/../client/build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
   })
 }
 
