@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import CharacterName from './CharacterName'
-import './CharacterSelect.css'
 
 class CharacterSelect extends Component {
   sendName = (characterChoice) => {
@@ -11,7 +10,7 @@ class CharacterSelect extends Component {
     return this.props.characters.map((character) => (
       (<CharacterName
         key={character.id}
-        character={character} characterPasser={this.sendName} />)
+        character={character} characterPasser={this.sendName} player={this.props.player} opponent={this.props.opponent} />)
     ))
   }
 }

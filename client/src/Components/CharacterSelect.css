@@ -1,3 +1,11 @@
-.disabled{
-  pointer-events: none;
+.border-green{
+  border: 2px solid #28a745;
+  color: #28a745;
 }
+
+.border-danger{
+  border: 2px solid #de4337;
+  color: #de4337;
+}
+
+

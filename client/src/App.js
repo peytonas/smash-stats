@@ -10,7 +10,6 @@ import Matchup from './Components/Matchup.js'
 class App extends Component {
   state = {
     characters: [],
-    selectedCharacters: [],
     playerChoice: {},
     opponentChoice: {},
   }
@@ -88,7 +87,7 @@ class App extends Component {
           <div className="col-2 text-left">
             <h6><b>choose two:</b></h6>
             <div className="name-scroll bg-info rounded">
-              <CharacterSelect characters={this.state.characters} characterPasser={this.selectedNames} />
+              <CharacterSelect characters={this.state.characters} characterPasser={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
             </div>
             <div className="text-center">
               <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
