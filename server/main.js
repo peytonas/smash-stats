@@ -31,7 +31,7 @@ if (dev) {
   server.use(morgan('dev'))
 }
 
-let whitelist = ['http://localhost:8080', 'https://fierce-garden-50211.herokuapp.com/'];
+let whitelist = ['http://localhost:8080', 'https://ssb-stats.herokuapp.com'];
 let corsOptions = {
   origin: function (origin, callback) {
     let originIsWhitelisted = whitelist.indexOf(origin) !== -1;

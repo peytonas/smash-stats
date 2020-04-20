@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   selectedNames = (playerId, opponentId) => {
-    let base = window.location.host.includes('localhost:8080') ? '//localhost:3000/' : '/'
+    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
     let api = Axios.create({
       baseURL: base + 'api/',
       timeout: 3000,
@@ -58,7 +58,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let base = window.location.host.includes('localhost:8080') ? '//localhost:3000/' : '/'
+    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
     let api = Axios.create({
       baseURL: base + 'api/',
       timeout: 3000,
