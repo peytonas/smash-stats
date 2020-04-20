@@ -21,7 +21,7 @@ if (!dev) {
   // @ts-ignore
   server.use(morgan('common'))
   server.use(express.static('client/build'))
-  server.use('*', (req, res) => {
+  server.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
   })
 }
