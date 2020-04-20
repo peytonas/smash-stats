@@ -10,25 +10,28 @@ import Matchup from './Components/Matchup.js'
 class App extends Component {
   state = {
     characters: [],
+    selectedCharacters: [],
     playerChoice: {},
     opponentChoice: {},
   }
 
-  selectedNames = (playerId, opponentId) => {
+  selectedNames = (characterId) => {
     let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
     let api = Axios.create({
       baseURL: base + 'api/',
       timeout: 3000,
       withCredentials: true
     })
-    api.get(`/characters/${playerId}`)
-      .then(res => {
-        this.setState({ playerChoice: res.data });
-      })
-    api.get(`/characters/${opponentId}`)
-      .then(res => {
-        this.setState({ opponentChoice: res.data });
-      })
+    this.state.playerChoice.name ?
+      api.get(`/characters/${characterId}`)
+        .then(res => {
+          this.setState({ opponentChoice: res.data });
+        })
+      :
+      api.get(`/characters/${characterId}`)
+        .then(res => {
+          this.setState({ playerChoice: res.data });
+        })
   }
 
   viewInfo() {
@@ -51,8 +54,6 @@ class App extends Component {
   }
 
   resetChoices() {
-    console.log(process.env.PORT);
-
     this.setState({ playerChoice: {} })
     this.setState({ opponentChoice: {} })
   }
