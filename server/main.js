@@ -20,7 +20,7 @@ if (!dev) {
   server.use(compression())
   // @ts-ignore
   server.use(morgan('common'))
-  server.use(express.static(__dirname + '/client/build'))
+  server.use(express.static(__dirname + '/../client/build'))
   server.use('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
   })
@@ -31,7 +31,7 @@ if (dev) {
   server.use(morgan('dev'))
 }
 
-let whitelist = ['http://localhost:8080', 'https://ssb-stats.herokuapp.com'];
+let whitelist = ['http://localhost:8080', 'https://fierce-garden-50211.herokuapp.com/'];
 let corsOptions = {
   origin: function (origin, callback) {
     let originIsWhitelisted = whitelist.indexOf(origin) !== -1;
