@@ -1,14 +1,14 @@
 const express = require('express')
 const cors = require('cors')
 const bp = require('body-parser')
-import DbConfig from "./db/DbConfig"
+import DbContext from "./db/DbConfig"
 
 
 const port = process.env.PORT || 3000
 
 let server = express()
 
-DbConfig.connect()
+DbContext.connect()
 
 server.use(express.static(__dirname + '/../client/build'))
 
