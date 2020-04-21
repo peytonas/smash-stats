@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './Matchup.css'
 
 class MatchupStats extends Component {
   render() {
     return (
-      <div className="col-4 col-md-3 text-center">
-        <div className="stat-size">
+      <div className="col col-md-3 text-center">
+        <div className="stat-size mb-1">
           <p className="clear-border">Series</p>
           <p className="clear-border">Weight</p>
           <p className="clear-border">Walk Speed</p>

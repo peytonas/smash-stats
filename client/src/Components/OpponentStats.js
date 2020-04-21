@@ -5,7 +5,7 @@ class OpponentStats extends Component {
     const player = this.props.player
     const opponent = this.props.opponent
     return (
-      <div className="col-3 col-md-4 text-center">
+      <div className="col col-md-4 text-center">
         <div className="stat-size">
           {opponent.name && <p>{opponent.series}</p>}
           {opponent.name && <p className={opponent.weight >= player.weight ? "text-green border-green" : "text-danger border-danger"}>{opponent.weight}</p>}

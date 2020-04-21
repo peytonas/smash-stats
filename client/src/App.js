@@ -85,10 +85,10 @@ class App extends Component {
           </div>
         </div>
         <div className="row justify-content-center justify-content-md-between text-success">
-          <div className="col-8 col-md-2 text-center text-md-left">
+          <div className="col-6 col-md-2 text-center text-md-left">
             <h6><b>choose two:</b></h6>
             <div className="name-scroll bg-info rounded flexBox">
-              <CharacterSelect characters={this.state.characters} characterPasser={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} className={"flexBox"}/>
+              <CharacterSelect characters={this.state.characters} characterPasser={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} className={"flexBox"} />
             </div>
             <div className="text-center">
               <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
@@ -99,7 +99,7 @@ class App extends Component {
             <Matchup callBack={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
             <h5><i className="fas fa-sort-down pulse text-primary" title="scroll down!"></i></h5>
           </div>
-          <div className="col-6 col-md-2 text-center text-danger col-height">
+          <div className="col-4 col-md-2 text-center text-danger col-height">
             <h6 className="text-danger text-center text-md-left"><b>character stats:</b></h6>
             <div className="card-scroll flexBox">
               <CharacterCards characters={this.state.characters} className={"flexBox"} />

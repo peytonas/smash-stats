@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const bp = require('body-parser')
 import DbContext from "./db/DbConfig"
-
+const path = require('path');
 
 const port = process.env.PORT || 3000
 
@@ -10,7 +10,8 @@ let server = express()
 
 DbContext.connect()
 
-server.use(express.static(__dirname + '/../client/build'))
+// server.use(express.static(__dirname + '/../client/build'))
+server.use(express.static(path.join(__dirname, '/../client/build')));
 
 let whitelist = ['http://localhost:8080', 'https://ssb-stats.herokuapp.com'];
 let corsOptions = {

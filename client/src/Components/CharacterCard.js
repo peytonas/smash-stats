@@ -64,9 +64,9 @@ class CharacterCard extends Component {
     const characterNumber = Math.floor(this.props.character.characterNumber)
 
     return (
-      <div className="cards mb-1 text-danger" style={{ order: characterNumber }} onClick={this.viewStats.bind(this, this.props.character)}>
-        <img src={imgUrl} alt="character icon" />
-        <p className="cardName">{name}</p>
+      <div className="cards text-danger" style={{ order: characterNumber }} onClick={this.viewStats.bind(this, this.props.character)}>
+        <img src={imgUrl} alt="character icon" className="mt-1" />
+        <p className="cardName mt-1"><b>{name}</b></p>
       </div>
     )
   }
@@ -75,6 +75,5 @@ class CharacterCard extends Component {
 CharacterCard.propTypes = {
   character: PropTypes.object.isRequired
 }
-
 
 export default CharacterCard
