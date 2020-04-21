@@ -24,9 +24,9 @@
   min-height: 100vh;
 }
 
-.row{
-  max-height: 80vh;
-}
+/* .row{
+  max-height: 100vh;
+} */
 
 .fa-trash-alt{
   font-size: .7rem;
@@ -41,7 +41,7 @@
 }
 
 .name-scroll{
-  max-height: 46vh;
+  max-height: 65vh;
   overflow: scroll;
   cursor: pointer;
   border: 2px solid #4f43ae;
@@ -113,10 +113,6 @@ i{
 .container-fluid{
   background-color: #211a21;
   min-height: 100vh;
-}
-
-.row{
-  max-height: 15vh;
 }
 
 .fa-trash-alt{

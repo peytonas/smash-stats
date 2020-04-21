@@ -6,6 +6,7 @@ import './SNES-bootstrap.css'
 import CharacterCards from './Components/CharacterCards'
 import CharacterSelect from './Components/CharacterSelect'
 import Matchup from './Components/Matchup.js'
+import GameChart from './Components/Chart.js'
 
 class App extends Component {
   state = {
@@ -99,7 +100,7 @@ class App extends Component {
             <Matchup callBack={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
             <h5><i className="fas fa-sort-down pulse text-primary" title="scroll down!"></i></h5>
           </div>
-          <div className="col-4 col-md-2 text-center text-danger col-height">
+          <div className="col-4 col-md-2 text-center text-danger">
             <h6 className="text-danger text-center text-md-left"><b>character stats:</b></h6>
             <div className="card-scroll flexBox">
               <CharacterCards characters={this.state.characters} className={"flexBox"} />
@@ -107,10 +108,15 @@ class App extends Component {
             <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
         </div>
+        <div className="row justify-content-left text-center text-md-left">
+          <div className="col col-md-5 offset-md-1 text-center text-primary mb-4">
+            <GameChart />
+          </div>
+        </div>
         <footer className="row justify-content-left bg-primary fixed-bottom text-center text-md-left">
           <div className="col col-md-3">
-            <a href="https://twitter.com/UnbrandedLemon" target="_blank"><i className="fab fa-twitter ml-2 text-success"></i></a>
-            <a href="https://www.youtube.com/channel/UCkQmM3FZJXlOo3cf2n-MwEQ" target="_blank"><i className="fab fa-youtube ml-2 text-success"></i></a>
+            <a href="https://twitter.com/UnbrandedLemon" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter ml-2 text-success"></i></a>
+            <a href="https://www.youtube.com/channel/UCkQmM3FZJXlOo3cf2n-MwEQ" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube ml-2 text-success"></i></a>
           </div>
         </footer>
       </div>
