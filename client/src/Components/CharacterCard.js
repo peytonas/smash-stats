@@ -61,8 +61,10 @@ class CharacterCard extends Component {
   }
   render() {
     const { name, imgUrl } = this.props.character
+    const characterNumber = Math.floor(this.props.character.characterNumber)
+
     return (
-      <div className="cards mb-1 text-danger" onClick={this.viewStats.bind(this, this.props.character)}>
+      <div className="cards mb-1 text-danger" style={{ order: characterNumber }} onClick={this.viewStats.bind(this, this.props.character)}>
         <img src={imgUrl} alt="character icon" />
         <p className="cardName">{name}</p>
       </div>

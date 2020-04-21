@@ -2,6 +2,11 @@
   border: 1px solid red;
 } */
 
+.flexBox{
+  display: flex;
+  flex-direction: column;
+}
+
 .size{
   font-size: 3.5rem;
 }
@@ -43,7 +48,7 @@
 }
 
 .card-scroll{
-  max-height: 68vh;
+  max-height: 70vh;
   overflow: scroll;
   cursor: pointer;
 }
@@ -134,7 +139,7 @@ i{
 }
 
 .card-scroll{
-  max-height: 47vh;
+  max-height: 44vh;
   overflow: scroll;
   cursor: pointer;
 }
