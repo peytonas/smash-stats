@@ -12,7 +12,7 @@
 }
 
 .stat-scroll{
-  max-height: 60vh;
+  max-height: 57vh;
   overflow: scroll;
 }
 
@@ -50,7 +50,7 @@ h6{
 }
 
 .stat-scroll{
-  max-height: 20vh;
+  max-height: 19vh;
   overflow: scroll;
 }
 

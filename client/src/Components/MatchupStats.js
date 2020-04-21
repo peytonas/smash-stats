@@ -6,7 +6,6 @@ class MatchupStats extends Component {
     return (
       <div className="col col-md-3 text-center">
         <div className="stat-size mb-1">
-          <p className="clear-border">Series</p>
           <p className="clear-border">Weight</p>
           <p className="clear-border">Walk Speed</p>
           <p className="clear-border">Run Speed</p>

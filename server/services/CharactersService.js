@@ -5,6 +5,7 @@ const _schema = new Schema(
   {
     name: { type: String, required: true },
     series: { type: String, required: true },
+    introduced: { type: String, required: true },
     characterNumber: { type: Number, unique: true, required: true },
     imgUrl: { type: String },
     walkSpeed: { type: Number, required: true },

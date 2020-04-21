@@ -8,7 +8,6 @@ class PlayerStats extends Component {
     return (
       <div className="col col-md-4 text-center">
         <div className="stat-size">
-          {player.name && <p>{player.series}</p>}
           {player.name && <p className={player.weight >= opponent.weight ? "text-green border-green" : "text-danger border-danger"}>{player.weight}</p>}
           {player.name && <p className={player.walkSpeed >= opponent.walkSpeed ? "text-green border-green" : "text-danger border-danger"}>{player.walkSpeed}</p>}
           {player.name && <p className={player.runSpeed >= opponent.runSpeed ? "text-green border-green" : "text-danger border-danger"}>{player.runSpeed}</p>}

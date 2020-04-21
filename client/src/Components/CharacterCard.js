@@ -10,6 +10,7 @@ class CharacterCard extends Component {
       title: `<span style="color:#b5b6e4;font-size:.7rem" className="overflow">
       <span style="font-size:1.5rem; font-weight:bold">${characterStats.name}</span> </br> 
       Series: ${characterStats.series}</br>
+      Introduced: ${characterStats.introduced}</br>
       Smash Number: ${characterStats.characterNumber} </br>
       Weight: ${characterStats.weight} </br> 
       Walk Speed: ${characterStats.walkSpeed}</br>

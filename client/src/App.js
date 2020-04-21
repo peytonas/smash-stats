@@ -107,6 +107,12 @@ class App extends Component {
             <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
         </div>
+        <footer className="row justify-content-left bg-primary fixed-bottom text-center text-md-left">
+          <div className="col col-md-3">
+            <a href="https://twitter.com/UnbrandedLemon" target="_blank"><i className="fab fa-twitter ml-2 text-success"></i></a>
+            <a href="https://www.youtube.com/channel/UCkQmM3FZJXlOo3cf2n-MwEQ" target="_blank"><i className="fab fa-youtube ml-2 text-success"></i></a>
+          </div>
+        </footer>
       </div>
     )
   }

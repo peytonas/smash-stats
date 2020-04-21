@@ -112,7 +112,7 @@ i{
 
 .container-fluid{
   background-color: #211a21;
-  min-height: 125vh;
+  min-height: 100vh;
 }
 
 .row{
@@ -132,14 +132,14 @@ i{
 }
 
 .name-scroll{
-  max-height: 20vh;
+  max-height: 17vh;
   overflow: scroll;
   cursor: pointer;
   border: 2px solid #4f43ae;
 }
 
 .card-scroll{
-  max-height: 46vh;
+  max-height: 23vh;
   overflow: scroll;
   cursor: pointer;
 }
