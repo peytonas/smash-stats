@@ -55,15 +55,16 @@ class CharacterCard extends Component {
       imageAlt: "character icon",
       background: "#211a21",
       backdrop: "rgba(33,26,33,0.5)",
-      showConfirmButton: false
+      showConfirmButton: false,
+      showCloseButton: true
     });
   }
   render() {
     const { name, imgUrl } = this.props.character
     return (
       <div className="cards mb-1 text-danger" onClick={this.viewStats.bind(this, this.props.character)}>
-        <img src={imgUrl} alt="character icon" className="mt-n1" />
-        <p>{name}</p>
+        <img src={imgUrl} alt="character icon" />
+        <p className="cardName">{name}</p>
       </div>
     )
   }

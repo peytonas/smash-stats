@@ -1,3 +1,7 @@
+/* *{
+  border: 1px solid red
+} */
+
 img{
   height: 100px;
   width: 100px;
@@ -23,6 +27,34 @@ img{
   overflow: scroll;
 }
 
-/* *{
-  border: 1px solid red
-} */
+
+@media only screen and (max-width: 767px){
+  img{
+  height: 50px;
+  width: 50px;
+}
+
+.cardName{
+  font-size: .5rem;
+}
+
+.cards{
+  cursor: pointer;
+  background-color: #cec9cc;
+  border: 1px solid #de4337;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  height: auto;
+  margin-top: 4px;
+}
+
+.cards:active {
+  transform: translateY(4px);
+  background-color: #908a99
+}
+
+.overflow{
+  overflow: scroll;
+}
+}

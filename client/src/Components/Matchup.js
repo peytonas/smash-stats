@@ -12,14 +12,14 @@ class Matchup extends Component {
     return (
       <div>
         <div className="row justify-content-between text-primary">
-          <div className="col-4 text-center">
+          <div className="col col-md-4 text-md-center">
             <h6><b>{player.name}</b></h6>
             {player.name && <img src={player.imgUrl} className="mt-n1" />}
           </div>
-          <div className="col-2 text-center">
+          <div className="col col-md-2 text-center align-self-center">
             <h1 className="vs text-danger">vs</h1>
           </div>
-          <div className="col-4 text-center">
+          <div className="col col-md-4 text-center">
             <h6><b>{opponent.name}</b></h6>
             {opponent.name && <img src={opponent.imgUrl} className="mt-n1" />}
           </div>

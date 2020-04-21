@@ -48,7 +48,8 @@ class App extends Component {
               </span>`,
       background: "#211a21",
       backdrop: "rgba(33,26,33,0.3)",
-      showConfirmButton: false
+      showConfirmButton: false,
+      showCloseButton: true
     });
   }
 
@@ -75,16 +76,16 @@ class App extends Component {
   render() {
     return (
       <div id="characters" className="container-fluid">
-        <div className="row text-success">
-          <div className="col-1 align-self-center">
-            <i className="far fa-question-circle pointer" onClick={this.viewInfo.bind(this)}></i>
+        <div className="row text-primary">
+          <div className="order-2 order-md-1 col col-md-1 align-self-center">
+            <i className="far fa-question-circle pointer text-success" onClick={this.viewInfo.bind(this)}></i>
           </div>
-          <div className=" offset-3 col-4 text-center">
-            <h1 className="size mt-2 border border-success rounded pl-1 pr-1">SMASH STATS</h1>
+          <div className="order-1 order-md-2 col-12 offset-md-3 col-md-4 text-center">
+            <h1 className="size mt-2 border border-primary rounded pl-1 pr-1">SMASH STATS</h1>
           </div>
         </div>
-        <div className="row justify-content-between text-success">
-          <div className="col-2 text-left">
+        <div className="row justify-content-center justify-content-md-between text-success">
+          <div className="col-8 col-md-2 text-center text-md-left">
             <h6><b>choose two:</b></h6>
             <div className="name-scroll bg-info rounded">
               <CharacterSelect characters={this.state.characters} characterPasser={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
@@ -94,12 +95,12 @@ class App extends Component {
               <h5 className="mt-n4"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
             </div>
           </div>
-          <div className="col-5 text-center text-success mt-3">
+          <div className="col-12 col-md-5 text-center text-success mt-3">
             <Matchup callBack={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
             <h5><i className="fas fa-sort-down pulse text-primary" title="scroll down!"></i></h5>
           </div>
-          <div className="col-2 text-center text-danger col-height">
-            <h6 className="text-danger text-left"><b>character stats:</b></h6>
+          <div className="col-6 col-md-2 text-center text-danger col-height">
+            <h6 className="text-danger text-center text-md-left"><b>character stats:</b></h6>
             <div className="card-scroll">
               <CharacterCards characters={this.state.characters} />
             </div>

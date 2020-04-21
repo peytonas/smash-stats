@@ -31,3 +31,44 @@
 .clear-border{
   border: 2px solid transparent;
 }
+
+@media only screen and (max-width: 767px){
+  .vs{
+  font-size: 2rem;
+}
+
+.overflow{
+  overflow: scroll;
+}
+
+h6{
+  font-size: .7rem;
+}
+
+.stat-size{
+  font-size: 5px;
+}
+
+.stat-scroll{
+  max-height: 20vh;
+  overflow: scroll;
+}
+
+.text-green{
+  color: #28a745;
+}
+
+.border-green{
+  border: 1px solid #28a745;
+}
+
+.border-danger{
+  border: 1px solid #de4337;
+}
+
+.clear-border{
+  border: 1px solid transparent;
+  font-size: 5px;
+}
+
+}

@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class MatchupStats extends Component {
   render() {
     return (
-      <div className="col-3 text-center">
-        <div className="stat-size mt-n1">
+      <div className="col-4 col-md-3 text-center">
+        <div className="stat-size">
           <p className="clear-border">Series</p>
           <p className="clear-border">Weight</p>
           <p className="clear-border">Walk Speed</p>

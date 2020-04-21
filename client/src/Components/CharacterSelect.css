@@ -8,4 +8,19 @@
   color: #de4337;
 }
 
+@media only screen and (max-width: 767px){
+  .border-green{
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+.border-danger{
+  border: 1px solid #de4337;
+  color: #de4337;
+}
+
+.name-size{
+  font-size: 8px;
+}
+}
 
