@@ -25,7 +25,6 @@ img{
   overflow: scroll;
 }
 
-
 @media only screen and (max-width: 767px){
   img{
   height: 50px;

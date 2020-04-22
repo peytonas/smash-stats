@@ -109,7 +109,7 @@ class App extends Component {
           </div>
         </div>
         <div className="row justify-content-left text-center text-md-left">
-          <div className="col col-md-5 offset-md-1 text-center text-primary mb-4">
+          <div className="col col-md-4 offset-md-1 text-center text-primary mb-4">
             <GameChart />
           </div>
         </div>
