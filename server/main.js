@@ -10,7 +10,7 @@ let server = express()
 
 DbContext.connect()
 
-server.use(express.static(__dirname + '/../client/build'))
+server.use(express.static(__dirname + '/build'))
 // server.use(express.static(path.join(__dirname, '/../client/build')));
 
 let whitelist = ['http://localhost:8080', 'https://ssb-stats.herokuapp.com'];
