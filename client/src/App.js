@@ -95,7 +95,7 @@ class App extends Component {
           </div>
         </div>
         <div className="row justify-content-center justify-content-md-between text-success">
-          <div className="col-3 col-md-2 text-center text-md-left">
+          <div className="col-4 col-md-2 text-center text-md-left">
             <p className="text-primary">Player:</p>
             <div className="name-scroll bg-info rounded flexBox mt-n2">
               <PlayerSelect characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} className={"flexBox"} />
@@ -104,7 +104,7 @@ class App extends Component {
             <div className="name-scroll bg-info rounded flexBox mt-n2">
               <OpponentSelect characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} className={"flexBox"} />
             </div>
-            <div className="text-center">
+            <div className="ml-4 ml-md-0">
               <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
             </div>
           </div>
