@@ -10,7 +10,7 @@ class Matchup extends Component {
     const player = this.props.player
     const opponent = this.props.opponent
     return (
-      <div>
+      <div className="col-12 col-md-5 text-center text-success mt-3">
         <div className="row justify-content-between text-primary">
           <div className="col col-md-4 text-md-center">
             <h6><b>{player.name}</b></h6>
@@ -29,6 +29,7 @@ class Matchup extends Component {
           <MatchupStats player={player} opponent={opponent} />
           <OpponentStats player={player} opponent={opponent} />
         </div>
+        <h5><i className="fas fa-sort-down pulse text-primary" title="scroll down!"></i></h5>
       </div>
     )
   }

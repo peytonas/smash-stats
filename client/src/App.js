@@ -8,6 +8,7 @@ import PlayerSelect from './Components/PlayerSelect'
 import OpponentSelect from './Components/OpponentSelect'
 import Matchup from './Components/Matchup.js'
 import GameChart from './Components/GameChart.js'
+import Links from './Components/Links'
 
 class App extends Component {
   state = {
@@ -107,10 +108,7 @@ class App extends Component {
               <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
             </div>
           </div>
-          <div className="col-12 col-md-5 text-center text-success mt-3">
-            <Matchup player={this.state.playerChoice} opponent={this.state.opponentChoice} />
-            <h5><i className="fas fa-sort-down pulse text-primary" title="scroll down!"></i></h5>
-          </div>
+          <Matchup player={this.state.playerChoice} opponent={this.state.opponentChoice} />
           <div className="col-4 col-md-2 text-center text-danger">
             <h6 className="text-danger text-center text-md-left"><b>Character Stats:</b></h6>
             <div className="card-scroll flexBox">
@@ -124,12 +122,7 @@ class App extends Component {
             <GameChart />
           </div>
         </div>
-        <footer className="row justify-content-left bg-primary fixed-bottom text-center text-md-left">
-          <div className="col col-md-3">
-            <a href="https://twitter.com/UnbrandedLemon" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter ml-2 text-success"></i></a>
-            <a href="https://www.youtube.com/channel/UCkQmM3FZJXlOo3cf2n-MwEQ" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube ml-2 text-success"></i></a>
-          </div>
-        </footer>
+        <Links />
       </div>
     )
   }
