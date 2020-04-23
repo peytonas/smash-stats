@@ -4,9 +4,10 @@ import swal from 'sweetalert2'
 import './App.css';
 import './SNES-bootstrap.css'
 import CharacterCards from './Components/CharacterCards'
-import CharacterSelect from './Components/CharacterSelect'
+import PlayerSelect from './Components/PlayerSelect'
+import OpponentSelect from './Components/OpponentSelect'
 import Matchup from './Components/Matchup.js'
-import GameChart from './Components/Chart.js'
+import GameChart from './Components/GameChart.js'
 
 class App extends Component {
   state = {
@@ -15,23 +16,30 @@ class App extends Component {
     opponentChoice: {},
   }
 
-  selectedNames = (characterId) => {
+  selectedPlayer = (characterId) => {
     let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
     let api = Axios.create({
       baseURL: base + 'api/',
       timeout: 3000,
       withCredentials: true
     })
-    this.state.playerChoice.name ?
-      api.get(`/characters/${characterId}`)
-        .then(res => {
-          this.setState({ opponentChoice: res.data });
-        })
-      :
-      api.get(`/characters/${characterId}`)
-        .then(res => {
-          this.setState({ playerChoice: res.data });
-        })
+    api.get(`/characters/${characterId}`)
+      .then(res => {
+        this.setState({ playerChoice: res.data });
+      })
+  }
+
+  selectedOpponent = (characterId) => {
+    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
+    let api = Axios.create({
+      baseURL: base + 'api/',
+      timeout: 3000,
+      withCredentials: true
+    })
+    api.get(`/characters/${characterId}`)
+      .then(res => {
+        this.setState({ opponentChoice: res.data });
+      })
   }
 
   viewInfo() {
@@ -86,22 +94,25 @@ class App extends Component {
           </div>
         </div>
         <div className="row justify-content-center justify-content-md-between text-success">
-          <div className="col-6 col-md-2 text-center text-md-left">
-            <h6><b>choose two:</b></h6>
-            <div className="name-scroll bg-info rounded flexBox">
-              <CharacterSelect characters={this.state.characters} characterPasser={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} className={"flexBox"} />
+          <div className="col-3 col-md-2 text-center text-md-left">
+            <p className="text-primary">Player:</p>
+            <div className="name-scroll bg-info rounded flexBox mt-n2">
+              <PlayerSelect characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} className={"flexBox"} />
+            </div>
+            <p className="mt-1 text-primary">Opponent:</p>
+            <div className="name-scroll bg-info rounded flexBox mt-n2">
+              <OpponentSelect characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} className={"flexBox"} />
             </div>
             <div className="text-center">
               <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
-              <h5 className="mt-n4"><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
             </div>
           </div>
           <div className="col-12 col-md-5 text-center text-success mt-3">
-            <Matchup callBack={this.selectedNames} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
+            <Matchup player={this.state.playerChoice} opponent={this.state.opponentChoice} />
             <h5><i className="fas fa-sort-down pulse text-primary" title="scroll down!"></i></h5>
           </div>
           <div className="col-4 col-md-2 text-center text-danger">
-            <h6 className="text-danger text-center text-md-left"><b>character stats:</b></h6>
+            <h6 className="text-danger text-center text-md-left"><b>Character Stats:</b></h6>
             <div className="card-scroll flexBox">
               <CharacterCards characters={this.state.characters} className={"flexBox"} />
             </div>

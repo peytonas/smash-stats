@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import CharacterName from './CharacterName'
+import OpponentName from './OpponentName'
 
-class CharacterSelect extends Component {
+class OpponentSelect extends Component {
   sendName = (characterChoice) => {
     this.props.characterPasser(characterChoice)
   }
   render() {
     return this.props.characters.map((character) => (
-      (<CharacterName
+      (<OpponentName
         key={character.id}
-        character={character} characterPasser={this.sendName} player={this.props.player} opponent={this.props.opponent} />)
+        character={character} characterPasser={this.sendName} opponent={this.props.opponent} />)
     ))
   }
 }
 
-CharacterSelect.propTypes = {
+OpponentSelect.propTypes = {
   characters: PropTypes.array.isRequired
 }
 
-export default CharacterSelect
+export default OpponentSelect

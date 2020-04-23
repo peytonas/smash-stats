@@ -29,7 +29,7 @@
 }
 
 .btn.fab{
-  padding: .5rem;
+  padding: .25rem;
   border-radius: 50%;
   display: flex;
   align-items: left;
@@ -37,7 +37,7 @@
 }
 
 .name-scroll{
-  max-height: 65vh;
+  max-height: 29vh;
   overflow: scroll;
   cursor: pointer;
   border: 2px solid #4f43ae;
