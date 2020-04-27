@@ -7,7 +7,6 @@ import CharacterCards from './Components/CharacterCards'
 import PlayerSelect from './Components/PlayerSelect'
 import OpponentSelect from './Components/OpponentSelect'
 import Matchup from './Components/Matchup'
-import GameChart from './Components/GameChart'
 import Links from './Components/Links'
 
 class App extends Component {
@@ -118,9 +117,9 @@ class App extends Component {
           </div>
         </div>
         <div className="row justify-content-left text-center text-md-left">
-          <div className="col col-md-4 offset-md-1 text-center text-primary mb-4">
+          {/* <div className="col col-md-4 offset-md-1 text-center text-primary mb-4">
             <GameChart />
-          </div>
+          </div> */}
           {/* <div className="col col-md-4 offset-md-1 text-center text-primary mb-4">
             <PlayerChart characters={this.state.characters} player={this.state.playerChoice} opponent={this.state.opponentChoice} />
           </div> */}
