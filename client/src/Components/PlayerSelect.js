@@ -6,6 +6,7 @@ class PlayerSelect extends Component {
   sendName = (characterChoice) => {
     this.props.characterPasser(characterChoice)
   }
+
   render() {
     return this.props.characters.map((character) => (
       (

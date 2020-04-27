@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Chart from "chart.js";
 import './Chart.css'
 
-export default class GameChart extends Component {
+class GameChart extends Component {
   chartRef = React.createRef();
 
   componentDidMount() {
@@ -116,3 +116,5 @@ export default class GameChart extends Component {
     )
   }
 }
+
+export default GameChart

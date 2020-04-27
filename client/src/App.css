@@ -7,6 +7,8 @@
   flex-direction: column;
 }
 
+:focus {outline: none;}
+
 .size{
   font-size: 3.5rem;
 }
