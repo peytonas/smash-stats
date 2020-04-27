@@ -20,8 +20,16 @@
   color: #28a745;
 }
 
+.text-yellow{
+  color: #ffc107;
+}
+
 .border-green{
   border: 2px solid #28a745;
+}
+
+.border-yellow{
+  border: 2px solid #ffc107;
 }
 
 .border-danger{
