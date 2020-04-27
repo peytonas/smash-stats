@@ -48,9 +48,10 @@ class App extends Component {
       title: `<span style="color:#de4337;font-size:1.1rem">
               <span style="font-size:1.6rem; font-weight:bold">A note on the numbers:</span> </br> 
               &middot; Stats seen here are based on the most recent SSBU patch notes and other official or semi-official websites. </br>
-              &middot; Most statistics that were made up of multiple numbers (multi-hit attacks, damage over time, etc...) were averaged and/or rounded, based on my best interpretation of the attack and character. this was in order to arrive at a single number with the intent of both showing the character at their best, as well as what you will typically experience with the character. </br>
+              &middot; Most statistics that were made up of multiple numbers (multi-hit attacks, damage over time, etc...) were averaged and/or rounded, based on my best interpretation of the attack and character. This was in order to arrive at a single number with the intent of both showing the character at their best, as well as to give an accurate idea of what you will typically experience with the character. </br>
               &middot; Generally, statistics that included sweet-spots, sour-spots, clean vs late damage, etc... I used the sweet-spot/clean damage with the intent to show the characters at their best and what you will typically experience with the character. </br>
               &middot; Any other "discrepancies" or differences came down to a need for rounding and wanting to give each statistic a single number to work with, while also remaining true to the spirit of the character and the individual attack. </br>
+              &middot; That said, I don't main every character and I'm sure there are potentially better ways to interpret or add to these stats, and deeper/more thorough stats will be forthcoming. With that said... </br>
               <span style="font-size:1rem";>Feedback, support, and contributions are welcome!
               @UnbrandedLemon on Twitter or <a href="https://github.com/peytonas/smash-stats" target="_blank">Github</a>.</span> </br>
              <span style="font-size:.5rem">I do not own any of the characters, images, or statistics found here.</span>

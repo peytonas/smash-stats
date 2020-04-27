@@ -7,21 +7,11 @@ class MatchupStats extends Component {
       <div className="col col-md-3 text-center">
         <div className="stat-size mb-1">
           <p className="clear-border">Weight</p>
-          <p className="clear-border">Walk Speed</p>
-          <p className="clear-border">Run Speed</p>
-          <p className="clear-border">Dash Speed</p>
-          <p className="clear-border">Air Speed</p>
-          <p className="clear-border">Falling Speed</p>
-          <p className="clear-border">Forward Roll Lag</p>
-          <p className="clear-border">Back Roll Lag</p>
-          <p className="clear-border">Spot Dodge Start</p>
-          <p className="clear-border">Spot Dodge Lag</p>
-          <p className="clear-border">Air Dodge Lag</p>
+          <p className="clear-border">Neutral Attack</p>
           <p className="clear-border">Neutral Special</p>
           <p className="clear-border">Side Special</p>
           <p className="clear-border">Up Special</p>
           <p className="clear-border">Down Special</p>
-          <p className="clear-border">Neutral Attack</p>
           <p className="clear-border">Up Tilt</p>
           <p className="clear-border">Down Tilt</p>
           <p className="clear-border">Forward Tilt</p>
@@ -45,6 +35,16 @@ class MatchupStats extends Component {
           <p className="clear-border">Trip Floor Attack</p>
           <p className="clear-border">Edge Attack</p>
           <p className="clear-border">Final Smash</p>
+          <p className="clear-border">Walk Speed</p>
+          <p className="clear-border">Run Speed</p>
+          <p className="clear-border">Dash Speed</p>
+          <p className="clear-border">Air Speed</p>
+          <p className="clear-border">Falling Speed</p>
+          <p className="clear-border">Forward Roll Lag</p>
+          <p className="clear-border">Back Roll Lag</p>
+          <p className="clear-border">Spot Dodge Start</p>
+          <p className="clear-border">Spot Dodge Lag</p>
+          <p className="clear-border">Air Dodge Lag</p>
         </div>
       </div>
     )
