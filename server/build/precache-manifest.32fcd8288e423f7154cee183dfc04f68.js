@@ -1,3 +1,4 @@
+// @ts-ignore
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "943b1b5a0e5dfc7ccc58fd954a881e72",
