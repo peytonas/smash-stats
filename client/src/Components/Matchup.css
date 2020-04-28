@@ -66,8 +66,16 @@ h6{
   color: #28a745;
 }
 
+.text-yellow{
+  color: #ffc107;
+}
+
 .border-green{
   border: 1px solid #28a745;
+}
+
+.border-yellow{
+  border: 1px solid #ffc107;
 }
 
 .border-danger{
