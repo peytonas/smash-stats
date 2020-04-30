@@ -8,6 +8,7 @@ import PlayerSelect from './Components/PlayerSelect'
 import OpponentSelect from './Components/OpponentSelect'
 import Matchup from './Components/Matchup'
 import Links from './Components/Links'
+import Navbar from './Components/Navbar'
 
 class App extends Component {
   state = {
@@ -85,8 +86,9 @@ class App extends Component {
   render() {
     return (
       <div id="characters" className="container-fluid">
+        <Navbar />
         <div className="row text-primary">
-          <div className="order-2 order-md-1 col col-md-1 align-self-center">
+          <div className="order-2 order-md-1 col col-md-1 align-self-center text-center">
             <i className="far fa-question-circle pointer text-success" onClick={this.viewInfo.bind(this)}></i>
           </div>
           <div className="order-1 order-md-2 col-12 offset-md-3 col-md-4 text-center">

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import swal from 'sweetalert2'
 import './Character.css'
 import PropTypes from 'prop-types'
@@ -77,4 +78,4 @@ CharacterCard.propTypes = {
   character: PropTypes.object.isRequired
 }
 
-export default CharacterCard
+export default withRouter(CharacterCard);

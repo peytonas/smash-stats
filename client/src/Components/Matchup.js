@@ -29,7 +29,7 @@ class Matchup extends Component {
           <MatchupStats player={player} opponent={opponent} />
           <OpponentStats player={player} opponent={opponent} />
         </div>
-        <h5><i className="fas fa-sort-down pulse text-primary" title="scroll down!"></i></h5>
+        <h5><i className="fas fa-sort-down pulse text-primary mt-n2" title="scroll down!"></i></h5>
       </div>
     )
   }
