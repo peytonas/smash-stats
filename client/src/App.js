@@ -4,8 +4,8 @@ import './App.css';
 import './SNES-bootstrap.css'
 import Links from './Components/Links'
 import Navbar from './Components/Navbar'
-import Home from './Components/Home'
-import CharacterPage from './Components/CharacterPage';
+import Home from './Views/Home'
+import CharacterPage from './Views/CharacterPage';
 
 class App extends Component {
   render() {

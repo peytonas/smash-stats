@@ -76,13 +76,13 @@ class CharacterPage extends Component {
         </div>
         <div className="row justify-content-center align-items-center text-center">
           <div className="col-1 text-danger">
-            <i className="fas fa-caret-left pulse" onClick={this.cycleDown.bind(this)}></i>
+            <i className="fas fa-caret-left pulse pointer" onClick={this.cycleDown.bind(this)}></i>
           </div>
           <div className="col-6">
             <img className="large-img" alt="character" src={this.state.currentSkin || this.state.character.imgUrl1} />
           </div>
           <div className="col-1 text-danger">
-            <i className="fas fa-caret-right pulse" onClick={this.cycleUp.bind(this)}></i>
+            <i className="fas fa-caret-right pulse pointer" onClick={this.cycleUp.bind(this)}></i>
           </div>
         </div>
       </div>

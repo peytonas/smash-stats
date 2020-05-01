@@ -3,9 +3,13 @@
   width: auto;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 767px){
   .large-img{
-  height: 100px;
+  height: 250px;
   width: auto;
 }
 }
