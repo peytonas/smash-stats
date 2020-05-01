@@ -24,6 +24,11 @@
   color: #ffc107;
 }
 
+.border:active{
+  transform: translateY(2px);
+  background-color: #211a21
+}
+
 .border-green{
   border: 2px solid #28a745;
 }
@@ -72,6 +77,11 @@ h6{
 
 .text-yellow{
   color: #ffc107;
+}
+
+.border:active{
+  transform: translateY(2px);
+  background-color: #211a21
 }
 
 .border-green{
