@@ -52,7 +52,7 @@ class CharacterCard extends Component {
       Edge Attack: ${characterStats.edgeAttack}</br>
       Final Smash: ${characterStats.finalSmash}
       </span >`,
-      imageUrl: characterStats.imgUrl,
+      imageUrl: characterStats.iconUrl,
       imageAlt: "character icon",
       background: "#211a21",
       backdrop: "rgba(33,26,33,0.5)",
