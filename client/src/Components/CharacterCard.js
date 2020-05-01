@@ -61,12 +61,12 @@ class CharacterCard extends Component {
     });
   }
   render() {
-    const { name, imgUrl } = this.props.character
+    const { name, iconUrl } = this.props.character
     const characterNumber = Math.floor(this.props.character.characterNumber)
 
     return (
       <div className="cards text-danger" style={{ order: characterNumber }} onClick={this.viewStats.bind(this, this.props.character)}>
-        <img src={imgUrl} alt="character icon" className="mt-1" />
+        <img src={iconUrl} alt="character icon" className="mt-1" />
         <p className="cardName mt-1"><b>{name}</b></p>
       </div>
     )

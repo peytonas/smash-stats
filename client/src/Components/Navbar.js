@@ -5,8 +5,8 @@ import './Nav.css';
 function NavBar() {
 
   return (
-    <div className="row justify-content-between bg-primary fixed-top text-center text-md-left">
-      <div className="col col-md-3">
+    <div className="row justify-content-left bg-primary fixed-top text-center text-md-left">
+      <div className="col col-md-1">
         <nav className="bg-primary">
           <Link className="text-dark ml-1" to="/">
             Home

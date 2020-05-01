@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../SNES-bootstrap.css'
+import './CharacterPage.css'
 import Axios from 'axios'
 
 class CharacterPage extends Component {
@@ -9,7 +10,6 @@ class CharacterPage extends Component {
   };
 
   async componentDidMount() {
-    console.log("mounted");
     await this.getCharacter();
   }
 
@@ -25,8 +25,15 @@ class CharacterPage extends Component {
   render() {
     const character = this.state.character
     return (
-      <div className="row justify-content-center">
-        <h1 className="text-danger mt-4">{character.name}</h1>
+      <div>
+        <div className="row justify-content-center">
+          <h1 className="text-danger mt-4"><b>{character.name}</b></h1>
+        </div>
+        <div className="row justify-content-center text-center">
+          <div className="col">
+            <img className="large-img" src={character.imgUrl} />
+          </div>
+        </div>
       </div>
     )
   }
