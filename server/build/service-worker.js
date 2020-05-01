@@ -19,10 +19,12 @@ importScripts(
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
+    // @ts-ignore
     self.skipWaiting();
   }
 });
 
+// @ts-ignore
 workbox.core.clientsClaim();
 
 /**
@@ -30,10 +32,13 @@ workbox.core.clientsClaim();
  * requests for URLs in the manifest.
  * See https://goo.gl/S9QRab
  */
+// @ts-ignore
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
+// @ts-ignore
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
+// @ts-ignore
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/index.html"), {
-  
-  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
+
+  blacklist: [/^\/_/, /\/[^\/?]+\.[^\/]+$/],
 });
