@@ -2,3 +2,10 @@
   height: 500px;
   width: auto;
 }
+
+@media only screen and (max-width: 767px){
+  .large-img{
+  height: 150px;
+  width: auto;
+}
+}
