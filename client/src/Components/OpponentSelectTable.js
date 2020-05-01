@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import OpponentName from './OpponentName'
 
-class OpponentSelect extends Component {
+class OpponentSelectTable extends Component {
   sendName = (characterChoice) => {
     this.props.characterPasser(characterChoice)
   }
@@ -15,8 +15,8 @@ class OpponentSelect extends Component {
   }
 }
 
-OpponentSelect.propTypes = {
+OpponentSelectTable.propTypes = {
   characters: PropTypes.array.isRequired
 }
 
-export default OpponentSelect
+export default OpponentSelectTable

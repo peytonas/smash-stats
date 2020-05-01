@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CharacterCard from './CharacterCard'
 import PropTypes from 'prop-types'
 
-class CharacterCards extends Component {
+class CharacterCardColumn extends Component {
   render() {
     return this.props.characters.map((character) => (
       <CharacterCard
@@ -13,8 +13,8 @@ class CharacterCards extends Component {
   }
 }
 
-CharacterCards.propTypes = {
+CharacterCardColumn.propTypes = {
   characters: PropTypes.array.isRequired
 }
 
-export default CharacterCards;
+export default CharacterCardColumn;

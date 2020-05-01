@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import PlayerName from './PlayerName'
 
-class PlayerSelect extends Component {
+class PlayerSelectTable extends Component {
   sendName = (characterChoice) => {
     this.props.characterPasser(characterChoice)
   }
@@ -17,8 +17,8 @@ class PlayerSelect extends Component {
   }
 }
 
-PlayerSelect.propTypes = {
+PlayerSelectTable.propTypes = {
   characters: PropTypes.array.isRequired
 }
 
-export default PlayerSelect
+export default PlayerSelectTable

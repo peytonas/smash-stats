@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Links extends Component {
+class Footer extends Component {
 
   render() {
     return (
@@ -15,4 +15,4 @@ class Links extends Component {
   }
 }
 
-export default Links
+export default Footer

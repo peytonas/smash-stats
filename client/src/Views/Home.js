@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import swal from 'sweetalert2'
-import '../App.css';
 import '../SNES-bootstrap.css'
-import CharacterCards from '../Components/CharacterCards'
-import PlayerSelect from '../Components/PlayerSelect'
-import OpponentSelect from '../Components/OpponentSelect'
+import CharacterCardColumn from '../Components/CharacterCardColumn'
+import PlayerSelectTable from '../Components/PlayerSelectTable'
+import OpponentSelectTable from '../Components/OpponentSelectTable'
 import Matchup from '../Components/Matchup'
-import Links from '../Components/Links'
 
 class Home extends Component {
   state = {
@@ -97,11 +95,11 @@ class Home extends Component {
           <div className="col-4 col-md-2 text-center text-md-left">
             <p className="text-primary">Player:</p>
             <div className="name-scroll bg-info rounded flexBox mt-n2">
-              <PlayerSelect characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} className={"flexBox"} />
+              <PlayerSelectTable characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} className={"flexBox"} />
             </div>
             <p className="mt-1 text-primary">Opponent:</p>
             <div className="name-scroll bg-info rounded flexBox mt-n2">
-              <OpponentSelect characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} className={"flexBox"} />
+              <OpponentSelectTable characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} className={"flexBox"} />
             </div>
             <div className="ml-4 ml-md-0">
               <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
@@ -111,14 +109,13 @@ class Home extends Component {
           <div className="col-4 col-md-2 text-center text-danger">
             <h6 className="text-danger text-center text-md-left"><b>Character Stats:</b></h6>
             <div className="card-scroll flexBox">
-              <CharacterCards characters={this.state.characters} className={"flexBox"} />
+              <CharacterCardColumn characters={this.state.characters} className={"flexBox"} />
             </div>
             <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
         </div>
         <div className="row justify-content-left text-center text-md-left">
         </div>
-        <Links />
       </div>
     )
   }
