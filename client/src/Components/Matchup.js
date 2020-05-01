@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import MatchupStats from './MatchupStats'
 import PlayerStats from './PlayerStats'
 import './Matchup.css'
@@ -14,14 +15,22 @@ class Matchup extends Component {
         <div className="row justify-content-between text-primary">
           <div className="col col-md-4 text-md-center">
             <h6><b>{player.name}</b></h6>
-            {player.name && <img src={player.imgUrl} alt="player icon" className="mt-n1" />}
+            <nav>
+              <Link to={`/character/${player.id}`}>
+                {player.name && <img src={player.imgUrl} alt="player icon" className="mt-n1" />}
+              </Link>
+            </nav>
           </div>
           <div className="col col-md-2 text-center align-self-center">
             <h1 className="vs text-danger">vs</h1>
           </div>
           <div className="col col-md-4 text-center">
             <h6><b>{opponent.name}</b></h6>
-            {opponent.name && <img src={opponent.imgUrl} alt="opponent icon" className="mt-n1" />}
+            <nav>
+              <Link to={`/character/${opponent.id}`}>
+                {opponent.name && <img src={opponent.imgUrl} alt="opponent icon" className="mt-n1" />}
+              </Link>
+            </nav>
           </div>
         </div>
         <div className="row justify-content-between text-primary stat-scroll">
@@ -35,4 +44,4 @@ class Matchup extends Component {
   }
 }
 
-export default Matchup
+export default withRouter(Matchup)

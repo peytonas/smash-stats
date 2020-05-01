@@ -5,15 +5,15 @@ import './Nav.css';
 function NavBar() {
 
   return (
-    <footer className="row justify-content-between bg-primary text-center text-md-left">
+    <div className="row justify-content-between bg-primary fixed-top text-center text-md-left">
       <div className="col col-md-3">
         <nav className="bg-primary">
-          <Link className="text-dark" to="/">
+          <Link className="text-dark ml-1" to="/">
             Home
           </Link>
         </nav>
       </div>
-    </footer>
+    </div>
   );
 }
 

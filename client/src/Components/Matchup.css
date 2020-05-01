@@ -53,6 +53,10 @@ h6{
   font-size: .7rem;
 }
 
+.bg-transparent{
+  background-color: transparent;
+}
+
 .stat-size{
   font-size: 7px;
 }
