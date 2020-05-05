@@ -79,8 +79,8 @@ class CharacterPageImage extends Component {
             <i className="fas fa-caret-left pulse pointer" onClick={this.cycleDown.bind(this)}></i>
           </div>
           <div className="col col-md-4">
-            <img className="small-img" alt="character" src={this.state.character.iconUrl} />
-            <img className="large-img" alt="character" src={this.state.currentSkin || this.state.character.imgUrl1} />
+            <img className="small-img" alt="character icon" src={character.iconUrl} />
+            <img className="large-img" alt="character image" src={this.state.currentSkin || this.state.character.imgUrl1} />
           </div>
           <div className="col col-md-1 text-danger">
             <i className="fas fa-caret-right pulse pointer" onClick={this.cycleUp.bind(this)}></i>
