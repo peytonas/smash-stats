@@ -11,11 +11,7 @@ class CharacterPageImage extends Component {
     currentSkin: null
   };
 
-  async componentDidMount() {
-    await this.getCharacter();
-  }
-
-  async getCharacter() {
+  componentDidMount() {
     const characterId = this.props.character
     Axios.get(`http://localhost:3000/api/characters/${characterId}`).then(res => {
       this.setState({
@@ -80,7 +76,7 @@ class CharacterPageImage extends Component {
           </div>
           <div className="col col-md-4">
             <img className="small-img" alt="character icon" src={character.iconUrl} />
-            <img className="large-img" alt="character image" src={this.state.currentSkin || this.state.character.imgUrl1} />
+            <img className="large-img" alt="character" src={this.state.currentSkin || this.state.character.imgUrl1} />
           </div>
           <div className="col col-md-1 text-danger">
             <i className="fas fa-caret-right pulse pointer" onClick={this.cycleUp.bind(this)}></i>

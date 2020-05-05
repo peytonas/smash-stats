@@ -15,7 +15,7 @@ class PlayerChart extends Component {
 
   averagePlayerScore = 0
 
-  async getCharacter() {
+  componentDidMount() {
     const characterId = this.props.character
     Axios.get(`http://localhost:3000/api/characters/${characterId}`).then(res => {
       this.setState({
@@ -77,9 +77,6 @@ class PlayerChart extends Component {
   //   return 1;
   // }
 
-  async componentDidMount() {
-    await this.getCharacter()
-  }
   render() {
     return (
       <div className="text-primary row justify-content-left text-center text-md-left">
