@@ -1,3 +1,8 @@
+@media only screen and (min-width: 768px){
+.small-img{
+  display: none;
+}
+
 .large-img{
   height: 400px;
   width: auto;
@@ -6,10 +11,20 @@
 .pointer {
   cursor: pointer;
 }
+}
 
 @media only screen and (max-width: 767px){
+  .small-img{
+  height: 100px;
+  width: auto;
+}
   .large-img{
+  display: none;
   height: 250px;
   width: auto;
 }
+  .fas{
+    display: none;
+  }
+
 }
