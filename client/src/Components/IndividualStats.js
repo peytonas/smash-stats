@@ -13,8 +13,6 @@ class PlayerChart extends Component {
     averagePlayerScore: 0
   }
 
-  averagePlayerScore = 0
-
   componentDidMount() {
     const characterId = this.props.character
     let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
@@ -27,12 +25,23 @@ class PlayerChart extends Component {
       this.setState({
         character: res.data,
       },
-        this.mountedFunctions
+        this.playerFunctions
       );
     })
+    api.get(`/characters`)
+      .then(res => {
+        this.setState({ characters: res.data },
+          this.averageFunctions
+        );
+      })
   }
 
-  mountedFunctions() {
+  averageFunctions() {
+    this.averageScoreBuilder()
+    this.lagAverageCalculator()
+  }
+
+  playerFunctions() {
     this.playerScoreBuilder()
     this.playerLagCalculator()
   }
@@ -42,27 +51,28 @@ class PlayerChart extends Component {
     this.setState({ playerScore: score })
   }
 
-  // averageScoreBuilder() {
-  //   for (var c = 0; c <= this.state.characters.length; c++) {
-  //     this.averagePlayerScore += ((this.state.characters[c].walkSpeed + this.state.characters[c].runSpeed + this.state.characters[c].dashSpeed + this.state.characters[c].airSpeed + this.state.characters[c].fallingSpeed + this.state.characters[c].weight + this.state.characters[c].neutral + this.state.characters[c].forwardTilt + this.state.characters[c].upTilt + this.state.characters[c].downTilt + this.state.characters[c].dashAttack + this.state.characters[c].forwardSmash + this.state.characters[c].upSmash + this.state.characters[c].downSmash + this.state.characters[c].nair + this.state.characters[c].fair + this.state.characters[c].bair + this.state.characters[c].uair + this.state.characters[c].dair + this.state.characters[c].zair + this.state.characters[c].pummel + this.state.characters[c].forwardThrow + this.state.characters[c].backThrow + this.state.characters[c].upThrow + this.state.characters[c].downThrow + this.state.characters[c].floorAttackFront + this.state.characters[c].floorAttackBack + this.state.characters[c].floorAttackTrip + this.state.characters[c].edgeAttack + this.state.characters[c].neutralSpecial + this.state.characters[c].sideSpecial + this.state.characters[c].upSpecial + this.state.characters[c].downSpecial) / 33)
-  //   }
-  //   this.setState({ averagePlayerScore: this.averagePlayerScore })
-  // }
-
   playerLagCalculator() {
     var lag = ((this.state.character.forwardRollLag + this.state.character.backRollLag + this.state.character.spotDodgeLag + this.state.character.airDodgeLag) / 5)
     this.setState({ playerLag: lag });
   }
 
-  // lagAverageCalculator() {
-  //   var lag = 0
-  //   for (var c in this.characters) {
-  //     lag += Math.ceil((this.characters[c].forwardRollLag + this.characters[c].backRollLag + this.characters[c].spotDodgeStart + this.characters[c].spotDodgeLag + this.characters[c].airDodgeLag) / 5)
-  //   }
-  //   lag = Math.ceil(lag / this.characters.length)
-  //   this.lagAverage = lag
-  //   console.log(this.lagAverage);
-  // }
+  averageScoreBuilder() {
+    var score = 0
+    for (var c in this.state.characters) {
+      score += (this.state.characters[c].walkSpeed + this.state.characters[c].runSpeed + this.state.characters[c].dashSpeed + this.state.characters[c].airSpeed + this.state.characters[c].fallingSpeed + this.state.characters[c].weight + this.state.characters[c].neutral + this.state.characters[c].forwardTilt + this.state.characters[c].upTilt + this.state.characters[c].downTilt + this.state.characters[c].dashAttack + this.state.characters[c].forwardSmash + this.state.characters[c].upSmash + this.state.characters[c].downSmash + this.state.characters[c].nair + this.state.characters[c].fair + this.state.characters[c].bair + this.state.characters[c].uair + this.state.characters[c].dair + this.state.characters[c].zair + this.state.characters[c].pummel + this.state.characters[c].forwardThrow + this.state.characters[c].backThrow + this.state.characters[c].upThrow + this.state.characters[c].downThrow + this.state.characters[c].floorAttackFront + this.state.characters[c].floorAttackBack + this.state.characters[c].floorAttackTrip + this.state.characters[c].edgeAttack + this.state.characters[c].neutralSpecial + this.state.characters[c].sideSpecial + this.state.characters[c].upSpecial + this.state.characters[c].downSpecial) / 33
+    }
+    score = score / this.state.characters.length
+    this.setState({ averagePlayerScore: score })
+  }
+
+  lagAverageCalculator() {
+    var lag = 0
+    for (var c in this.state.characters) {
+      lag += (this.state.characters[c].forwardRollLag + this.state.characters[c].backRollLag + this.state.characters[c].spotDodgeStart + this.state.characters[c].spotDodgeLag + this.state.characters[c].airDodgeLag) / 5
+    }
+    lag = lag / this.state.characters.length
+    this.setState({ lagAverage: Math.floor(lag) })
+  }
 
   // Returns the percentile of the given value in a sorted numeric array.
   // percentRank(arr, v) {
@@ -85,9 +95,9 @@ class PlayerChart extends Component {
   render() {
     return (
       <div className="text-primary row justify-content-left text-center text-md-left">
-        <div className="col col-md-4">
-          <h3>Average FAF: {Math.floor(this.state.playerLag)}</h3>
-          <h4>Damage per Attack: {this.state.playerScore.toFixed(2)}/{this.state.averagePlayerScore.toFixed(2)}</h4>
+        <div className="col col-md-6">
+          <h5>{this.state.character.name} Average FAF/Fighter Average: {Math.floor(this.state.playerLag)}/{this.state.lagAverage}</h5>
+          <h5>{this.state.character.name} Damage per Attack/Fighter Average: {this.state.playerScore.toFixed(2)}/{this.state.averagePlayerScore.toFixed(2)}</h5>
         </div>
       </div>
     )
