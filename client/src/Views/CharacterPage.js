@@ -19,8 +19,6 @@ class CharacterPage extends Component {
     api.get(`/characters`)
       .then(res => {
         this.setState({ characters: res.data });
-      }).catch(function (error) {
-        console.log(error);
       })
   }
 

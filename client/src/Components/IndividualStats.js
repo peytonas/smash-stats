@@ -17,7 +17,13 @@ class PlayerChart extends Component {
 
   componentDidMount() {
     const characterId = this.props.character
-    Axios.get(`http://localhost:3000/api/characters/${characterId}`).then(res => {
+    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
+    let api = Axios.create({
+      baseURL: base + 'api/',
+      timeout: 3000,
+      withCredentials: true
+    })
+    api.get(`http://localhost:3000/api/characters/${characterId}`).then(res => {
       this.setState({
         character: res.data,
       },
@@ -29,7 +35,6 @@ class PlayerChart extends Component {
   mountedFunctions() {
     this.playerScoreBuilder()
     this.playerLagCalculator()
-    this.playerScoreBuilder()
   }
 
   playerScoreBuilder() {
