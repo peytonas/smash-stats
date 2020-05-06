@@ -106,9 +106,8 @@ class GameChart extends Component {
   }
   render() {
     return (
-      <div className="text-primary">
+      <div className="text-primary col col-md-4">
         <canvas
-          // className="w-md-50 h-md-50"
           id="myChart"
           ref={this.chartRef}
         />

@@ -30,11 +30,11 @@ class PlayerChart extends Component {
     new Chart(myChartRef, {
       type: "pie",
       data: {
-        labels: ["Player Percentile", "Opponent Percentile"],
+        labels: ["Player Average", "Roster Average"],
         datasets: [
           {
             label: "games",
-            data: [1, 2],
+            data: [1, 4],
             backgroundColor: [
               "#000000", "#de4337"
             ],
@@ -47,9 +47,10 @@ class PlayerChart extends Component {
       options: {
         title: {
           display: true,
-          text: "Player Percentile",
+          text: "Player vs Roster",
           fontColor: "#b5b6e4"
         },
+        responsive: true,
         legend: {
           display: false
         }
@@ -58,7 +59,7 @@ class PlayerChart extends Component {
   }
   render() {
     return (
-      <div className="text-primary">
+      <div className="col col-md-3 mt-n5">
         <canvas
           id="myChart"
           ref={this.chartRef}
