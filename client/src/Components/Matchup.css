@@ -11,6 +11,10 @@
   font-weight: bold;
 }
 
+.smaller-text{
+  font-size: .55rem;
+}
+
 .stat-scroll{
   max-height: 54vh;
   overflow: scroll;
