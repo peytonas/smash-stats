@@ -33,51 +33,55 @@ const _schema = new Schema(
 
     neutral: { type: Number, required: true },
     neutralStartup: { type: Number, required: false },
-    neutralBaseKnockback: { type: Number, required: false },
+    neutralLag: { type: Number, required: false },
 
     upTilt: { type: Number, required: true },
     upTiltStartup: { type: Number, required: false },
     upTiltLag: { type: Number, required: false },
-    upTiltBaseKnockback: { type: Number, required: false },
 
     downTilt: { type: Number, required: true },
     downTiltStartup: { type: Number, required: false },
     downTiltLag: { type: Number, required: false },
-    downTiltBaseKnockback: { type: Number, required: false },
-
 
     forwardTilt: { type: Number, required: true },
     forwardTiltStartup: { type: Number, required: false },
     forwardTiltLag: { type: Number, required: false },
-    forwardTiltBaseKnockback: { type: Number, required: false },
 
     dashAttack: { type: Number, required: true },
+    dashAttackStartup: { type: Number, required: true },
+    dashAttackLag: { type: Number, required: true },
 
     upSmash: { type: Number, required: true },
     downSmash: { type: Number, required: true },
     forwardSmash: { type: Number, required: true },
 
     uair: { type: Number, required: true },
+    uairStartup: { type: Number, required: true },
     uairLandingLag: { type: Number, required: false },
     uairAutoCancel: { type: Number, required: false },
 
     nair: { type: Number, required: true },
+    nairStartup: { type: Number, required: true },
     nairLandingLag: { type: Number, required: false },
     nairAutoCancel: { type: Number, required: false },
 
     fair: { type: Number, required: true },
+    fairStartup: { type: Number, required: true },
     fairLandingLag: { type: Number, required: false },
     fairAutoCancel: { type: Number, required: false },
 
     dair: { type: Number, required: true },
+    dairStartup: { type: Number, required: true },
     dairLandingLag: { type: Number, required: false },
     dairAutoCancel: { type: Number, required: false },
 
     bair: { type: Number, required: true },
+    bairStartup: { type: Number, required: true },
     bairLandingLag: { type: Number, required: false },
     bairAutoCancel: { type: Number, required: false },
 
     zair: { type: Number, required: false },
+    zairStartup: { type: Number, required: true },
     zairLandingLag: { type: Number, required: false },
     zairAutoCancel: { type: Number, required: false },
 
@@ -107,22 +111,18 @@ const _schema = new Schema(
 
     neutralSpecial: { type: Number, required: true },
     neutralSpecialStartup: { type: Number, required: true },
-    neutralSpecialBaseKnockback: { type: Number, required: false },
     neutralSpecialLag: { type: Number, required: true },
 
     sideSpecial: { type: Number, required: true },
     sideSpecialStartup: { type: Number, required: true },
-    sideSpecialBaseKnockback: { type: Number, required: false },
     sideSpecialLag: { type: Number, required: true },
 
     upSpecial: { type: Number, required: true },
     upSpecialStartup: { type: Number, required: true },
-    upSpecialBaseKnockback: { type: Number, required: false },
     upSpecialLag: { type: Number, required: true },
 
     downSpecial: { type: Number, required: true },
     downSpecialStartup: { type: Number, required: true },
-    downSpecialBaseKnockback: { type: Number, required: false },
     downSpecialLag: { type: Number, required: true },
 
     finalSmash: { type: Number, required: true }
