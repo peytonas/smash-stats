@@ -18,22 +18,27 @@ const _schema = new Schema(
     imgUrl7: { type: String, required: true },
     imgUrl8: { type: String, required: true },
 
-    walkSpeed: { type: Number, required: true },
-    runSpeed: { type: Number, required: true },
-    dashSpeed: { type: Number, required: true },
-    airSpeed: { type: Number, required: true },
-    fallingSpeed: { type: Number, required: true },
     weight: { type: Number, required: true },
-
-    forwardRollLag: { type: Number, required: true },
-    backRollLag: { type: Number, required: true },
-    spotDodgeStart: { type: Number, required: true },
-    spotDodgeLag: { type: Number, required: true },
-    airDodgeLag: { type: Number, required: true },
 
     neutral: { type: Number, required: true },
     neutralStartup: { type: Number, required: false },
     neutralLag: { type: Number, required: false },
+
+    neutralSpecial: { type: Number, required: true },
+    neutralSpecialStartup: { type: Number, required: true },
+    neutralSpecialLag: { type: Number, required: true },
+
+    sideSpecial: { type: Number, required: true },
+    sideSpecialStartup: { type: Number, required: true },
+    sideSpecialLag: { type: Number, required: true },
+
+    upSpecial: { type: Number, required: true },
+    upSpecialStartup: { type: Number, required: true },
+    upSpecialLag: { type: Number, required: true },
+
+    downSpecial: { type: Number, required: true },
+    downSpecialStartup: { type: Number, required: true },
+    downSpecialLag: { type: Number, required: true },
 
     upTilt: { type: Number, required: true },
     upTiltStartup: { type: Number, required: false },
@@ -55,25 +60,25 @@ const _schema = new Schema(
     downSmash: { type: Number, required: true },
     forwardSmash: { type: Number, required: true },
 
-    uair: { type: Number, required: true },
-    uairStartup: { type: Number, required: true },
-    uairLandingLag: { type: Number, required: false },
-    uairAutoCancel: { type: Number, required: false },
-
     nair: { type: Number, required: true },
     nairStartup: { type: Number, required: true },
     nairLandingLag: { type: Number, required: false },
     nairAutoCancel: { type: Number, required: false },
 
-    fair: { type: Number, required: true },
-    fairStartup: { type: Number, required: true },
-    fairLandingLag: { type: Number, required: false },
-    fairAutoCancel: { type: Number, required: false },
+    uair: { type: Number, required: true },
+    uairStartup: { type: Number, required: true },
+    uairLandingLag: { type: Number, required: false },
+    uairAutoCancel: { type: Number, required: false },
 
     dair: { type: Number, required: true },
     dairStartup: { type: Number, required: true },
     dairLandingLag: { type: Number, required: false },
     dairAutoCancel: { type: Number, required: false },
+
+    fair: { type: Number, required: true },
+    fairStartup: { type: Number, required: true },
+    fairLandingLag: { type: Number, required: false },
+    fairAutoCancel: { type: Number, required: false },
 
     bair: { type: Number, required: true },
     bairStartup: { type: Number, required: true },
@@ -109,23 +114,19 @@ const _schema = new Schema(
     floorAttackTrip: { type: Number, required: true },
     edgeAttack: { type: Number, required: true },
 
-    neutralSpecial: { type: Number, required: true },
-    neutralSpecialStartup: { type: Number, required: true },
-    neutralSpecialLag: { type: Number, required: true },
+    finalSmash: { type: Number, required: true },
 
-    sideSpecial: { type: Number, required: true },
-    sideSpecialStartup: { type: Number, required: true },
-    sideSpecialLag: { type: Number, required: true },
+    walkSpeed: { type: Number, required: true },
+    runSpeed: { type: Number, required: true },
+    dashSpeed: { type: Number, required: true },
+    airSpeed: { type: Number, required: true },
+    fallingSpeed: { type: Number, required: true },
 
-    upSpecial: { type: Number, required: true },
-    upSpecialStartup: { type: Number, required: true },
-    upSpecialLag: { type: Number, required: true },
-
-    downSpecial: { type: Number, required: true },
-    downSpecialStartup: { type: Number, required: true },
-    downSpecialLag: { type: Number, required: true },
-
-    finalSmash: { type: Number, required: true }
+    forwardRollLag: { type: Number, required: true },
+    backRollLag: { type: Number, required: true },
+    spotDodgeStart: { type: Number, required: true },
+    spotDodgeLag: { type: Number, required: true },
+    airDodgeLag: { type: Number, required: true }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
