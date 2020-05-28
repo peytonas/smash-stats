@@ -65,9 +65,21 @@ class OpponentStats extends Component {
 
           {opponent.name && <p className={opponent.upSmash === player.upSmash ? "text-yellow border-yellow" : opponent.upSmash > player.upSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSmash}</p>}
 
+          {opponent.name && <p className={opponent.upSmashStartup === player.upSmashStartup ? "text-yellow border-yellow" : opponent.upSmashStartup > player.upSmashStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSmashStartup}</p>}
+
+          {opponent.name && <p className={opponent.upSmashLag === player.upSmashLag ? "text-yellow border-yellow" : opponent.upSmashLag > player.upSmashLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSmashLag}</p>}
+
           {opponent.name && <p className={opponent.downSmash === player.downSmash ? "text-yellow border-yellow" : opponent.downSmash > player.downSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSmash}</p>}
 
+          {opponent.name && <p className={opponent.downSmashStartup === player.downSmashStartup ? "text-yellow border-yellow" : opponent.downSmashStartup > player.downSmashStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSmashStartup}</p>}
+
+          {opponent.name && <p className={opponent.downSmashLag === player.downSmashLag ? "text-yellow border-yellow" : opponent.downSmashLag > player.downSmashLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSmashLag}</p>}
+
           {opponent.name && <p className={opponent.forwardSmash === player.forwardSmash ? "text-yellow border-yellow" : opponent.forwardSmash > player.forwardSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmash}</p>}
+
+          {opponent.name && <p className={opponent.forwardSmashStartup === player.forwardSmashStartup ? "text-yellow border-yellow" : opponent.forwardSmashStartup > player.forwardSmashStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmashStartup}</p>}
+
+          {opponent.name && <p className={opponent.forwardSmashLag === player.forwardSmashLag ? "text-yellow border-yellow" : opponent.forwardSmashLag > player.forwardSmashLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmashLag}</p>}
 
           {opponent.name && <p className={opponent.nair === player.nair ? "text-yellow border-yellow" : opponent.nair > player.nair ? "text-green border-green" : "text-danger border-danger"}>{opponent.nair}</p>}
 

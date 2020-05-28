@@ -57,8 +57,16 @@ const _schema = new Schema(
     dashAttackLag: { type: Number, required: true },
 
     upSmash: { type: Number, required: true },
+    upSmashStartup: { type: Number, required: true },
+    upSmashLag: { type: Number, required: true },
+
     downSmash: { type: Number, required: true },
+    downSmashStartup: { type: Number, required: true },
+    downSmashLag: { type: Number, required: true },
+
     forwardSmash: { type: Number, required: true },
+    forwardSmashStartup: { type: Number, required: true },
+    forwardSmashLag: { type: Number, required: true },
 
     nair: { type: Number, required: true },
     nairStartup: { type: Number, required: true },
