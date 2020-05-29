@@ -70,36 +70,43 @@ const _schema = new Schema(
 
     nair: { type: Number, required: true },
     nairStartup: { type: Number, required: true },
+    nairLag: { type: Number, required: true },
     nairLandingLag: { type: Number, required: false },
     nairAutoCancel: { type: Number, required: false },
 
     uair: { type: Number, required: true },
     uairStartup: { type: Number, required: true },
+    uairLag: { type: Number, required: true },
     uairLandingLag: { type: Number, required: false },
     uairAutoCancel: { type: Number, required: false },
 
     dair: { type: Number, required: true },
     dairStartup: { type: Number, required: true },
+    dairLag: { type: Number, required: true },
     dairLandingLag: { type: Number, required: false },
     dairAutoCancel: { type: Number, required: false },
 
     fair: { type: Number, required: true },
     fairStartup: { type: Number, required: true },
+    fairLag: { type: Number, required: true },
     fairLandingLag: { type: Number, required: false },
     fairAutoCancel: { type: Number, required: false },
 
     bair: { type: Number, required: true },
     bairStartup: { type: Number, required: true },
+    bairLag: { type: Number, required: true },
     bairLandingLag: { type: Number, required: false },
     bairAutoCancel: { type: Number, required: false },
 
     zair: { type: Number, required: false },
     zairStartup: { type: Number, required: true },
+    zairLag: { type: Number, required: true },
     zairLandingLag: { type: Number, required: false },
     zairAutoCancel: { type: Number, required: false },
 
     pummel: { type: Number, required: true },
     pummelStartup: { type: Number, required: true },
+    pummelLag: { type: Number, required: true },
 
     forwardThrow: { type: Number, required: true },
     forwardThrowStartup: { type: Number, required: false },

@@ -85,6 +85,8 @@ class PlayerStats extends Component {
 
           {player.name && <p className={player.nairStartup === opponent.nairStartup ? "text-yellow border-yellow" : player.nairStartup > opponent.nairStartup ? "text-green border-green" : "text-danger border-danger"}>{player.nairStartup}</p>}
 
+          {player.name && <p className={player.nairLag === opponent.nairLag ? "text-yellow border-yellow" : player.nairLag > opponent.nairLag ? "text-green border-green" : "text-danger border-danger"}>{player.nairLag}</p>}
+
           {player.name && <p className={player.nairLandingLag === opponent.nairLandingLag ? "text-yellow border-yellow" : player.nairLandingLag > opponent.nairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{player.nairLandingLag}</p>}
 
           {player.name && <p className={player.nairAutoCancel === opponent.nairAutoCancel ? "text-yellow border-yellow" : player.nairAutoCancel > opponent.nairAutoCancel ? "text-green border-green" : "text-danger border-danger"}>{player.nairAutoCancel}</p>}
@@ -92,6 +94,8 @@ class PlayerStats extends Component {
           {player.name && <p className={player.uair === opponent.uair ? "text-yellow border-yellow" : player.uair > opponent.uair ? "text-green border-green" : "text-danger border-danger"}>{player.uair}</p>}
 
           {player.name && <p className={player.uairStartup === opponent.uairStartup ? "text-yellow border-yellow" : player.uairStartup > opponent.uairStartup ? "text-green border-green" : "text-danger border-danger"}>{player.uairStartup}</p>}
+
+          {player.name && <p className={player.uairLag === opponent.uairLag ? "text-yellow border-yellow" : player.uairLag > opponent.uairLag ? "text-green border-green" : "text-danger border-danger"}>{player.uairLag}</p>}
 
           {player.name && <p className={player.uairLandingLag === opponent.uairLandingLag ? "text-yellow border-yellow" : player.uairLandingLag > opponent.uairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{player.uairLandingLag}</p>}
 
@@ -101,6 +105,8 @@ class PlayerStats extends Component {
 
           {player.name && <p className={player.dairStartup === opponent.dairStartup ? "text-yellow border-yellow" : player.dairStartup > opponent.dairStartup ? "text-green border-green" : "text-danger border-danger"}>{player.dairStartup}</p>}
 
+          {player.name && <p className={player.dairLag === opponent.dairLag ? "text-yellow border-yellow" : player.dairLag > opponent.dairLag ? "text-green border-green" : "text-danger border-danger"}>{player.dairLag}</p>}
+
           {player.name && <p className={player.dairLandingLag === opponent.dairLandingLag ? "text-yellow border-yellow" : player.dairLandingLag > opponent.dairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{player.dairLandingLag}</p>}
 
           {player.name && <p className={player.dairAutoCancel === opponent.dairAutoCancel ? "text-yellow border-yellow" : player.dairAutoCancel > opponent.dairAutoCancel ? "text-green border-green" : "text-danger border-danger"}>{player.dairAutoCancel}</p>}
@@ -108,6 +114,8 @@ class PlayerStats extends Component {
           {player.name && <p className={player.fair === opponent.fair ? "text-yellow border-yellow" : player.fair > opponent.fair ? "text-green border-green" : "text-danger border-danger"}>{player.fair}</p>}
 
           {player.name && <p className={player.fairStartup === opponent.fairStartup ? "text-yellow border-yellow" : player.fairStartup > opponent.fairStartup ? "text-green border-green" : "text-danger border-danger"}>{player.fairStartup}</p>}
+
+          {player.name && <p className={player.fairLag === opponent.fairLag ? "text-yellow border-yellow" : player.fairLag > opponent.fairLag ? "text-green border-green" : "text-danger border-danger"}>{player.fairLag}</p>}
 
           {player.name && <p className={player.fairLandingLag === opponent.fairLandingLag ? "text-yellow border-yellow" : player.fairLandingLag > opponent.fairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{player.fairLandingLag}</p>}
 
@@ -117,6 +125,8 @@ class PlayerStats extends Component {
 
           {player.name && <p className={player.bairStartup === opponent.bairStartup ? "text-yellow border-yellow" : player.bairStartup > opponent.bairStartup ? "text-green border-green" : "text-danger border-danger"}>{player.bairStartup}</p>}
 
+          {player.name && <p className={player.bairLag === opponent.bairLag ? "text-yellow border-yellow" : player.bairLag > opponent.bairLag ? "text-green border-green" : "text-danger border-danger"}>{player.bairLag}</p>}
+
           {player.name && <p className={player.bairLandingLag === opponent.bairLandingLag ? "text-yellow border-yellow" : player.bairLandingLag > opponent.bairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{player.bairLandingLag}</p>}
 
           {player.name && <p className={player.bairAutoCancel === opponent.bairAutoCancel ? "text-yellow border-yellow" : player.bairAutoCancel > opponent.bairAutoCancel ? "text-green border-green" : "text-danger border-danger"}>{player.bairAutoCancel}</p>}
@@ -125,6 +135,8 @@ class PlayerStats extends Component {
 
           {player.name && <p className={player.zairStartup === opponent.zairStartup ? "text-yellow border-yellow" : player.zairStartup > opponent.zairStartup ? "text-green border-green" : "text-danger border-danger"}>{player.zairStartup}</p>}
 
+          {player.name && <p className={player.zairLag === opponent.zairLag ? "text-yellow border-yellow" : player.zairLag > opponent.zairLag ? "text-green border-green" : "text-danger border-danger"}>{player.zairLag}</p>}
+
           {player.name && <p className={player.zairLandingLag === opponent.zairLandingLag ? "text-yellow border-yellow" : player.zairLandingLag > opponent.zairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{player.zairLandingLag}</p>}
 
           {player.name && <p className={player.zairAutoCancel === opponent.zairAutoCancel ? "text-yellow border-yellow" : player.zairAutoCancel > opponent.zairAutoCancel ? "text-green border-green" : "text-danger border-danger"}>{player.zairAutoCancel}</p>}
@@ -132,6 +144,9 @@ class PlayerStats extends Component {
           {player.name && <p className={player.pummel === opponent.pummel ? "text-yellow border-yellow" : player.pummel > opponent.pummel ? "text-green border-green" : "text-danger border-danger"}>{player.pummel}</p>}
 
           {player.name && <p className={player.pummelStartup === opponent.pummelStartup ? "text-yellow border-yellow" : player.pummelStartup > opponent.pummelStartup ? "text-green border-green" : "text-danger border-danger"}>{player.pummelStartup}</p>}
+
+          {player.name && <p className={player.pummelLag === opponent.pummelLag ? "text-yellow border-yellow" : player.pummelLag > opponent.pummelLag ? "text-green border-green" : "text-danger border-danger"}>{player.pummelLag}</p>}
+
 
           {player.name && <p className={player.forwardThrow === opponent.forwardThrow ? "text-yellow border-yellow" : player.forwardThrow > opponent.forwardThrow ? "text-green border-green" : "text-danger border-danger"}>{player.forwardThrow}</p>}
 

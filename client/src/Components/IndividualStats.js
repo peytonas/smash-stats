@@ -63,7 +63,7 @@ class IndividualStats extends Component {
   }
 
   playerLagCalculator() {
-    var lag = ((this.state.character.forwardRollLag + this.state.character.backRollLag + this.state.character.spotDodgeLag + this.state.character.airDodgeLag) / 5)
+    var lag = ((this.state.character.forwardRollLag + this.state.character.backRollLag + this.state.character.spotDodgeLag + this.state.character.airDodgeLag + this.state.character.downThrowLag + this.state.character.upThrowLag + this.state.character.backThrowLag + this.state.character.forwardThrowLag + this.state.character.pummelLag + this.state.character.zairLag + this.state.character.bairLag + this.state.character.fairLag + this.state.character.dairLag + this.state.character.uairLag + this.state.character.nairLag + this.state.character.forwardSmashLag + this.state.character.downSmashLag + this.state.character.upSmashLag + this.state.character.dashAttackLag + this.state.character.forwardTiltLag + this.state.character.downTiltLag + this.state.character.upTiltLag + this.state.character.downSpecialLag + this.state.character.upSpecialLag + this.state.character.sideSpecialLag + this.state.character.neutralSpecialLag + this.state.character.neutralLag) / 27)
     this.setState({ characterLag: lag });
   }
 
@@ -78,6 +78,7 @@ class IndividualStats extends Component {
     this.setState({ rosterDmgAverage: score })
   }
 
+  //FIXME update once roster stats are all finalized
   lagAverageCalculator() {
     var lag = 0
     for (var c in this.state.roster) {
