@@ -139,8 +139,6 @@ class OpponentStats extends Component {
 
           {opponent.name && <p className={opponent.zairLandingLag === player.zairLandingLag ? "text-yellow border-yellow" : opponent.zairLandingLag > player.zairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.zairLandingLag}</p>}
 
-          {opponent.name && <p className={opponent.zairAutoCancel === player.zairAutoCancel ? "text-yellow border-yellow" : opponent.zairAutoCancel > player.zairAutoCancel ? "text-green border-green" : "text-danger border-danger"}>{opponent.zairAutoCancel}</p>}
-
           {opponent.name && <p className={opponent.pummel === player.pummel ? "text-yellow border-yellow" : opponent.pummel > player.pummel ? "text-green border-green" : "text-danger border-danger"}>{opponent.pummel}</p>}
 
           {opponent.name && <p className={opponent.pummelStartup === player.pummelStartup ? "text-yellow border-yellow" : opponent.pummelStartup > player.pummelStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.pummelStartup}</p>}

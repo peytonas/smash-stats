@@ -7,9 +7,9 @@ class MatchupStats extends Component {
       <div className="col col-md-3 text-center">
         <div className="stat-size mb-1">
           <p className="clear-border">Weight</p>
-          <p className="clear-border">Neutral Attack</p>
-          <p className="clear-border">Neutral SU</p>
-          <p className="clear-border">Neutral FAF</p>
+          <p className="clear-border">Jab</p>
+          <p className="clear-border">Jab SU</p>
+          <p className="clear-border">Jab FAF</p>
           <p className="clear-border">Neutral Special</p>
           <p className="clear-border">Neutral Special SU</p>
           <p className="clear-border smaller-text">Neutral Special FAF</p>
@@ -72,7 +72,6 @@ class MatchupStats extends Component {
           <p className="clear-border">ZAIR SU</p>
           <p className="clear-border">ZAIR FAF</p>
           <p className="clear-border">ZAIR LL</p>
-          <p className="clear-border">ZAIR AC</p>
           <p className="clear-border">Pummel</p>
           <p className="clear-border">Pummel SU</p>
           <p className="clear-border">Pummel FAF</p>

@@ -13,29 +13,86 @@ class CharacterCard extends Component {
       Introduced: ${characterStats.introduced}</br>
       Smash Number: ${characterStats.characterNumber}</br>
       Weight: ${characterStats.weight}</br> 
-      Neutral Attack: ${characterStats.neutral} dmg</br>
+      Jab: ${characterStats.neutral} dmg</br>
+      Jab SU: ${characterStats.neutral}</br>
+      Jab FAF: ${characterStats.neutral}</br>
       Neutral Special: ${characterStats.neutralSpecial} dmg</br>
+      Neutral Special SU: ${characterStats.neutralSpecialStartup}</br>
+      Neutral Special FAF: ${characterStats.neutralSpecialLag}</br>
       Side Special: ${characterStats.sideSpecial} dmg</br>
+      Side Special SU: ${characterStats.sideSpecialStartup}</br>
+      Side Special FAF: ${characterStats.sideSpecialLag}</br>
       Up Special: ${characterStats.upSpecial} dmg</br>
+      Up Special SU: ${characterStats.upSpecialStartup}</br>
+      Up Special FAF: ${characterStats.upSpecialLag}</br>
       Down Special: ${characterStats.downSpecial} dmg</br>
+      Down Special SU: ${characterStats.downSpecialStartup}</br>
+      Down Special FAF: ${characterStats.downSpecialLag}</br>
       Up Tilt: ${characterStats.upTilt} dmg</br>
+      Up Tilt SU: ${characterStats.upTiltStartup}</br>
+      Up Tilt FAF: ${characterStats.upTiltLag}</br>
       Down Tilt: ${characterStats.downTilt} dmg</br>
+      Down Tilt SU: ${characterStats.downTiltStartup}</br>
+      Down Tilt FAF: ${characterStats.downTiltLag}</br>
       Forward Tilt: ${characterStats.forwardTilt} dmg</br>
+      Forward Tilt SU: ${characterStats.forwardTiltStartup}</br>
+      Forward Tilt FAF: ${characterStats.forwardTiltLag}</br>
       Dash Attack: ${characterStats.dashAttack} dmg</br>
+      Dash Attack SU: ${characterStats.dashAttackStartup}</br>
+      Dash Attack FAF: ${characterStats.dashAttackLag}</br>
       Up Smash: ${characterStats.upSmash} dmg</br>
+      Up Smash SU: ${characterStats.upSmashStartup}</br>
+      Up Smash FAF: ${characterStats.upSmashLag}</br>
       Down Smash: ${characterStats.downSmash} dmg</br>
+      Down Smash SU: ${characterStats.downSmashStartup}</br>
+      Down Smash FAF: ${characterStats.downSmashLag}</br>
       Forward Smash: ${characterStats.forwardSmash} dmg</br>
+      Forward Smash SU: ${characterStats.forwardSmashStartup}</br>
+      Forward Smash FAF: ${characterStats.forwardSmashLag}</br>
       Neutral Air: ${characterStats.nair} dmg</br>
+      NAIR SU: ${characterStats.nairStartup}</br>
+      NAIR FAF: ${characterStats.nairLag}</br>
+      NAIR LL: ${characterStats.nairLandingLag}</br>
+      NAIR AC: ${characterStats.nairAutoCancel}</br>
       Up Air: ${characterStats.uair} dmg</br>
-      Down Air: ${characterStats.dair} dmg</br>
+      UAIR SU: ${characterStats.uairStartup}</br>
+      UAIR FAF: ${characterStats.uairLag}</br>
+      UAIR LL: ${characterStats.uairLandingLag}</br>
+      UAIR AC: ${characterStats.uairAutoCancel}</br>
+      Down Air: ${characterStats.uair} dmg</br>
+      DAIR SU: ${characterStats.dairStartup}</br>
+      DAIR FAF: ${characterStats.dairLag}</br>
+      DAIR LL: ${characterStats.dairLandingLag}</br>
+      DAIR AC: ${characterStats.dairAutoCancel}</br>
       Forward Air: ${characterStats.fair} dmg</br>
+      FAIR SU: ${characterStats.fairStartup}</br>
+      FAIR FAF: ${characterStats.fairLag}</br>
+      FAIR LL: ${characterStats.fairLandingLag}</br>
+      FAIR AC: ${characterStats.fairAutoCancel}</br>
       Back Air: ${characterStats.bair} dmg</br>
+      BAIR SU: ${characterStats.bairStartup}</br>
+      BAIR FAF: ${characterStats.bairLag}</br>
+      BAIR LL: ${characterStats.bairLandingLag}</br>
+      BAIR AC: ${characterStats.bairAutoCancel}</br>
       Grab Air: ${characterStats.zair} dmg</br>
+      ZAIR SU: ${characterStats.zairStartup}</br>
+      ZAIR FAF: ${characterStats.zairLag}</br>
+      ZAIR LL: ${characterStats.zairLandingLag}</br>
       Pummel: ${characterStats.pummel} dmg</br>
+      Pummel SU: ${characterStats.pummelStartup}</br>
+      Pummel FAF: ${characterStats.pummelLag}</br>
       Forward Throw: ${characterStats.forwardThrow} dmg</br>
+      Forward Throw: ${characterStats.forwardThrowStartup}</br>
+      Forward Throw: ${characterStats.forwardThrowLag}</br>
       Back Throw: ${characterStats.backThrow} dmg</br>
+      Back Throw SU: ${characterStats.backThrowStartup}</br>
+      Back Throw FAF: ${characterStats.backThrowLag}</br>
       Up Throw: ${characterStats.upThrow} dmg</br>
-      Down Throw: ${characterStats.downThrow} dmg</br>
+      Up Throw SU: ${characterStats.upThrowStartup}</br>
+      Up Throw FAF: ${characterStats.upThrowLag}</br>
+      Down Throw: ${characterStats.downThrow}</br>
+      Down Throw SU: ${characterStats.downThrowStartup}</br>
+      Down Throw FAF: ${characterStats.downThrowLag}</br>
       Front Floor Attack: ${characterStats.floorAttackFront} dmg</br>
       Back Floor Attack: ${characterStats.floorAttackBack} dmg</br>
       Trip Floor Attack: ${characterStats.floorAttackTrip} dmg</br>
