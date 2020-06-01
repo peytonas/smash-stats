@@ -14,8 +14,8 @@ class CharacterCard extends Component {
       Smash Number: ${characterStats.characterNumber}</br>
       Weight: ${characterStats.weight}</br> 
       Jab: ${characterStats.neutral} dmg</br>
-      Jab SU: ${characterStats.neutral}</br>
-      Jab FAF: ${characterStats.neutral}</br>
+      Jab SU: ${characterStats.neutralStartup}</br>
+      Jab FAF: ${characterStats.neutralLag}</br>
       Neutral Special: ${characterStats.neutralSpecial} dmg</br>
       Neutral Special SU: ${characterStats.neutralSpecialStartup}</br>
       Neutral Special FAF: ${characterStats.neutralSpecialLag}</br>
