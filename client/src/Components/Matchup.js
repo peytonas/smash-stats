@@ -39,7 +39,7 @@ class Matchup extends Component {
           <OpponentStats player={player} opponent={opponent} />
         </div>
         <h5><i className="fas fa-sort-down pulse text-primary mt-n2" title="scroll down!"></i></h5>
-        <p className="text-success stat-size">SU = "Startup" | FAF = "First Active Frame" | LL = "Landing Lag" | AC = "Auto Cancel"</p>
+        <p className="text-success stat-size">SU = "Startup (frames)" | FAF = "First Active Frame" | LL = "Landing Lag" | AC = "Auto Cancel"</p>
       </div>
     )
   }
