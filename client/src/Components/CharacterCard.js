@@ -53,27 +53,22 @@ class CharacterCard extends Component {
       NAIR SU: ${characterStats.nairStartup}</br>
       NAIR FAF: ${characterStats.nairLag}</br>
       NAIR LL: ${characterStats.nairLandingLag}</br>
-      NAIR AC: ${characterStats.nairAutoCancel}</br>
       Up Air: ${characterStats.uair} dmg</br>
       UAIR SU: ${characterStats.uairStartup}</br>
       UAIR FAF: ${characterStats.uairLag}</br>
       UAIR LL: ${characterStats.uairLandingLag}</br>
-      UAIR AC: ${characterStats.uairAutoCancel}</br>
       Down Air: ${characterStats.uair} dmg</br>
       DAIR SU: ${characterStats.dairStartup}</br>
       DAIR FAF: ${characterStats.dairLag}</br>
       DAIR LL: ${characterStats.dairLandingLag}</br>
-      DAIR AC: ${characterStats.dairAutoCancel}</br>
       Forward Air: ${characterStats.fair} dmg</br>
       FAIR SU: ${characterStats.fairStartup}</br>
       FAIR FAF: ${characterStats.fairLag}</br>
       FAIR LL: ${characterStats.fairLandingLag}</br>
-      FAIR AC: ${characterStats.fairAutoCancel}</br>
       Back Air: ${characterStats.bair} dmg</br>
       BAIR SU: ${characterStats.bairStartup}</br>
       BAIR FAF: ${characterStats.bairLag}</br>
       BAIR LL: ${characterStats.bairLandingLag}</br>
-      BAIR AC: ${characterStats.bairAutoCancel}</br>
       Grab Air: ${characterStats.zair} dmg</br>
       ZAIR SU: ${characterStats.zairStartup}</br>
       ZAIR FAF: ${characterStats.zairLag}</br>
@@ -82,8 +77,8 @@ class CharacterCard extends Component {
       Pummel SU: ${characterStats.pummelStartup}</br>
       Pummel FAF: ${characterStats.pummelLag}</br>
       Forward Throw: ${characterStats.forwardThrow} dmg</br>
-      Forward Throw: ${characterStats.forwardThrowStartup}</br>
-      Forward Throw: ${characterStats.forwardThrowLag}</br>
+      Forward Throw SU: ${characterStats.forwardThrowStartup}</br>
+      Forward Throw FAF: ${characterStats.forwardThrowLag}</br>
       Back Throw: ${characterStats.backThrow} dmg</br>
       Back Throw SU: ${characterStats.backThrowStartup}</br>
       Back Throw FAF: ${characterStats.backThrowLag}</br>
