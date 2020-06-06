@@ -129,6 +129,14 @@ class PlayerStats extends Component {
 
           {player.name && <p className={player.zairLandingLag === opponent.zairLandingLag ? "text-yellow border-yellow" : player.zairLandingLag < opponent.zairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{player.zairLandingLag}</p>}
 
+          {player.name && <p className={player.grabStartup === opponent.grabStartup ? "text-yellow border-yellow" : player.grabStartup < opponent.grabStartup ? "text-green border-green" : "text-danger border-danger"}>{player.grabStartup}</p>}
+
+          {player.name && <p className={player.grabLag === opponent.grabLag ? "text-yellow border-yellow" : player.grabLag < opponent.grabLag ? "text-green border-green" : "text-danger border-danger"}>{player.grabLag}</p>}
+
+          {player.name && <p className={player.dashGrabStartup === opponent.dashGrabStartup ? "text-yellow border-yellow" : player.dashGrabStartup < opponent.dashGrabStartup ? "text-green border-green" : "text-danger border-danger"}>{player.dashGrabStartup}</p>}
+
+          {player.name && <p className={player.dashGrabLag === opponent.dashGrabLag ? "text-yellow border-yellow" : player.dashGrabLag < opponent.dashGrabLag ? "text-green border-green" : "text-danger border-danger"}>{player.dashGrabLag}</p>}
+
           {player.name && <p className={player.pummel === opponent.pummel ? "text-yellow border-yellow" : player.pummel > opponent.pummel ? "text-green border-green" : "text-danger border-danger"}>{player.pummel}</p>}
 
           {player.name && <p className={player.pummelStartup === opponent.pummelStartup ? "text-yellow border-yellow" : player.pummelStartup < opponent.pummelStartup ? "text-green border-green" : "text-danger border-danger"}>{player.pummelStartup}</p>}

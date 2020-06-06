@@ -104,6 +104,12 @@ const _schema = new Schema(
     zairLandingLag: { type: Number, required: false },
     zairAutoCancel: { type: Number, required: false },
 
+    grabStartup: { type: Number, required: false },
+    grabLag: { type: Number, required: false },
+
+    dashGrabStartup: { type: Number, required: false },
+    dashGrabLag: { type: Number, required: false },
+
     pummel: { type: Number, required: true },
     pummelStartup: { type: Number, required: true },
     pummelLag: { type: Number, required: true },

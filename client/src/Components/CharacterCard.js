@@ -72,6 +72,10 @@ class CharacterCard extends Component {
       ZAIR SU: ${characterStats.zairStartup}</br>
       ZAIR FAF: ${characterStats.zairLag}</br>
       ZAIR LL: ${characterStats.zairLandingLag}</br>
+      Grab SU: ${characterStats.grabStartup}</br>
+      Grab FAF: ${characterStats.grabLag}</br>
+      Dash Grab SU: ${characterStats.dashGrabStartup}</br>
+      Dash Grab FAF: ${characterStats.dashGrabLag}</br>
       Pummel: ${characterStats.pummel} dmg</br>
       Pummel SU: ${characterStats.pummelStartup}</br>
       Pummel FAF: ${characterStats.pummelLag}</br>
