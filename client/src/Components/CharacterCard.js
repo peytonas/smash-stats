@@ -56,7 +56,7 @@ class CharacterCard extends Component {
       UAIR SU: ${characterStats.uairStartup}</br>
       UAIR FAF: ${characterStats.uairLag}</br>
       UAIR LL: ${characterStats.uairLandingLag}</br>
-      Down Air: ${characterStats.uair} dmg</br>
+      Down Air: ${characterStats.dair} dmg</br>
       DAIR SU: ${characterStats.dairStartup}</br>
       DAIR FAF: ${characterStats.dairLag}</br>
       DAIR LL: ${characterStats.dairLandingLag}</br>
