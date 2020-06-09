@@ -71,7 +71,7 @@ h6{
 }
 
 .stat-scroll{
-  max-height: 19vh;
+  max-height: 25vh;
   overflow: scroll;
 }
 
@@ -104,5 +104,4 @@ h6{
   border: 1px solid transparent;
   font-size: 7px;
 }
-
 }

@@ -17,14 +17,9 @@
   .small-img{
   height: 99px;
   width: 99px;
-  /* display: none; */
 }
 
 .large-img{
   display: none;
 }
-
-.fas{
-    display: none;
-  }
 }

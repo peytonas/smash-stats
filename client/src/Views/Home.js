@@ -90,7 +90,7 @@ class Home extends Component {
           </div>
         </div>
         <div className="row justify-content-center justify-content-md-between text-success">
-          <div className="col-4 col-md-2 text-center text-md-left">
+          <div className="col col-md-2 text-center text-md-left">
             <p className="text-primary">Player:</p>
             <div className="name-scroll bg-info rounded flexBox mt-n2">
               <PlayerSelectTable characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} className={"flexBox"} />
@@ -106,7 +106,7 @@ class Home extends Component {
           <Matchup player={this.state.playerChoice} opponent={this.state.opponentChoice} />
           <div className="col-4 col-md-2 text-center text-danger">
             <h6 className="text-danger text-center text-md-left"><b>Character Stats:</b></h6>
-            <div className="card-scroll flexBox">
+            <div className="card-scroll">
               <CharacterCardColumn characters={this.state.characters} className={"flexBox"} />
             </div>
             <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>

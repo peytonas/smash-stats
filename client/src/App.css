@@ -108,7 +108,7 @@ i{
 
 .container-fluid{
   background-color: #211a21;
-  min-height: 100vh;
+  min-height: 151vh;
 }
 
 .fa-trash-alt{
@@ -122,14 +122,14 @@ i{
 }
 
 .name-scroll{
-  max-height: 17vh;
+  max-height: 15vh;
   overflow: scroll;
   cursor: pointer;
   border: 2px solid #4f43ae;
 }
 
 .card-scroll{
-  max-height: 23vh;
+  max-height: 38vh;
   overflow: scroll;
   cursor: pointer;
 }
