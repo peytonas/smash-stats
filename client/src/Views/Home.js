@@ -99,8 +99,8 @@ class Home extends Component {
             <div className="name-scroll bg-info rounded flexBox mt-n2">
               <OpponentSelectTable characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} className={"flexBox"} />
             </div>
-            <div className="ml-4 ml-md-0">
-              <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fas fa-trash-alt"></i></button>
+            <div>
+              <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fa fa-trash-alt"></i></button>
             </div>
           </div>
           <Matchup player={this.state.playerChoice} opponent={this.state.opponentChoice} />
