@@ -42,7 +42,7 @@ export default class CharactersController {
 
   async edit(req, res, next) {
     try {
-      let character = await _charactersService.findOneAndUpdate({ id: req.params.id }, req.body, { new: true })
+      let character = await _charactersService.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
       if (character) {
         return res.status(201).send(character)
       }
