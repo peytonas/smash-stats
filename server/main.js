@@ -24,7 +24,6 @@ let corsOptions = {
 // @ts-ignore
 server.use(cors(corsOptions))
 
-
 server.use(bp.urlencoded({ extended: true }))
 server.use(bp.json())
 

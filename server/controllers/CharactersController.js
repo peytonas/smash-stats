@@ -9,6 +9,7 @@ export default class CharactersController {
       .get("", this.getAll)
       .get('/:id', this.getById)
       .post("", this.create)
+      .put('/:id', this.edit)
   }
 
   async getAll(req, res, next) {
@@ -37,5 +38,14 @@ export default class CharactersController {
     } catch (error) {
       next(error);
     }
+  }
+
+  async edit(req, res, next) {
+    try {
+      let character = await _charactersService.findOneAndUpdate({ id: req.params.id }, req.body, { new: true })
+      if (character) {
+        return res.status(201).send(character)
+      }
+    } catch (error) { next(error) }
   }
 }
