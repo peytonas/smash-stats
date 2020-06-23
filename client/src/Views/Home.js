@@ -93,11 +93,11 @@ class Home extends Component {
           <div className="col col-md-2 text-center text-md-left">
             <p className="text-primary">Player:</p>
             <div className="name-scroll bg-info rounded flexBox mt-n2">
-              <PlayerSelectTable characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} className={"flexBox"} />
+              <PlayerSelectTable characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} />
             </div>
             <p className="mt-1 text-primary">Opponent:</p>
             <div className="name-scroll bg-info rounded flexBox mt-n2">
-              <OpponentSelectTable characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} className={"flexBox"} />
+              <OpponentSelectTable characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} />
             </div>
             <div>
               <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fa fa-trash-alt"></i></button>
@@ -106,13 +106,11 @@ class Home extends Component {
           <Matchup player={this.state.playerChoice} opponent={this.state.opponentChoice} />
           <div className="col-4 col-md-2 text-center text-danger">
             <h6 className="text-danger text-center text-md-left"><b>Character Stats:</b></h6>
-            <div className="card-scroll">
-              <CharacterCardColumn characters={this.state.characters} className={"flexBox"} />
+            <div className="card-scroll flexBox">
+              <CharacterCardColumn characters={this.state.characters} />
             </div>
             <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
-        </div>
-        <div className="row justify-content-left text-center text-md-left">
         </div>
       </div>
     )
