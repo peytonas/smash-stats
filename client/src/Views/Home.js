@@ -6,6 +6,7 @@ import CharacterCardColumn from '../Components/CharacterCardColumn'
 import PlayerSelectTable from '../Components/PlayerSelectTable'
 import OpponentSelectTable from '../Components/OpponentSelectTable'
 import Matchup from '../Components/Matchup'
+import Key from '../Components/Key'
 
 class Home extends Component {
   state = {
@@ -86,7 +87,7 @@ class Home extends Component {
             <i className="far fa-question-circle pointer text-success" onClick={this.viewInfo.bind(this)}></i>
           </div>
           <div className="order-1 order-md-2 col-12 offset-md-3 col-md-4 text-center">
-            <h1 className="size mt-4 border border-primary rounded pl-1 pr-1">SMASH STATS</h1>
+            <h1 className="size mt-2 border border-primary rounded pl-1 pr-1">SMASH STATS</h1>
           </div>
         </div>
         <div className="row justify-content-center justify-content-md-between text-success">
@@ -112,6 +113,7 @@ class Home extends Component {
             <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
           </div>
         </div>
+        <Key />
       </div>
     )
   }

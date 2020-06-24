@@ -28,8 +28,10 @@ server.use(bp.urlencoded({ extended: true }))
 server.use(bp.json())
 
 import CharactersController from './controllers/CharactersController'
+import HitsController from './controllers/HitsController'
 
 server.use('/api/characters', new CharactersController().router)
+server.use('/api/hits', new HitsController().router)
 
 server.use((error, req, res, next) => {
   console.error(error);
