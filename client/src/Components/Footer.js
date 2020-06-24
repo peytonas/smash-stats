@@ -25,7 +25,6 @@ class Footer extends Component {
 
   editHits() {
     this.setState({ hitsObject: { _id: this.state.hitsObject._id, hits: this.state.hitsObject.hits + 1 } })
-    console.log(this.state.hitsObject.hits);
     api.put(`/hits/${this.state.hitsObject._id}`, this.state.hitsObject)
   }
 

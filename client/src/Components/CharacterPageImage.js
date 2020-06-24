@@ -58,7 +58,6 @@ class CharacterPageImage extends Component {
       characterSkinNumber: this.state.characterSkinNumber < 8 ? this.state.characterSkinNumber += 1 : this.state.characterSkinNumber >= 8 ? this.state.characterSkinNumber = 1 : null
     })
     this.cycleImage();
-    console.log(this.state.characterSkinNumber);
   }
 
   async cycleDown() {
@@ -66,7 +65,6 @@ class CharacterPageImage extends Component {
       characterSkinNumber: this.state.characterSkinNumber > 1 ? this.state.characterSkinNumber -= 1 : this.state.characterSkinNumber <= 1 ? this.state.characterSkinNumber = 8 : null
     })
     this.cycleImage();
-    console.log(this.state.characterSkinNumber);
   }
 
   render() {
