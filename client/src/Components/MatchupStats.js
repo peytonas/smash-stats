@@ -71,6 +71,8 @@ class MatchupStats extends Component {
           <p className="clear-border">Grab FAF</p>
           <p className="clear-border">Dash Grab SU</p>
           <p className="clear-border">Dash Grab FAF</p>
+          <p className="clear-border">Pivot Grab SU</p>
+          <p className="clear-border">Pivot Grab FAF</p>
           <p className="clear-border">Pummel</p>
           <p className="clear-border">Pummel SU</p>
           <p className="clear-border">Pummel FAF</p>

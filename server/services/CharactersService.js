@@ -110,6 +110,9 @@ const _schema = new Schema(
     dashGrabStartup: { type: Number, required: false },
     dashGrabLag: { type: Number, required: false },
 
+    pivotGrabStartup: { type: Number, required: false },
+    pivotGrabLag: { type: Number, required: false },
+
     pummel: { type: Number, required: false },
     pummelStartup: { type: Number, required: false },
     pummelLag: { type: Number, required: false },

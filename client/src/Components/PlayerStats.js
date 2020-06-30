@@ -137,6 +137,10 @@ class PlayerStats extends Component {
 
           {player.name && <p className={player.dashGrabLag === opponent.dashGrabLag ? "text-yellow border-yellow" : player.dashGrabLag < opponent.dashGrabLag ? "text-green border-green" : "text-danger border-danger"}>{player.dashGrabLag}</p>}
 
+          {player.name && <p className={player.pivotGrabStartup === opponent.pivotGrabStartup ? "text-yellow border-yellow" : player.pivotGrabStartup < opponent.pivotGrabStartup ? "text-green border-green" : "text-danger border-danger"}>{player.pivotGrabStartup}</p>}
+
+          {player.name && <p className={player.pivotGrabLag === opponent.pivotGrabLag ? "text-yellow border-yellow" : player.pivotGrabLag < opponent.pivotGrabLag ? "text-green border-green" : "text-danger border-danger"}>{player.pivotGrabLag}</p>}
+
           {player.name && <p className={player.pummel === opponent.pummel ? "text-yellow border-yellow" : player.pummel > opponent.pummel ? "text-green border-green" : "text-danger border-danger"}>{player.pummel}</p>}
 
           {player.name && <p className={player.pummelStartup === opponent.pummelStartup ? "text-yellow border-yellow" : player.pummelStartup < opponent.pummelStartup ? "text-green border-green" : "text-danger border-danger"}>{player.pummelStartup}</p>}

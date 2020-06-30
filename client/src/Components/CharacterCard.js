@@ -76,6 +76,8 @@ class CharacterCard extends Component {
       Grab FAF: ${characterStats.grabLag}</br>
       Dash Grab SU: ${characterStats.dashGrabStartup}</br>
       Dash Grab FAF: ${characterStats.dashGrabLag}</br>
+      Pivot Grab SU: ${characterStats.pivotGrabStartup}</br>
+      Pivot Grab FAF: ${characterStats.pivotGrabLag}</br>
       Pummel: ${characterStats.pummel} dmg</br>
       Pummel SU: ${characterStats.pummelStartup}</br>
       Pummel FAF: ${characterStats.pummelLag}</br>
