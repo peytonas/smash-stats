@@ -15,51 +15,31 @@ class CharacterCard extends Component {
       Jab: ${characterStats.neutral} dmg</br>
       Jab SU: ${characterStats.neutralStartup}</br>
       Jab FAF: ${characterStats.neutralLag}</br>
-      Neutral Special: ${characterStats.neutralSpecial} dmg</br>
-      Neutral Special SU: ${characterStats.neutralSpecialStartup}</br>
-      Neutral Special FAF: ${characterStats.neutralSpecialLag}</br>
-      Side Special: ${characterStats.sideSpecial} dmg</br>
-      Side Special SU: ${characterStats.sideSpecialStartup}</br>
-      Side Special FAF: ${characterStats.sideSpecialLag}</br>
-      Up Special: ${characterStats.upSpecial} dmg</br>
-      Up Special SU: ${characterStats.upSpecialStartup}</br>
-      Up Special FAF: ${characterStats.upSpecialLag}</br>
-      Down Special: ${characterStats.downSpecial} dmg</br>
-      Down Special SU: ${characterStats.downSpecialStartup}</br>
-      Down Special FAF: ${characterStats.downSpecialLag}</br>
+      Forward Tilt: ${characterStats.forwardTilt} dmg</br>
+      Forward Tilt SU: ${characterStats.forwardTiltStartup}</br>
+      Forward Tilt FAF: ${characterStats.forwardTiltLag}</br>
       Up Tilt: ${characterStats.upTilt} dmg</br>
       Up Tilt SU: ${characterStats.upTiltStartup}</br>
       Up Tilt FAF: ${characterStats.upTiltLag}</br>
       Down Tilt: ${characterStats.downTilt} dmg</br>
       Down Tilt SU: ${characterStats.downTiltStartup}</br>
       Down Tilt FAF: ${characterStats.downTiltLag}</br>
-      Forward Tilt: ${characterStats.forwardTilt} dmg</br>
-      Forward Tilt SU: ${characterStats.forwardTiltStartup}</br>
-      Forward Tilt FAF: ${characterStats.forwardTiltLag}</br>
       Dash Attack: ${characterStats.dashAttack} dmg</br>
       Dash Attack SU: ${characterStats.dashAttackStartup}</br>
       Dash Attack FAF: ${characterStats.dashAttackLag}</br>
+      Forward Smash: ${characterStats.forwardSmash} dmg</br>
+      Forward Smash SU: ${characterStats.forwardSmashStartup}</br>
+      Forward Smash FAF: ${characterStats.forwardSmashLag}</br>
       Up Smash: ${characterStats.upSmash} dmg</br>
       Up Smash SU: ${characterStats.upSmashStartup}</br>
       Up Smash FAF: ${characterStats.upSmashLag}</br>
       Down Smash: ${characterStats.downSmash} dmg</br>
       Down Smash SU: ${characterStats.downSmashStartup}</br>
       Down Smash FAF: ${characterStats.downSmashLag}</br>
-      Forward Smash: ${characterStats.forwardSmash} dmg</br>
-      Forward Smash SU: ${characterStats.forwardSmashStartup}</br>
-      Forward Smash FAF: ${characterStats.forwardSmashLag}</br>
       Neutral Air: ${characterStats.nair} dmg</br>
       NAIR SU: ${characterStats.nairStartup}</br>
       NAIR FAF: ${characterStats.nairLag}</br>
       NAIR LL: ${characterStats.nairLandingLag}</br>
-      Up Air: ${characterStats.uair} dmg</br>
-      UAIR SU: ${characterStats.uairStartup}</br>
-      UAIR FAF: ${characterStats.uairLag}</br>
-      UAIR LL: ${characterStats.uairLandingLag}</br>
-      Down Air: ${characterStats.dair} dmg</br>
-      DAIR SU: ${characterStats.dairStartup}</br>
-      DAIR FAF: ${characterStats.dairLag}</br>
-      DAIR LL: ${characterStats.dairLandingLag}</br>
       Forward Air: ${characterStats.fair} dmg</br>
       FAIR SU: ${characterStats.fairStartup}</br>
       FAIR FAF: ${characterStats.fairLag}</br>
@@ -68,6 +48,14 @@ class CharacterCard extends Component {
       BAIR SU: ${characterStats.bairStartup}</br>
       BAIR FAF: ${characterStats.bairLag}</br>
       BAIR LL: ${characterStats.bairLandingLag}</br>
+      Up Air: ${characterStats.uair} dmg</br>
+      UAIR SU: ${characterStats.uairStartup}</br>
+      UAIR FAF: ${characterStats.uairLag}</br>
+      UAIR LL: ${characterStats.uairLandingLag}</br>
+      Down Air: ${characterStats.dair} dmg</br>
+      DAIR SU: ${characterStats.dairStartup}</br>
+      DAIR FAF: ${characterStats.dairLag}</br>
+      DAIR LL: ${characterStats.dairLandingLag}</br>
       Grab Air: ${characterStats.zair} dmg</br>
       ZAIR SU: ${characterStats.zairStartup}</br>
       ZAIR FAF: ${characterStats.zairLag}</br>
@@ -97,6 +85,18 @@ class CharacterCard extends Component {
       Back Floor Attack: ${characterStats.floorAttackBack} dmg</br>
       Trip Floor Attack: ${characterStats.floorAttackTrip} dmg</br>
       Edge Attack: ${characterStats.edgeAttack} dmg</br>
+      Neutral Special: ${characterStats.neutralSpecial} dmg</br>
+      Neutral Special SU: ${characterStats.neutralSpecialStartup}</br>
+      Neutral Special FAF: ${characterStats.neutralSpecialLag}</br>
+      Side Special: ${characterStats.sideSpecial} dmg</br>
+      Side Special SU: ${characterStats.sideSpecialStartup}</br>
+      Side Special FAF: ${characterStats.sideSpecialLag}</br>
+      Up Special: ${characterStats.upSpecial} dmg</br>
+      Up Special SU: ${characterStats.upSpecialStartup}</br>
+      Up Special FAF: ${characterStats.upSpecialLag}</br>
+      Down Special: ${characterStats.downSpecial} dmg</br>
+      Down Special SU: ${characterStats.downSpecialStartup}</br>
+      Down Special FAF: ${characterStats.downSpecialLag}</br>
       Final Smash: ${characterStats.finalSmash} dmg</br>
       Walk Speed: ${characterStats.walkSpeed} </br>
       Run Speed: ${characterStats.runSpeed} </br>

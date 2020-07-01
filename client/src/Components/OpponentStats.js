@@ -15,29 +15,11 @@ class OpponentStats extends Component {
 
           {opponent.name && <p className={opponent.neutralLag === player.neutralLag ? "text-yellow border-yellow" : opponent.neutralLag < player.neutralLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutralLag}</p>}
 
-          {opponent.name && <p className={opponent.neutralSpecial === player.neutralSpecial ? "text-yellow border-yellow" : opponent.neutralSpecial > player.neutralSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutralSpecial}</p>}
+          {opponent.name && <p className={opponent.forwardTilt === player.forwardTilt ? "text-yellow border-yellow" : opponent.forwardTilt > player.forwardTilt ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardTilt}</p>}
 
-          {opponent.name && <p className={opponent.neutralSpecialStartup === player.neutralSpecialStartup ? "text-yellow border-yellow" : opponent.neutralSpecialStartup < player.neutralSpecialStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutralSpecialStartup}</p>}
+          {opponent.name && <p className={opponent.forwardTiltStartup === player.forwardTiltStartup ? "text-yellow border-yellow" : opponent.forwardTiltStartup < player.forwardTiltStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardTiltStartup}</p>}
 
-          {opponent.name && <p className={opponent.neutralSpecialLag === player.neutralSpecialLag ? "text-yellow border-yellow" : opponent.neutralSpecialLag < player.neutralSpecialLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutralSpecialLag}</p>}
-
-          {opponent.name && <p className={opponent.sideSpecial === player.sideSpecial ? "text-yellow border-yellow" : opponent.sideSpecial > player.sideSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.sideSpecial}</p>}
-
-          {opponent.name && <p className={opponent.sideSpecialStartup === player.sideSpecialStartup ? "text-yellow border-yellow" : opponent.sideSpecialStartup < player.sideSpecialStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.sideSpecialStartup}</p>}
-
-          {opponent.name && <p className={opponent.sideSpecialLag === player.sideSpecialLag ? "text-yellow border-yellow" : opponent.sideSpecialLag < player.sideSpecialLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.sideSpecialLag}</p>}
-
-          {opponent.name && <p className={opponent.upSpecial === player.upSpecial ? "text-yellow border-yellow" : opponent.upSpecial > player.upSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSpecial}</p>}
-
-          {opponent.name && <p className={opponent.upSpecialStartup === player.upSpecialStartup ? "text-yellow border-yellow" : opponent.upSpecialStartup < player.upSpecialStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSpecialStartup}</p>}
-
-          {opponent.name && <p className={opponent.upSpecialLag === player.upSpecialLag ? "text-yellow border-yellow" : opponent.upSpecialLag < player.upSpecialLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSpecialLag}</p>}
-
-          {opponent.name && <p className={opponent.downSpecial === player.downSpecial ? "text-yellow border-yellow" : opponent.downSpecial > player.downSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSpecial}</p>}
-
-          {opponent.name && <p className={opponent.downSpecialStartup === player.downSpecialStartup ? "text-yellow border-yellow" : opponent.downSpecialStartup < player.downSpecialStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSpecialStartup}</p>}
-
-          {opponent.name && <p className={opponent.downSpecialLag === player.downSpecialLag ? "text-yellow border-yellow" : opponent.downSpecialLag < player.downSpecialLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSpecialLag}</p>}
+          {opponent.name && <p className={opponent.forwardTiltLag === player.forwardTiltLag ? "text-yellow border-yellow" : opponent.forwardTiltLag < player.forwardTiltLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardTiltLag}</p>}
 
           {opponent.name && <p className={opponent.upTilt === player.upTilt ? "text-yellow border-yellow" : opponent.upTilt > player.upTilt ? "text-green border-green" : "text-danger border-danger"}>{opponent.upTilt}</p>}
 
@@ -51,17 +33,17 @@ class OpponentStats extends Component {
 
           {opponent.name && <p className={opponent.downTiltLag === player.downTiltLag ? "text-yellow border-yellow" : opponent.downTiltLag < player.downTiltLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.downTiltLag}</p>}
 
-          {opponent.name && <p className={opponent.forwardTilt === player.forwardTilt ? "text-yellow border-yellow" : opponent.forwardTilt > player.forwardTilt ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardTilt}</p>}
-
-          {opponent.name && <p className={opponent.forwardTiltStartup === player.forwardTiltStartup ? "text-yellow border-yellow" : opponent.forwardTiltStartup < player.forwardTiltStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardTiltStartup}</p>}
-
-          {opponent.name && <p className={opponent.forwardTiltLag === player.forwardTiltLag ? "text-yellow border-yellow" : opponent.forwardTiltLag < player.forwardTiltLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardTiltLag}</p>}
-
           {opponent.name && <p className={opponent.dashAttack === player.dashAttack ? "text-yellow border-yellow" : opponent.dashAttack > player.dashAttack ? "text-green border-green" : "text-danger border-danger"}>{opponent.dashAttack}</p>}
 
           {opponent.name && <p className={opponent.dashAttackStartup === player.dashAttackStartup ? "text-yellow border-yellow" : opponent.dashAttackStartup < player.dashAttackStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.dashAttackStartup}</p>}
 
           {opponent.name && <p className={opponent.dashAttackLag === player.dashAttackLag ? "text-yellow border-yellow" : opponent.dashAttackLag < player.dashAttackLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.dashAttackLag}</p>}
+
+          {opponent.name && <p className={opponent.forwardSmash === player.forwardSmash ? "text-yellow border-yellow" : opponent.forwardSmash > player.forwardSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmash}</p>}
+
+          {opponent.name && <p className={opponent.forwardSmashStartup === player.forwardSmashStartup ? "text-yellow border-yellow" : opponent.forwardSmashStartup < player.forwardSmashStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmashStartup}</p>}
+
+          {opponent.name && <p className={opponent.forwardSmashLag === player.forwardSmashLag ? "text-yellow border-yellow" : opponent.forwardSmashLag < player.forwardSmashLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmashLag}</p>}
 
           {opponent.name && <p className={opponent.upSmash === player.upSmash ? "text-yellow border-yellow" : opponent.upSmash > player.upSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSmash}</p>}
 
@@ -75,12 +57,6 @@ class OpponentStats extends Component {
 
           {opponent.name && <p className={opponent.downSmashLag === player.downSmashLag ? "text-yellow border-yellow" : opponent.downSmashLag < player.downSmashLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSmashLag}</p>}
 
-          {opponent.name && <p className={opponent.forwardSmash === player.forwardSmash ? "text-yellow border-yellow" : opponent.forwardSmash > player.forwardSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmash}</p>}
-
-          {opponent.name && <p className={opponent.forwardSmashStartup === player.forwardSmashStartup ? "text-yellow border-yellow" : opponent.forwardSmashStartup < player.forwardSmashStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmashStartup}</p>}
-
-          {opponent.name && <p className={opponent.forwardSmashLag === player.forwardSmashLag ? "text-yellow border-yellow" : opponent.forwardSmashLag < player.forwardSmashLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.forwardSmashLag}</p>}
-
           {opponent.name && <p className={opponent.nair === player.nair ? "text-yellow border-yellow" : opponent.nair > player.nair ? "text-green border-green" : "text-danger border-danger"}>{opponent.nair}</p>}
 
           {opponent.name && <p className={opponent.nairStartup === player.nairStartup ? "text-yellow border-yellow" : opponent.nairStartup < player.nairStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.nairStartup}</p>}
@@ -88,22 +64,6 @@ class OpponentStats extends Component {
           {opponent.name && <p className={opponent.nairLag === player.nairLag ? "text-yellow border-yellow" : opponent.nairLag < player.nairLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.nairLag}</p>}
 
           {opponent.name && <p className={opponent.nairLandingLag === player.nairLandingLag ? "text-yellow border-yellow" : opponent.nairLandingLag < player.nairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.nairLandingLag}</p>}
-
-          {opponent.name && <p className={opponent.uair === player.uair ? "text-yellow border-yellow" : opponent.uair > player.uair ? "text-green border-green" : "text-danger border-danger"}>{opponent.uair}</p>}
-
-          {opponent.name && <p className={opponent.uairStartup === player.uairStartup ? "text-yellow border-yellow" : opponent.uairStartup < player.uairStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.uairStartup}</p>}
-
-          {opponent.name && <p className={opponent.uairLag === player.uairLag ? "text-yellow border-yellow" : opponent.uairLag < player.uairLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.uairLag}</p>}
-
-          {opponent.name && <p className={opponent.uairLandingLag === player.uairLandingLag ? "text-yellow border-yellow" : opponent.uairLandingLag < player.uairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.uairLandingLag}</p>}
-
-          {opponent.name && <p className={opponent.dair === player.dair ? "text-yellow border-yellow" : opponent.dair > player.dair ? "text-green border-green" : "text-danger border-danger"}>{opponent.dair}</p>}
-
-          {opponent.name && <p className={opponent.dairStartup === player.dairStartup ? "text-yellow border-yellow" : opponent.dairStartup < player.dairStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.dairStartup}</p>}
-
-          {opponent.name && <p className={opponent.dairLag === player.dairLag ? "text-yellow border-yellow" : opponent.dairLag < player.dairLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.dairLag}</p>}
-
-          {opponent.name && <p className={opponent.dairLandingLag === player.dairLandingLag ? "text-yellow border-yellow" : opponent.dairLandingLag < player.dairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.dairLandingLag}</p>}
 
           {opponent.name && <p className={opponent.fair === player.fair ? "text-yellow border-yellow" : opponent.fair > player.fair ? "text-green border-green" : "text-danger border-danger"}>{opponent.fair}</p>}
 
@@ -120,6 +80,22 @@ class OpponentStats extends Component {
           {opponent.name && <p className={opponent.bairLag === player.bairLag ? "text-yellow border-yellow" : opponent.bairLag < player.bairLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.bairLag}</p>}
 
           {opponent.name && <p className={opponent.bairLandingLag === player.bairLandingLag ? "text-yellow border-yellow" : opponent.bairLandingLag < player.bairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.bairLandingLag}</p>}
+
+          {opponent.name && <p className={opponent.uair === player.uair ? "text-yellow border-yellow" : opponent.uair > player.uair ? "text-green border-green" : "text-danger border-danger"}>{opponent.uair}</p>}
+
+          {opponent.name && <p className={opponent.uairStartup === player.uairStartup ? "text-yellow border-yellow" : opponent.uairStartup < player.uairStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.uairStartup}</p>}
+
+          {opponent.name && <p className={opponent.uairLag === player.uairLag ? "text-yellow border-yellow" : opponent.uairLag < player.uairLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.uairLag}</p>}
+
+          {opponent.name && <p className={opponent.uairLandingLag === player.uairLandingLag ? "text-yellow border-yellow" : opponent.uairLandingLag < player.uairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.uairLandingLag}</p>}
+
+          {opponent.name && <p className={opponent.dair === player.dair ? "text-yellow border-yellow" : opponent.dair > player.dair ? "text-green border-green" : "text-danger border-danger"}>{opponent.dair}</p>}
+
+          {opponent.name && <p className={opponent.dairStartup === player.dairStartup ? "text-yellow border-yellow" : opponent.dairStartup < player.dairStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.dairStartup}</p>}
+
+          {opponent.name && <p className={opponent.dairLag === player.dairLag ? "text-yellow border-yellow" : opponent.dairLag < player.dairLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.dairLag}</p>}
+
+          {opponent.name && <p className={opponent.dairLandingLag === player.dairLandingLag ? "text-yellow border-yellow" : opponent.dairLandingLag < player.dairLandingLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.dairLandingLag}</p>}
 
           {opponent.name && <p className={opponent.zair === player.zair ? "text-yellow border-yellow" : opponent.zair > player.zair ? "text-green border-green" : "text-danger border-danger"}>{opponent.zair}</p>}
 
@@ -178,6 +154,30 @@ class OpponentStats extends Component {
           {opponent.name && <p className={opponent.floorAttackTrip === player.floorAttackTrip ? "text-yellow border-yellow" : opponent.floorAttackTrip > player.floorAttackTrip ? "text-green border-green" : "text-danger border-danger"}>{opponent.floorAttackTrip}</p>}
 
           {opponent.name && <p className={opponent.edgeAttack === player.edgeAttack ? "text-yellow border-yellow" : opponent.edgeAttack > player.edgeAttack ? "text-green border-green" : "text-danger border-danger"}>{opponent.edgeAttack}</p>}
+
+          {opponent.name && <p className={opponent.neutralSpecial === player.neutralSpecial ? "text-yellow border-yellow" : opponent.neutralSpecial > player.neutralSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutralSpecial}</p>}
+
+          {opponent.name && <p className={opponent.neutralSpecialStartup === player.neutralSpecialStartup ? "text-yellow border-yellow" : opponent.neutralSpecialStartup < player.neutralSpecialStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutralSpecialStartup}</p>}
+
+          {opponent.name && <p className={opponent.neutralSpecialLag === player.neutralSpecialLag ? "text-yellow border-yellow" : opponent.neutralSpecialLag < player.neutralSpecialLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.neutralSpecialLag}</p>}
+
+          {opponent.name && <p className={opponent.sideSpecial === player.sideSpecial ? "text-yellow border-yellow" : opponent.sideSpecial > player.sideSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.sideSpecial}</p>}
+
+          {opponent.name && <p className={opponent.sideSpecialStartup === player.sideSpecialStartup ? "text-yellow border-yellow" : opponent.sideSpecialStartup < player.sideSpecialStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.sideSpecialStartup}</p>}
+
+          {opponent.name && <p className={opponent.sideSpecialLag === player.sideSpecialLag ? "text-yellow border-yellow" : opponent.sideSpecialLag < player.sideSpecialLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.sideSpecialLag}</p>}
+
+          {opponent.name && <p className={opponent.upSpecial === player.upSpecial ? "text-yellow border-yellow" : opponent.upSpecial > player.upSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSpecial}</p>}
+
+          {opponent.name && <p className={opponent.upSpecialStartup === player.upSpecialStartup ? "text-yellow border-yellow" : opponent.upSpecialStartup < player.upSpecialStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSpecialStartup}</p>}
+
+          {opponent.name && <p className={opponent.upSpecialLag === player.upSpecialLag ? "text-yellow border-yellow" : opponent.upSpecialLag < player.upSpecialLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.upSpecialLag}</p>}
+
+          {opponent.name && <p className={opponent.downSpecial === player.downSpecial ? "text-yellow border-yellow" : opponent.downSpecial > player.downSpecial ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSpecial}</p>}
+
+          {opponent.name && <p className={opponent.downSpecialStartup === player.downSpecialStartup ? "text-yellow border-yellow" : opponent.downSpecialStartup < player.downSpecialStartup ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSpecialStartup}</p>}
+
+          {opponent.name && <p className={opponent.downSpecialLag === player.downSpecialLag ? "text-yellow border-yellow" : opponent.downSpecialLag < player.downSpecialLag ? "text-green border-green" : "text-danger border-danger"}>{opponent.downSpecialLag}</p>}
 
           {opponent.name && <p className={opponent.finalSmash === player.finalSmash ? "text-yellow border-yellow" : opponent.finalSmash > player.finalSmash ? "text-green border-green" : "text-danger border-danger"}>{opponent.finalSmash}</p>}
 
