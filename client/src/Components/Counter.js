@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 class Counter extends Component {
   render() {
     return (
-      <div className="col col-md-3 text-right mr-1">
+      <div className="col col-md-2 text-right mr-1">
         00000{this.props.hits}
       </div >
     )
