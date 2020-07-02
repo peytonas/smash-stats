@@ -52,7 +52,6 @@ class Home extends Component {
               &middot; Finally, I don't main every character and I'm sure there are potentially better ways to interpret or add to these stats, and deeper/more thorough stats will be forthcoming. With that said... </br>
               <span style="font-size:1rem";>Feedback, support, and contributions are welcome!
               @UnbrandedLemon on Twitter or <a href="https://github.com/peytonas/smash-stats" target="_blank">Github</a>.</span> </br>
-             <span style="font-size:.5rem">I do not own any of the characters, images, or statistics found here.</span>
               </span>`,
       background: "#211a21",
       backdrop: "rgba(33,26,33,0.3)",
