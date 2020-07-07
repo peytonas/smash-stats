@@ -9,7 +9,7 @@ function NavBar() {
       <div className="col col-md-1">
         <nav className="bg-primary">
           <Link className="text-dark ml-1" to="/">
-            Home
+            <i className="fas fa-home"></i>
           </Link>
         </nav>
       </div>
