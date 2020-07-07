@@ -1,4 +1,9 @@
 @media only screen and (min-width: 768px){
+.character-container{
+  background-color: #211a21;
+  min-height: 150vh;
+}
+
 .small-img{
   display: none;
 }

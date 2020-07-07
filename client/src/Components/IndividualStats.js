@@ -1,45 +1,22 @@
 import React, { Component } from 'react'
 import './Chart.css'
-import Axios from 'axios'
 import '../Components/IndividualStats.css'
 
 class IndividualStats extends Component {
   state = {
-    character: {},
     characterLag: 0,
     characterDmg: 0,
-    roster: [],
     rosterDmgAverages: [],
     rosterDmgAverage: 0,
     rosterLagAverage: 0,
   }
 
   componentDidMount() {
-    const characterId = this.props.character
-
-    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com' || 'http://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
-    let api = Axios.create({
-      baseURL: base + 'api/',
-      timeout: 6000,
-      withCredentials: true
-    })
-
-    api.get(`http://localhost:3000/api/characters/${characterId}`).then(res => {
-      this.setState({
-        character: res.data,
-      },
-        this.playerFunctions
-      );
-    })
-
-    api.get(`/characters`)
-      .then(res => {
-        this.setState({ roster: res.data },
-          this.averageFunctions
-        );
-      })
+    setTimeout(() => {
+      this.averageFunctions()
+      this.playerFunctions()
+    }, 1000)
   }
-
   averageFunctions() {
     this.averageScoreBuilder()
     this.lagAverageCalculator()
@@ -48,44 +25,38 @@ class IndividualStats extends Component {
   playerFunctions() {
     this.playerScoreBuilder()
     this.playerLagCalculator()
-    this.passToParent()
-  }
-
-  passToParent = () => {
-    var averagePlayerScore = this.state.averagePlayerScore
-    var playerScore = this.state.playerScore
-    this.props.callBack(averagePlayerScore, playerScore)
   }
 
   playerScoreBuilder() {
-    let score = (this.state.character.walkSpeed + this.state.character.runSpeed + this.state.character.dashSpeed + this.state.character.airSpeed + this.state.character.fallingSpeed + this.state.character.weight + this.state.character.neutral + this.state.character.forwardTilt + this.state.character.upTilt + this.state.character.downTilt + this.state.character.dashAttack + this.state.character.forwardSmash + this.state.character.upSmash + this.state.character.downSmash + this.state.character.nair + this.state.character.fair + this.state.character.bair + this.state.character.uair + this.state.character.dair + this.state.character.zair + this.state.character.pummel + this.state.character.forwardThrow + this.state.character.backThrow + this.state.character.upThrow + this.state.character.downThrow + this.state.character.floorAttackFront + this.state.character.floorAttackBack + this.state.character.floorAttackTrip + this.state.character.edgeAttack + this.state.character.neutralSpecial + this.state.character.sideSpecial + this.state.character.upSpecial + this.state.character.downSpecial + this.state.character.neutralStartup + this.state.character.forwardTiltStartup + this.state.character.upTiltStartup + this.state.character.downTiltStartup + this.state.character.dashAttackStartup + this.state.character.forwardSmashStartup + this.state.character.upSmashStartup + this.state.character.downSmashStartup + this.state.character.nairStartup + this.state.character.fairStartup + this.state.character.bairStartup + this.state.character.uairStartup + this.state.character.dairStartup + this.state.character.zairStartup + this.state.character.pummelStartup + this.state.character.forwardThrowStartup + this.state.character.backThrowStartup + this.state.character.upThrowStartup + this.state.character.downThrowStartup + this.state.character.floorAttackFront + this.state.character.floorAttackBack + this.state.character.floorAttackTrip + this.state.character.edgeAttack + this.state.character.neutralSpecialStartup + this.state.character.sideSpecialStartup + this.state.character.upSpecialStartup + this.state.character.downSpecialStartup) / 60;
+    let score = (this.props.character.walkSpeed + this.props.character.runSpeed + this.props.character.dashSpeed + this.props.character.airSpeed + this.props.character.fallingSpeed + this.props.character.weight + this.props.character.neutral + this.props.character.forwardTilt + this.props.character.upTilt + this.props.character.downTilt + this.props.character.dashAttack + this.props.character.forwardSmash + this.props.character.upSmash + this.props.character.downSmash + this.props.character.nair + this.props.character.fair + this.props.character.bair + this.props.character.uair + this.props.character.dair + this.props.character.zair + this.props.character.pummel + this.props.character.forwardThrow + this.props.character.backThrow + this.props.character.upThrow + this.props.character.downThrow + this.props.character.floorAttackFront + this.props.character.floorAttackBack + this.props.character.floorAttackTrip + this.props.character.edgeAttack + this.props.character.neutralSpecial + this.props.character.sideSpecial + this.props.character.upSpecial + this.props.character.downSpecial + this.props.character.neutralStartup + this.props.character.forwardTiltStartup + this.props.character.upTiltStartup + this.props.character.downTiltStartup + this.props.character.dashAttackStartup + this.props.character.forwardSmashStartup + this.props.character.upSmashStartup + this.props.character.downSmashStartup + this.props.character.nairStartup + this.props.character.fairStartup + this.props.character.bairStartup + this.props.character.uairStartup + this.props.character.dairStartup + this.props.character.zairStartup + this.props.character.pummelStartup + this.props.character.forwardThrowStartup + this.props.character.backThrowStartup + this.props.character.upThrowStartup + this.props.character.downThrowStartup + this.props.character.floorAttackFront + this.props.character.floorAttackBack + this.props.character.floorAttackTrip + this.props.character.edgeAttack + this.props.character.neutralSpecialStartup + this.props.character.sideSpecialStartup + this.props.character.upSpecialStartup + this.props.character.downSpecialStartup) / 60;
     this.setState({ characterDmg: score })
   }
 
   playerLagCalculator() {
-    var lag = ((this.state.character.forwardRollLag + this.state.character.backRollLag + this.state.character.spotDodgeLag + this.state.character.airDodgeLag + this.state.character.downThrowLag + this.state.character.upThrowLag + this.state.character.backThrowLag + this.state.character.forwardThrowLag + this.state.character.pummelLag + this.state.character.zairLag + this.state.character.bairLag + this.state.character.fairLag + this.state.character.dairLag + this.state.character.uairLag + this.state.character.nairLag + this.state.character.forwardSmashLag + this.state.character.downSmashLag + this.state.character.upSmashLag + this.state.character.dashAttackLag + this.state.character.forwardTiltLag + this.state.character.downTiltLag + this.state.character.upTiltLag + this.state.character.downSpecialLag + this.state.character.upSpecialLag + this.state.character.sideSpecialLag + this.state.character.neutralSpecialLag + this.state.character.neutralLag) / 27)
+    var lag = ((this.props.character.forwardRollLag + this.props.character.backRollLag + this.props.character.spotDodgeLag + this.props.character.airDodgeLag + this.props.character.downThrowLag + this.props.character.upThrowLag + this.props.character.backThrowLag + this.props.character.forwardThrowLag + this.props.character.pummelLag + this.props.character.zairLag + this.props.character.bairLag + this.props.character.fairLag + this.props.character.dairLag + this.props.character.uairLag + this.props.character.nairLag + this.props.character.forwardSmashLag + this.props.character.downSmashLag + this.props.character.upSmashLag + this.props.character.dashAttackLag + this.props.character.forwardTiltLag + this.props.character.downTiltLag + this.props.character.upTiltLag + this.props.character.downSpecialLag + this.props.character.upSpecialLag + this.props.character.sideSpecialLag + this.props.character.neutralSpecialLag + this.props.character.neutralLag) / 27)
     this.setState({ characterLag: lag });
   }
 
   averageScoreBuilder() {
     var score = 0
-    for (var c in this.state.roster) {
-      var playerScore = (this.state.roster[c].walkSpeed + this.state.roster[c].runSpeed + this.state.roster[c].dashSpeed + this.state.roster[c].airSpeed + this.state.roster[c].fallingSpeed + this.state.roster[c].weight + this.state.roster[c].neutral + this.state.roster[c].forwardTilt + this.state.roster[c].upTilt + this.state.roster[c].downTilt + this.state.roster[c].dashAttack + this.state.roster[c].forwardSmash + this.state.roster[c].upSmash + this.state.roster[c].downSmash + this.state.roster[c].nair + this.state.roster[c].fair + this.state.roster[c].bair + this.state.roster[c].uair + this.state.roster[c].dair + this.state.roster[c].zair + this.state.roster[c].pummel + this.state.roster[c].forwardThrow + this.state.roster[c].backThrow + this.state.roster[c].upThrow + this.state.roster[c].downThrow + this.state.roster[c].floorAttackFront + this.state.roster[c].floorAttackBack + this.state.roster[c].floorAttackTrip + this.state.roster[c].edgeAttack + this.state.roster[c].neutralSpecial + this.state.roster[c].sideSpecial + this.state.roster[c].upSpecial + this.state.roster[c].downSpecial + this.state.roster[c].walkSpeed + this.state.roster[c].runSpeed + this.state.roster[c].dashSpeed + this.state.roster[c].airSpeed + this.state.roster[c].fallingSpeed + this.state.roster[c].weight + this.state.roster[c].neutralStartup + this.state.roster[c].forwardTiltStartup + this.state.roster[c].upTiltStartup + this.state.roster[c].downTiltStartup + this.state.roster[c].dashAttackStartup + this.state.roster[c].forwardSmashStartup + this.state.roster[c].upSmashStartup + this.state.roster[c].downSmashStartup + this.state.roster[c].nairStartup + this.state.roster[c].fairStartup + this.state.roster[c].bairStartup + this.state.roster[c].uairStartup + this.state.roster[c].dairStartup + this.state.roster[c].zairStartup + this.state.roster[c].pummelStartup + this.state.roster[c].forwardThrowStartup + this.state.roster[c].backThrowStartup + this.state.roster[c].upThrowStartup + this.state.roster[c].downThrowStartup + this.state.roster[c].floorAttackFront + this.state.roster[c].floorAttackBack + this.state.roster[c].floorAttackTrip + this.state.roster[c].edgeAttack + this.state.roster[c].neutralSpecialStartup + this.state.roster[c].sideSpecialStartup + this.state.roster[c].upSpecialStartup + this.state.roster[c].downSpecialStartup) / 60
+    for (var c in this.props.roster) {
+      var playerScore = (this.props.roster[c].walkSpeed + this.props.roster[c].runSpeed + this.props.roster[c].dashSpeed + this.props.roster[c].airSpeed + this.props.roster[c].fallingSpeed + this.props.roster[c].weight + this.props.roster[c].neutral + this.props.roster[c].forwardTilt + this.props.roster[c].upTilt + this.props.roster[c].downTilt + this.props.roster[c].dashAttack + this.props.roster[c].forwardSmash + this.props.roster[c].upSmash + this.props.roster[c].downSmash + this.props.roster[c].nair + this.props.roster[c].fair + this.props.roster[c].bair + this.props.roster[c].uair + this.props.roster[c].dair + this.props.roster[c].zair + this.props.roster[c].pummel + this.props.roster[c].forwardThrow + this.props.roster[c].backThrow + this.props.roster[c].upThrow + this.props.roster[c].downThrow + this.props.roster[c].floorAttackFront + this.props.roster[c].floorAttackBack + this.props.roster[c].floorAttackTrip + this.props.roster[c].edgeAttack + this.props.roster[c].neutralSpecial + this.props.roster[c].sideSpecial + this.props.roster[c].upSpecial + this.props.roster[c].downSpecial + this.props.roster[c].walkSpeed + this.props.roster[c].runSpeed + this.props.roster[c].dashSpeed + this.props.roster[c].airSpeed + this.props.roster[c].fallingSpeed + this.props.roster[c].weight + this.props.roster[c].neutralStartup + this.props.roster[c].forwardTiltStartup + this.props.roster[c].upTiltStartup + this.props.roster[c].downTiltStartup + this.props.roster[c].dashAttackStartup + this.props.roster[c].forwardSmashStartup + this.props.roster[c].upSmashStartup + this.props.roster[c].downSmashStartup + this.props.roster[c].nairStartup + this.props.roster[c].fairStartup + this.props.roster[c].bairStartup + this.props.roster[c].uairStartup + this.props.roster[c].dairStartup + this.props.roster[c].zairStartup + this.props.roster[c].pummelStartup + this.props.roster[c].forwardThrowStartup + this.props.roster[c].backThrowStartup + this.props.roster[c].upThrowStartup + this.props.roster[c].downThrowStartup + this.props.roster[c].floorAttackFront + this.props.roster[c].floorAttackBack + this.props.roster[c].floorAttackTrip + this.props.roster[c].edgeAttack + this.props.roster[c].neutralSpecialStartup + this.props.roster[c].sideSpecialStartup + this.props.roster[c].upSpecialStartup + this.props.roster[c].downSpecialStartup) / 60
       score += playerScore;
       this.state.rosterDmgAverages.push(playerScore)
     }
-    score = score / this.state.roster.length
+    score = score / this.props.roster.length
     this.setState({ rosterDmgAverage: score })
   }
 
   //FIXME update once roster stats are all finalized
   lagAverageCalculator() {
     var lag = 0
-    for (var c in this.state.roster) {
-      var characterLag = (this.state.roster[c].forwardRollLag + this.state.roster[c].backRollLag + this.state.roster[c].spotDodgeStart + this.state.roster[c].spotDodgeLag + this.state.roster[c].airDodgeLag) / 5
+    for (var c in this.props.roster) {
+      var characterLag = (this.props.roster[c].forwardRollLag + this.props.roster[c].backRollLag + this.props.roster[c].spotDodgeLag + this.props.roster[c].airDodgeLag + this.props.roster[c].downThrowLag + this.props.roster[c].upThrowLag + this.props.roster[c].backThrowLag + this.props.roster[c].forwardThrowLag + this.props.roster[c].pummelLag + this.props.roster[c].zairLag + this.props.roster[c].bairLag + this.props.roster[c].fairLag + this.props.roster[c].dairLag + this.props.roster[c].uairLag + this.props.roster[c].nairLag + this.props.roster[c].forwardSmashLag + this.props.roster[c].downSmashLag + this.props.roster[c].upSmashLag + this.props.roster[c].dashAttackLag + this.props.roster[c].forwardTiltLag + this.props.roster[c].downTiltLag + this.props.roster[c].upTiltLag + this.props.roster[c].downSpecialLag + this.props.roster[c].upSpecialLag + this.props.roster[c].sideSpecialLag + this.props.roster[c].neutralSpecialLag + this.props.roster[c].neutralLag) / 27
+      this.setState({ characterLag: lag })
       lag += characterLag
     }
-    lag = lag / this.state.roster.length
+    lag = lag / this.props.roster.length
     this.setState({ rosterLagAverage: Math.floor(lag) })
   }
 
@@ -110,15 +81,13 @@ class IndividualStats extends Component {
   render() {
     return (
       <div className="col col-md-6">
-        <h5>{this.state.character.name} Average FAF/Fighter Average:
-        <span className={this.state.characterLag > this.state.rosterLagAverage ? "text-danger" : "text-green"}> {Math.floor(this.state.characterLag)}</span>
-        /
-       {this.state.rosterLagAverage}
+        <h5>{this.props.character.name} Average FAF/Fighter Average:
+        <span className={this.state.characterLag > this.state.rosterLagAverage ? "text-danger" : "text-green"}>
+            {Math.floor(this.state.characterLag)}</span>/{this.state.rosterLagAverage}
         </h5>
-        <h5>{this.state.character.name} DPA/Average DPA:
-        <span className={this.state.characterDmg > this.state.rosterDmgAverage ? "text-green" : "text-danger"}> {this.state.characterDmg.toFixed(2)}</span>
-        /
-        {this.state.rosterDmgAverage.toFixed(2)}
+        <h5>{this.props.character.name} DPA/Average DPA:
+        <span className={this.state.characterDmg > this.state.rosterDmgAverage ? "text-green" : "text-danger"}>
+            {this.state.characterDmg.toFixed(2)}</span>/{this.state.rosterDmgAverage.toFixed(2)}
         </h5>
       </div>
     )

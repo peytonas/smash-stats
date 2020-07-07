@@ -45,7 +45,7 @@ class Footer extends Component {
           <Counter hits={this.state.hitsObject.hits} />
         </div>
         <div className="row justify-content-between bg-primary text-center text-md-left">
-          <div className="col footer-text text-center">All rights reserved. Super Smash Bros and Nintendo are registered trademarks of Nintendo of America.</div>
+          <div className="col footer-text text-center">All rights reserved. Super Smash Bros, its characters, and Nintendo are registered trademarks of Nintendo of America.</div>
         </div>
       </footer>
     )
