@@ -54,7 +54,7 @@ class GameChart extends Component {
       if (this.props.character.series === this.slices[c][0]) {
         this.slice = c - 1
         const newArr = this.state.series.slice(0, 36);
-        newArr[this.slice] = { offset: 0.4 }
+        newArr[this.slice] = { offset: 0.2 }
         this.setState({ series: newArr })
       }
     }
@@ -68,10 +68,10 @@ class GameChart extends Component {
 
   render() {
     return (
-      <div className={"my-pretty-chart-container mr-md-2"}>
+      <div className={"my-pretty-chart-container mr-md-2 mt-md-n5"}>
         <Chart
-          width={'410px'}
-          height={'350px'}
+          // width={'400px'}
+          height={'400px'}
           chartType="PieChart"
           loader={<div>Loading Chart</div>}
           data={this.slices}
@@ -89,7 +89,7 @@ class GameChart extends Component {
                 color: '#b5b6e4',
                 fontSize: 7,
               },
-              position: 'right'
+              position: 'bottom'
             }
           }
           }

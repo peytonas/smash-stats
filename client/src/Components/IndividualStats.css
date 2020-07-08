@@ -5,3 +5,9 @@
 .text-yellow{
   color: #ffc107;
 }
+
+@media only screen and (max-width: 767px){
+  .mobile-font{
+    font-size: 15px;
+  }
+}

@@ -56,7 +56,7 @@ class CharacterPage extends Component {
         <div className="text-primary row justify-content-between text-center text-md-left">
           <IndividualStats character={this.state.character} roster={this.state.roster} />
         </div>
-        <div className="text-primary row justify-content-around justify-content-md-end">
+        <div className="text-primary row justify-content-md-end">
           <GameChart character={this.state.character} />
         </div>
       </div>

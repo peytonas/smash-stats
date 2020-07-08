@@ -80,15 +80,15 @@ class IndividualStats extends Component {
 
   render() {
     return (
-      <div className="col col-md-6">
-        <h5>{this.props.character.name} Average FAF/Fighter Average:
+      <div className="col col-md-6 mobile-font">
+        <p>{this.props.character.name} Average FAF/Fighter Average:
         <span className={this.state.characterLag > this.state.rosterLagAverage ? "text-danger" : "text-green"}>
             {Math.floor(this.state.characterLag)}</span>/{this.state.rosterLagAverage}
-        </h5>
-        <h5>{this.props.character.name} DPA/Average DPA:
+        </p>
+        <p>{this.props.character.name} DPA/Average DPA:
         <span className={this.state.characterDmg > this.state.rosterDmgAverage ? "text-green" : "text-danger"}>
             {this.state.characterDmg.toFixed(2)}</span>/{this.state.rosterDmgAverage.toFixed(2)}
-        </h5>
+        </p>
       </div>
     )
   }
