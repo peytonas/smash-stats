@@ -19,7 +19,11 @@
 }
 
 @media only screen and (max-width: 767px){
-  .small-img{
+.fas {
+  display: none;
+}
+
+.small-img{
   height: 99px;
   width: 99px;
 }

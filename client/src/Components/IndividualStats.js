@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Chart.css'
-import '../Components/IndividualStats.css'
+import './IndividualStats.css'
 
 class IndividualStats extends Component {
   state = {
@@ -80,15 +80,15 @@ class IndividualStats extends Component {
 
   render() {
     return (
-      <div className="col col-md-6 mobile-font">
-        <p>{this.props.character.name} Average FAF/Fighter Average:
-        <span className={this.state.characterLag > this.state.rosterLagAverage ? "text-danger" : "text-green"}>
-            {Math.floor(this.state.characterLag)}</span>/{this.state.rosterLagAverage}
-        </p>
-        <p>{this.props.character.name} DPA/Average DPA:
+      <div className="col col-md-4 mobile-font stat-border ml-md-1 text-success">
+        <h6>{this.props.character.name} DPA/Average DPA:
         <span className={this.state.characterDmg > this.state.rosterDmgAverage ? "text-green" : "text-danger"}>
             {this.state.characterDmg.toFixed(2)}</span>/{this.state.rosterDmgAverage.toFixed(2)}
-        </p>
+        </h6>
+        <h6>{this.props.character.name} Average FAF/Fighter Average:
+        <span className={this.state.characterLag > this.state.rosterLagAverage ? "text-danger" : "text-green"}>
+            {Math.floor(this.state.characterLag)}</span>/{this.state.rosterLagAverage}
+        </h6>
       </div>
     )
   }
