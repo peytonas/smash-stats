@@ -6,7 +6,6 @@ import './Matchup.css'
 import OpponentStats from './OpponentStats';
 
 class Matchup extends Component {
-
   render() {
     const player = this.props.player
     const opponent = this.props.opponent

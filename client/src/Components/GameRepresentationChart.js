@@ -4,12 +4,14 @@ import { Chart } from "react-google-charts";
 import './Chart.css'
 
 class GameChart extends Component {
-
-  slice;
-  state = {
-    series: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+  constructor(props) {
+    super(props)
+    this.state = {
+      series: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+    }
   }
 
+  slice = 1;
   slices = [
     ["Series", 'Number of Fighters'],
     ["Super Mario Brothers", 9],

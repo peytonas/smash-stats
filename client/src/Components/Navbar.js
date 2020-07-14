@@ -3,7 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import './Nav.css';
 
 function NavBar() {
-
   return (
     <div className="row justify-content-left bg-primary text-center text-md-left" >
       <div className="col col-md-1">

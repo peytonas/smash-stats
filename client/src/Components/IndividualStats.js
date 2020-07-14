@@ -3,12 +3,15 @@ import './Chart.css'
 import './IndividualStats.css'
 
 class IndividualStats extends Component {
-  state = {
-    characterLag: 0,
-    characterDmg: 0,
-    rosterDmgAverages: [],
-    rosterDmgAverage: 0,
-    rosterLagAverage: 0,
+  constructor(props) {
+    super(props)
+    this.state = {
+      characterLag: 0,
+      characterDmg: 0,
+      rosterDmgAverages: [],
+      rosterDmgAverage: 0,
+      rosterLagAverage: 0,
+    }
   }
 
   componentDidMount() {

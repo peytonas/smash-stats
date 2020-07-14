@@ -11,9 +11,11 @@ let api = Axios.create({
 })
 
 class Footer extends Component {
-
-  state = {
-    hitsObject: {}
+  constructor(props) {
+    super(props)
+    this.state = {
+      hitsObject: {}
+    }
   }
 
   getHits() {

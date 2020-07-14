@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import './CharacterSelect.css'
 
 class OpponentName extends Component {
-
   selectCharacter = (characterId) => {
     this.props.characterPasser(characterId)
   }

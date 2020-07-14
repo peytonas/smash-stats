@@ -4,12 +4,14 @@ import '../Views/CharacterPage.css'
 import Axios from 'axios'
 
 class CharacterPageImage extends Component {
-
-  state = {
-    character: {},
-    characterSkinNumber: 1,
-    currentSkin: null
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      character: {},
+      characterSkinNumber: 1,
+      currentSkin: null
+    }
+  }
 
   componentDidMount() {
     const characterId = this.props.character
