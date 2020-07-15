@@ -18,6 +18,7 @@ class IndividualStats extends Component {
     setTimeout(() => {
       this.averageFunctions()
       this.playerFunctions()
+      // this.percentRank(this.state.rosterDmgAverages, this.state.characterDmg)
     }, 1000)
   }
   averageFunctions() {
@@ -83,12 +84,13 @@ class IndividualStats extends Component {
 
   render() {
     return (
-      <div className="col col-md-4 mobile-font stat-border ml-md-1 text-success">
-        <h6>{this.props.character.name} DPA/Average DPA:
+      <div className="col col-md-5 mobile-font stat-border ml-md-1 text-success">
+        <h6 className="mt-1">Percentile:&nbsp;<span></span></h6>
+        <h6>DPA/Average DPA:&nbsp;
         <span className={this.state.characterDmg > this.state.rosterDmgAverage ? "text-green" : "text-danger"}>
             {this.state.characterDmg.toFixed(2)}</span>/{this.state.rosterDmgAverage.toFixed(2)}
         </h6>
-        <h6>{this.props.character.name} Average FAF/Fighter Average:
+        <h6>Average FAF/Roster Average FAF:&nbsp;
         <span className={this.state.characterLag > this.state.rosterLagAverage ? "text-danger" : "text-green"}>
             {Math.floor(this.state.characterLag)}</span>/{this.state.rosterLagAverage}
         </h6>
