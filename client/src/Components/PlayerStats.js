@@ -200,6 +200,18 @@ class PlayerStats extends Component {
           {player.name && <p className={player.spotDodgeLag === opponent.spotDodgeLag ? "text-yellow border-yellow" : player.spotDodgeLag < opponent.spotDodgeLag ? "text-green border-green" : "text-danger border-danger"}>{player.spotDodgeLag}</p>}
 
           {player.name && <p className={player.airDodgeLag === opponent.airDodgeLag ? "text-yellow border-yellow" : player.airDodgeLag < opponent.airDodgeLag ? "text-green border-green" : "text-danger border-danger"}>{player.airDodgeLag}</p>}
+
+          {player.name === "Terry" && <p className={player.name === opponent.name ? "text-yellow border-yellow" : "text-green border-green"}>{player.superSpecial1}</p>}
+
+          {player.name === "Terry" && <p className={player.name === opponent.name ? "text-yellow border-yellow" : "text-green border-green"}>{player.superSpecial1Startup}</p>}
+
+          {player.name === "Terry" && <p className={player.name === opponent.name ? "text-yellow border-yellow" : "text-green border-green"}>{player.superSpecial1Lag}</p>}
+
+          {player.name === "Terry" && <p className={player.name === opponent.name ? "text-yellow border-yellow" : "text-green border-green"}>{player.superSpecial2}</p>}
+
+          {player.name === "Terry" && <p className={player.name === opponent.name ? "text-yellow border-yellow" : "text-green border-green"}>{player.superSpecial2Startup}</p>}
+
+          {player.name === "Terry" && <p className={player.name === opponent.name ? "text-yellow border-yellow" : "text-green border-green"}>{player.superSpecial2Lag}</p>}
         </div>
       </div>
     )

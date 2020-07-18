@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import './Matchup.css'
 
+let terry = false;
+
 class MatchupStats extends Component {
+  nameCheck() {
+    if (this.props.player.name === "Terry" || this.props.opponent.name === "Terry") {
+      terry = true
+    } else {
+      terry = false
+    }
+  }
   render() {
+    this.nameCheck()
+    const player = this.props.player
+    const opponent = this.props.opponent
     return (
       <div className="col col-md-3 text-center">
         <div className="stat-size mb-1">
@@ -103,6 +115,18 @@ class MatchupStats extends Component {
           <p className="clear-border">Spot Dodge Start</p>
           <p className="clear-border">Spot Dodge FAF</p>
           <p className="clear-border">Air Dodge FAF</p>
+          {terry &&
+            <p className="clear-border">Power Geyser</p>}
+          {terry &&
+            <p className="clear-border smaller-text">Power Geyser SU</p>}
+          {terry &&
+            <p className="clear-border">Power Geyser FAF</p>}
+          {terry &&
+            <p className="clear-border">Buster Wolf</p>}
+          {terry &&
+            <p className="clear-border smaller-text">Buster Wolf SU</p>}
+          {terry &&
+            <p className="clear-border">Buster Wolf FAF</p>}
         </div>
       </div>
     )

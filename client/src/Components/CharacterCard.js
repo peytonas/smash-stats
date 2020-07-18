@@ -108,6 +108,12 @@ class CharacterCard extends Component {
       Spot Dodge Startup: ${characterStats.spotDodgeStart}</br>
       Spot Dodge Lag (FAF): ${characterStats.spotDodgeLag}</br>
       Air Dodge Lag (FAF): ${characterStats.airDodgeLag}</br>
+      Power Geyser: ${characterStats.superSpecial1}</br>
+      Power Geyser Startup: ${characterStats.superSpecial1Startup}</br>
+      Power Geyser Lag (FAF): ${characterStats.superSpecial1Lag}</br>
+      Buster Wolf: ${characterStats.superSpecial2}</br>
+      Buster Wolf Startup: ${characterStats.superSpecial2Startup}</br>
+      Buster Wolf Lag (FAF): ${characterStats.superSpecial2Lag}</br>
       </span >`,
       imageUrl: characterStats.iconUrl,
       imageAlt: "character icon",

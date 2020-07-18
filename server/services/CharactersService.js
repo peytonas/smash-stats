@@ -40,6 +40,14 @@ const _schema = new Schema(
     downSpecialStartup: { type: Number, required: false },
     downSpecialLag: { type: Number, required: false },
 
+    superSpecial1: { type: Number, required: false },
+    superSpecial1Startup: { type: Number, required: false },
+    superSpecial1Lag: { type: Number, required: false },
+
+    superSpecial2: { type: Number, required: false },
+    superSpecial2Startup: { type: Number, required: false },
+    superSpecial2Lag: { type: Number, required: false },
+
     upTilt: { type: Number, required: false },
     upTiltStartup: { type: Number, required: false },
     upTiltLag: { type: Number, required: false },

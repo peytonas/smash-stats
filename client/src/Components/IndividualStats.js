@@ -8,6 +8,7 @@ class IndividualStats extends Component {
     this.state = {
       characterLag: 0,
       characterDmg: 0,
+      characterPercentile: 0,
       rosterDmgAverages: [],
       rosterDmgAverage: 0,
       rosterLagAverage: 0,
@@ -66,6 +67,7 @@ class IndividualStats extends Component {
 
   // Returns the percentile of the given value in a sorted numeric array.
   // percentRank(arr, v) {
+  //   var percentile;
   //   if (typeof v !== 'number') throw new TypeError('v must be a number');
   //   for (var i = 0, l = arr.length; i < l; i++) {
   //     if (v <= arr[i]) {
@@ -75,7 +77,9 @@ class IndividualStats extends Component {
   //         i += (v - arr[i - 1]) / (arr[i] - arr[i - 1]);
   //       }
   //       console.log(i / l)
-  //       return i / l;
+  //       percentile = i / l
+  //       this.setState({ characterPercentile: percentile })
+  //       // return i / l;
   //     }
   //   }
   //   console.log(1);
@@ -85,7 +89,7 @@ class IndividualStats extends Component {
   render() {
     return (
       <div className="col col-md-5 mobile-font stat-border ml-md-1 text-success">
-        <h6 className="mt-1">Percentile:&nbsp;<span></span></h6>
+        <h6 className="mt-1">Percentile:&nbsp;<span>{this.state.characterPercentile}</span></h6>
         <h6>DPA/Average DPA:&nbsp;
         <span className={this.state.characterDmg > this.state.rosterDmgAverage ? "text-green" : "text-danger"}>
             {this.state.characterDmg.toFixed(2)}</span>/{this.state.rosterDmgAverage.toFixed(2)}
