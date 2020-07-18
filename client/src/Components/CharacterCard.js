@@ -117,7 +117,7 @@ class CharacterCard extends Component {
       Buster Wolf Startup: ${ characterStats.superSpecial2Startup}</br >
       Buster Wolf Lag(FAF): ${ characterStats.superSpecial2Lag}</br >`}
       </span >`,
-      imageUrl: characterStats.imgUrl1,
+      imageUrl: characterStats.iconUrl,
       imageAlt: "character icon",
       background: "#211a21",
       backdrop: "rgba(33,26,33,0.5)",
