@@ -72,10 +72,10 @@ class GameChart extends Component {
     return (
       <div className={"my-pretty-chart-container mr-md-2 mt-md-n5"}>
         <Chart
-          // width={'400px'}
+          className="fill"
           height={'400px'}
           chartType="PieChart"
-          loader={<div>Loading Chart</div>}
+          loader={<div>Loading Chart...</div>}
           data={this.slices}
           options={{
             title: 'Series Representation',
@@ -87,11 +87,7 @@ class GameChart extends Component {
             pieSliceText: 'label',
             slices: this.state.series,
             legend: {
-              textStyle: {
-                color: '#b5b6e4',
-                fontSize: 7,
-              },
-              position: 'bottom'
+              position: 'none'
             }
           }
           }

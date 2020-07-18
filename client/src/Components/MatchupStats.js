@@ -15,7 +15,7 @@ class MatchupStats extends Component {
     this.nameCheck()
     return (
       <div className="col col-md-3 text-center">
-        <div className="stat-size mb-1">
+        <div className="stat-size">
           <p className="clear-border">Weight</p>
           <p className="clear-border">Jab</p>
           <p className="clear-border">Jab SU</p>
