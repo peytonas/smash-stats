@@ -3,8 +3,15 @@ import swal from 'sweetalert2'
 import './CharacterCard.css'
 import PropTypes from 'prop-types'
 
+let terry = true
+
 class CharacterCard extends Component {
   async viewStats(characterStats) {
+    if (characterStats.name === "Terry") {
+      terry = true
+    } else {
+      terry = false
+    }
     swal.fire({
       title: `<span style="color:#b5b6e4;font-size:.7rem" className="overflow">
       <span style="font-size:1.5rem; font-weight:bold">${characterStats.name}</span> </br> 
@@ -108,12 +115,13 @@ class CharacterCard extends Component {
       Spot Dodge Startup: ${characterStats.spotDodgeStart}</br>
       Spot Dodge Lag (FAF): ${characterStats.spotDodgeLag}</br>
       Air Dodge Lag (FAF): ${characterStats.airDodgeLag}</br>
-      Power Geyser: ${characterStats.superSpecial1}</br>
-      Power Geyser Startup: ${characterStats.superSpecial1Startup}</br>
-      Power Geyser Lag (FAF): ${characterStats.superSpecial1Lag}</br>
-      Buster Wolf: ${characterStats.superSpecial2}</br>
-      Buster Wolf Startup: ${characterStats.superSpecial2Startup}</br>
-      Buster Wolf Lag (FAF): ${characterStats.superSpecial2Lag}</br>
+      ${characterStats.name === "Terry" &&
+        `Power Geyser: ${characterStats.superSpecial1}</br >
+      Power Geyser Startup: ${ characterStats.superSpecial1Startup}</br >
+      Power Geyser Lag(FAF): ${ characterStats.superSpecial1Lag}</br >
+      Buster Wolf: ${ characterStats.superSpecial2}</br >
+      Buster Wolf Startup: ${ characterStats.superSpecial2Startup}</br >
+      Buster Wolf Lag(FAF): ${ characterStats.superSpecial2Lag}</br >`}
       </span >`,
       imageUrl: characterStats.iconUrl,
       imageAlt: "character icon",

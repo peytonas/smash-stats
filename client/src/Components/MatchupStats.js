@@ -13,8 +13,6 @@ class MatchupStats extends Component {
   }
   render() {
     this.nameCheck()
-    const player = this.props.player
-    const opponent = this.props.opponent
     return (
       <div className="col col-md-3 text-center">
         <div className="stat-size mb-1">
