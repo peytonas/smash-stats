@@ -15,6 +15,20 @@ class Home extends Component {
     opponentChoice: {},
   }
 
+  constructor(props) {
+    super(props)
+    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
+    let api = Axios.create({
+      baseURL: base + 'api/',
+      timeout: 6000,
+      withCredentials: true
+    })
+    api.get(`/characters`)
+      .then(res => {
+        this.setState({ characters: res.data });
+      })
+  }
+
   selectedPlayer = (characterId) => {
     let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
     let api = Axios.create({
@@ -63,19 +77,6 @@ class Home extends Component {
   resetChoices() {
     this.setState({ playerChoice: {} })
     this.setState({ opponentChoice: {} })
-  }
-
-  componentDidMount() {
-    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
-    let api = Axios.create({
-      baseURL: base + 'api/',
-      timeout: 6000,
-      withCredentials: true
-    })
-    api.get(`/characters`)
-      .then(res => {
-        this.setState({ characters: res.data });
-      })
   }
 
   render() {

@@ -8,7 +8,7 @@ function NavBar() {
       <div className="col col-md-1">
         <nav className="bg-primary">
           <Link className="text-dark ml-1" to="/">
-            <i className="fas fa-home"></i>
+            <i className="fa fa-home"></i>
           </Link>
         </nav>
       </div>
