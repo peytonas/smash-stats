@@ -13,9 +13,6 @@ class IndividualStats extends Component {
       rosterDmgAverage: 0,
       rosterLagAverage: 0,
     }
-  }
-
-  componentDidMount() {
     setTimeout(() => {
       this.averageFunctions()
       this.playerFunctions()
@@ -63,6 +60,9 @@ class IndividualStats extends Component {
     }
     lag = lag / this.props.roster.length
     this.setState({ rosterLagAverage: Math.floor(lag) })
+  }
+
+  componentDidMount() {
   }
 
   // Returns the percentile of the given value in a sorted numeric array.

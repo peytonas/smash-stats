@@ -6,34 +6,35 @@ import Navbar from '../Components/Navbar'
 import GameChart from '../Components/GameRepresentationChart'
 import "./CharacterPage.css"
 
-
 class CharacterPage extends Component {
+  state = {
+    character: {},
+    roster: []
+  }
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
     const characterId = this.props.match.params.characterId
+
     let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
     let api = Axios.create({
       baseURL: base + 'api/',
       timeout: 6000,
       withCredentials: true
     })
+
     api.get(`/characters/${characterId}`)
       .then(res => {
         this.setState({ character: res.data, },
         );
       })
+
     api.get(`/characters`)
       .then(res => {
-        this.state = { roster: res.data }
+        this.setState({ roster: res.data })
       })
-
-    this.state = {
-      character: {},
-      roster: []
-    }
-  }
-
-  componentDidMount() {
   }
 
   render() {
