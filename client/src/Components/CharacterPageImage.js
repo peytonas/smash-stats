@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../SNES-bootstrap.css'
 import '../Views/CharacterPage.css'
-import Axios from 'axios'
 
 class CharacterPageImage extends Component {
   constructor(props) {

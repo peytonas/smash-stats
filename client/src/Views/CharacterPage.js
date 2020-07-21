@@ -11,9 +11,6 @@ class CharacterPage extends Component {
     character: {},
     roster: []
   }
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     const characterId = this.props.match.params.characterId
