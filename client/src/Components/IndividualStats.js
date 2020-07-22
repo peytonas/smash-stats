@@ -23,7 +23,7 @@ class IndividualStats extends Component {
       this.sortMobility()
       this.sortDamage()
       this.characterRank()
-    }, 1000)
+    }, 1250)
   }
   averageFunctions() {
     this.averageDmgCalculator()
