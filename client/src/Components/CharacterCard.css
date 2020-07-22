@@ -10,7 +10,7 @@ img{
 .cards{
   cursor: pointer;
   background-color: #cec9cc;
-  border: 2px solid #de4337;
+  border: 2px solid #e60012;
   border-radius: 8px;
   height: auto;
   margin-top: 4px;
@@ -42,7 +42,7 @@ img{
 .cards{
   cursor: pointer;
   background-color: #cec9cc;
-  border: 1px solid #de4337;
+  border: 1px solid #e60012;
   font-size: 1rem;
   border-radius: 8px;
   height: auto;

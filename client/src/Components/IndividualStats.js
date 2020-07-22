@@ -23,7 +23,7 @@ class IndividualStats extends Component {
       this.sortMobility()
       this.sortDamage()
       this.characterRank()
-    }, 1250)
+    }, 1100)
   }
   averageFunctions() {
     this.averageDmgCalculator()
@@ -131,7 +131,7 @@ class IndividualStats extends Component {
 
   render() {
     return (
-      <div className="col col-md-5 mobile-font stat-border ml-md-1 text-success">
+      <div className="col col-md-5 mobile-font stat-border ml-md-1 text-info">
         <h6 className="mt-1">Rank:&nbsp;<span>{this.state.characterRank}</span></h6>
         <h6>DPA/Average DPA:&nbsp;
         <span className={this.state.characterDmg > this.state.rosterDmgAverage ? "text-green" : "text-danger"}>

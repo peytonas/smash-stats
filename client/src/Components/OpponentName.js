@@ -12,7 +12,7 @@ class OpponentName extends Component {
     const characterNumber = Math.floor(this.props.character.characterNumber)
 
     return (
-      <p className={this.props.opponent.name === name ? "border-danger name-size" : "name-size"} style={{ order: characterNumber }} onClick={this.selectCharacter.bind(this, this.props.character._id)}><b className="ml-1">{name}</b></p>
+      <p className={this.props.opponent.name === name ? "border-danger-name" : null} style={{ order: characterNumber }} onClick={this.selectCharacter.bind(this, this.props.character._id)}><b className="ml-1">{name}</b></p>
     )
   }
 }

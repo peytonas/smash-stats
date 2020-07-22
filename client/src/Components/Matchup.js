@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import MatchupStats from './MatchupStats'
 import PlayerStats from './PlayerStats'
-import './Matchup.css'
 import OpponentStats from './OpponentStats';
+import './Matchup.css'
 
 class Matchup extends Component {
   render() {
     const player = this.props.player
     const opponent = this.props.opponent
     return (
-      <div className="col-12 col-md-5 text-center text-success mt-4">
+      <div className="col-12 col-md-5 text-center mt-4">
         <div className="row justify-content-between text-primary">
           <div className="col col-md-4 text-md-center">
             <h6><b>{player.name}</b></h6>
             <nav>
               <Link to={`/character/${player.id}`}>
-                {player.name && <img src={player.iconUrl} alt="player icon" className="mb-1 border rounded border-danger bg-info" />}
+                {player.name && <img src={player.iconUrl} alt="player icon" className="mb-1 border rounded border-danger bg-secondary" />}
               </Link>
             </nav>
           </div>
@@ -27,7 +27,7 @@ class Matchup extends Component {
             <h6><b>{opponent.name}</b></h6>
             <nav>
               <Link to={`/character/${opponent.id}`}>
-                {opponent.name && <img src={opponent.iconUrl} alt="opponent icon" className="mb-1 border rounded border-danger bg-info" />}
+                {opponent.name && <img src={opponent.iconUrl} alt="opponent icon" className="mb-1 border rounded border-danger bg-secondary" />}
               </Link>
             </nav>
           </div>

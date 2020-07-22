@@ -1,14 +1,14 @@
 .text-green{
-  color: #28a745;
+  color: #1edc00;
 }
 
 .text-yellow{
-  color: #ffc107;
+  color: #e6ff00;
 }
 
 .stat-border {
   background-color: #cec9cc;
-  border: 2px solid #4f43ae;
+  border: 2px solid #4655f5;
   border-radius: 8px;
   height: auto;
 }

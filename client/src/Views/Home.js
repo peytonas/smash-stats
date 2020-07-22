@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import swal from 'sweetalert2'
-import '../SNES-bootstrap.css'
+import '../SWITCH-bootstrap.css'
 import CharacterCardColumn from '../Components/CharacterCardColumn'
 import PlayerSelectTable from '../Components/PlayerSelectTable'
 import OpponentSelectTable from '../Components/OpponentSelectTable'
@@ -84,29 +84,29 @@ class Home extends Component {
       <div id="characters" className="container-fluid">
         <div className="row text-primary">
           <div className="order-2 order-md-1 col col-md-1 align-self-center text-center">
-            <i className="far fa-question-circle pointer text-success" onClick={this.viewInfo.bind(this)}></i>
+            <i className="far fa-question-circle pointer text-info" onClick={this.viewInfo.bind(this)}></i>
           </div>
-          <div className="order-1 order-md-2 col-12 offset-md-3 col-md-4 text-center">
+          <div className="order-1 order-lg-2 col-12 col-md-8 col-lg-4 offset-md-1 offset-lg-3 text-center">
             <h1 className="size mt-2 border border-primary rounded pl-1 pr-1">SMASH STATS</h1>
           </div>
         </div>
-        <div className="row justify-content-center justify-content-md-between text-success">
-          <div className="col col-md-2 text-center text-md-left">
-            <p className="text-primary">Player:</p>
-            <div className="name-scroll bg-info rounded flexBox mt-n2">
+        <div className="row justify-content-center justify-content-md-between text-info">
+          <div className="col col-md-3 col-lg-2 text-center text-md-left">
+            <p className="text-info text-left">Player:</p>
+            <div className="name-scroll bg-secondary rounded flexBox mt-n2">
               <PlayerSelectTable characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} />
             </div>
-            <p className="mt-1 text-primary">Opponent:</p>
-            <div className="name-scroll bg-info rounded flexBox mt-n2">
+            <p className="mt-1 text-info text-left">Opponent:</p>
+            <div className="name-scroll bg-secondary rounded flexBox mt-n2">
               <OpponentSelectTable characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} />
             </div>
             <div>
-              <button className="btn fab btn-success mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fa fa-trash-alt"></i></button>
+              <button className="btn fab btn-info mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fa fa-trash-alt"></i></button>
             </div>
           </div>
           <Matchup player={this.state.playerChoice} opponent={this.state.opponentChoice} />
-          <div className="col-4 col-md-2 text-center text-danger">
-            <h6 className="text-danger text-center text-md-left"><b>Character Stats:</b></h6>
+          <div className="col-4 col-md-3 col-lg-2 text-center text-danger">
+            <h6 className="text-center text-md-left"><b>Character Stats:</b></h6>
             <div className="card-scroll flexBox">
               <CharacterCardColumn characters={this.state.characters} />
             </div>

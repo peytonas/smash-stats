@@ -1,22 +1,18 @@
-.border-green{
-  border: 2px solid #28a745;
-  color: #28a745;
+.border-green-name{
+  border: 3px solid #1edc00;
 }
 
-.border-danger{
-  border: 2px solid #de4337;
-  color: #de4337;
+.border-danger-name{
+  border: 3px solid #e60012;
 }
 
 @media only screen and (max-width: 767px){
   .border-green{
-  border: 1px solid #28a745;
-  color: #28a745;
+  border: 1px solid #1edc00;
 }
 
 .border-danger{
-  border: 1px solid #de4337;
-  color: #de4337;
+  border: 1px solid #e60012;
 }
 }
 

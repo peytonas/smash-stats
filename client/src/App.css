@@ -40,11 +40,11 @@
   max-height: 29vh;
   overflow: scroll;
   cursor: pointer;
-  border: 2px solid #4f43ae;
+  border: 2px solid #4655f5;
 }
 
 .card-scroll{
-  max-height: 69vh;
+  max-height: 68vh;
   overflow: scroll;
   cursor: pointer;
 }
@@ -125,7 +125,7 @@ i{
   max-height: 15vh;
   overflow: scroll;
   cursor: pointer;
-  border: 2px solid #4f43ae;
+  border: 2px solid #4655f5;
 }
 
 .card-scroll{

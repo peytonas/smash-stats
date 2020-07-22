@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import './App.css';
-import './SNES-bootstrap.css'
+import './SWITCH-bootstrap.css'
 import Footer from './Components/Footer'
 import Home from './Views/Home'
 import CharacterPage from './Views/CharacterPage';

@@ -40,9 +40,9 @@ class Footer extends Component {
       <footer className="fixed-bottom">
         <div className="row justify-content-between bg-primary text-center text-md-left mb-md-n2">
           <div className="col-4 col-md-2 text-left">
-            <a href="https://twitter.com/UnbrandedLemon" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter ml-2 text-success"></i></a>
-            <a href="https://www.youtube.com/channel/UCkQmM3FZJXlOo3cf2n-MwEQ" target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube ml-2 text-success"></i></a>
-            <a href="https://venmo.com/Peyton-Sonnefeld" target="_blank" rel="noopener noreferrer"><i className="fa fa-heartbeat ml-2 text-success"></i></a>
+            <a href="https://twitter.com/UnbrandedLemon" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter ml-2 text-dark"></i></a>
+            <a href="https://www.youtube.com/channel/UCkQmM3FZJXlOo3cf2n-MwEQ" target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube ml-2 text-dark"></i></a>
+            <a href="https://venmo.com/Peyton-Sonnefeld" target="_blank" rel="noopener noreferrer"><i className="fa fa-heartbeat ml-2 text-dark"></i></a>
           </div>
           <Counter hits={this.state.hitsObject.hits} />
         </div>

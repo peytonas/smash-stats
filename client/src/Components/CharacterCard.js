@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 class CharacterCard extends Component {
   async viewStats(characterStats) {
     swal.fire({
-      title: `<span style="color:#b5b6e4;font-size:.7rem" className="overflow">
+      title: `<span style="color:#00c3e3;font-size:.7rem" className="overflow">
       <span style="font-size:1.5rem; font-weight:bold">${characterStats.name}</span> </br> 
       Series: ${characterStats.series}</br>
       Introduced: ${characterStats.introduced}</br>
