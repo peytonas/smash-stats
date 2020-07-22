@@ -12,29 +12,38 @@ class CharacterPageImage extends Component {
   }
 
   async cycleImage() {
+    var skin1 = this.props.character.imgUrl1
+    var skin2 = this.props.character.imgUrl2
+    var skin3 = this.props.character.imgUrl3
+    var skin4 = this.props.character.imgUrl4
+    var skin5 = this.props.character.imgUrl5
+    var skin6 = this.props.character.imgUrl6
+    var skin7 = this.props.character.imgUrl7
+    var skin8 = this.props.character.imgUrl8
+
     if (this.state.characterSkinNumber === 1) {
-      this.setState({ currentSkin: this.props.character.imgUrl1 })
+      this.setState({ currentSkin: skin1 })
     }
     if (this.state.characterSkinNumber === 2) {
-      this.setState({ currentSkin: this.props.character.imgUrl2 })
+      this.setState({ currentSkin: skin2 })
     }
     if (this.state.characterSkinNumber === 3) {
-      this.setState({ currentSkin: this.props.character.imgUrl3 })
+      this.setState({ currentSkin: skin3 })
     }
     if (this.state.characterSkinNumber === 4) {
-      this.setState({ currentSkin: this.props.character.imgUrl4 })
+      this.setState({ currentSkin: skin4 })
     }
     if (this.state.characterSkinNumber === 5) {
-      this.setState({ currentSkin: this.props.character.imgUrl5 })
+      this.setState({ currentSkin: skin5 })
     }
     if (this.state.characterSkinNumber === 6) {
-      this.setState({ currentSkin: this.props.character.imgUrl6 })
+      this.setState({ currentSkin: skin6 })
     }
     if (this.state.characterSkinNumber === 7) {
-      this.setState({ currentSkin: this.props.character.imgUrl7 })
+      this.setState({ currentSkin: skin7 })
     }
     if (this.state.characterSkinNumber === 8) {
-      this.setState({ currentSkin: this.props.character.imgUrl8 })
+      this.setState({ currentSkin: skin8 })
     }
   }
 

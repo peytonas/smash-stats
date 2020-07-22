@@ -7,12 +7,13 @@ import GameChart from '../Components/GameRepresentationChart'
 import "./CharacterPage.css"
 
 class CharacterPage extends Component {
-  state = {
-    character: {},
-    roster: []
-  }
 
-  componentDidMount() {
+  constructor(props) {
+    super(props)
+    this.state = {
+      character: {},
+      roster: []
+    }
     const characterId = this.props.match.params.characterId
 
     let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'

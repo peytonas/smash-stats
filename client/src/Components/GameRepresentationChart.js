@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import Chart from "chart.js";
 import { Chart } from "react-google-charts";
 import './Chart.css'
 
