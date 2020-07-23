@@ -1,9 +1,9 @@
 .border-green-name{
-  border: 3px solid #1edc00;
+  border: 2px solid #1edc00;
 }
 
 .border-danger-name{
-  border: 3px solid #e60012;
+  border: 2px solid #e60012;
 }
 
 @media only screen and (max-width: 767px){

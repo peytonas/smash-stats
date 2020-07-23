@@ -78,7 +78,7 @@ class GameChart extends Component {
           options={{
             title: 'Series Representation',
             is3D: true,
-            backgroundColor: '#211a21',
+            backgroundColor: '#131111',
             titleTextStyle: {
               color: '#b5b6e4'
             },

@@ -119,8 +119,8 @@ class CharacterCard extends Component {
       </span >`,
       imageUrl: characterStats.iconUrl,
       imageAlt: "character icon",
-      background: "#211a21",
-      backdrop: "rgba(33,26,33,0.5)",
+      background: "#131111",
+      backdrop: "rgba(19,17,17,0.5)",
       showConfirmButton: false,
       showCloseButton: true
     });
