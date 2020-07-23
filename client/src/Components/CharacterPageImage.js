@@ -69,14 +69,14 @@ class CharacterPageImage extends Component {
         </div>
         <div className="row justify-content-center align-items-center text-center">
           <div className="col col-md-1 text-primary">
-            <i className="fas fa-caret-left fa-2x pulse pointer" onClick={this.cycleDown.bind(this)}></i>
+            <i className="fas fa-caret-left fa-3x pulse pointer" onClick={this.cycleDown.bind(this)}></i>
           </div>
           <div className="col col-md-4">
             <img className="small-img" alt="character icon" src={character.iconUrl} />
             <img className="large-img" alt="character" src={this.state.currentSkin || this.props.character.imgUrl1} />
           </div>
           <div className="col col-md-1 text-primary">
-            <i className="fas fa-caret-right fa-2x pulse pointer" onClick={this.cycleUp.bind(this)}></i>
+            <i className="fas fa-caret-right fa-3x pulse pointer" onClick={this.cycleUp.bind(this)}></i>
           </div>
         </div>
       </div>

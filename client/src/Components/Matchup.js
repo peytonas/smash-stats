@@ -16,7 +16,7 @@ class Matchup extends Component {
             <h6><b>{player.name}</b></h6>
             <nav>
               <Link to={`/character/${player.id}`}>
-                {player.name && <img src={player.iconUrl} alt="player icon" className="mb-1 border rounded border-danger bg-secondary" />}
+                {player.name && <img src={player.iconUrl} alt="player icon" className="mb-1 border-danger-icon bg-secondary" />}
               </Link>
             </nav>
           </div>
@@ -27,7 +27,7 @@ class Matchup extends Component {
             <h6><b>{opponent.name}</b></h6>
             <nav>
               <Link to={`/character/${opponent.id}`}>
-                {opponent.name && <img src={opponent.iconUrl} alt="opponent icon" className="mb-1 border rounded border-danger bg-secondary" />}
+                {opponent.name && <img src={opponent.iconUrl} alt="opponent icon" className="mb-1 border-danger-icon bg-secondary" />}
               </Link>
             </nav>
           </div>

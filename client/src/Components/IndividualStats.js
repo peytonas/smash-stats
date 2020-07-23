@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Chart.css'
 import './IndividualStats.css'
 
 class IndividualStats extends Component {

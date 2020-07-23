@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Chart from "chart.js";
-import './Chart.css'
 
 class PlayerChart extends Component {
 

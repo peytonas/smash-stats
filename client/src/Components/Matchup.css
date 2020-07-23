@@ -35,14 +35,23 @@
 
 .border-green{
   border: 2px solid #1edc00;
+  border-radius: 8px;
+
 }
 
 .border-yellow{
   border: 2px solid #e6ff00;
+  border-radius: 8px;
 }
 
 .border-danger{
   border: 2px solid #e60012;
+  border-radius: 8px;
+}
+
+.border-danger-icon{
+  border: 2px solid #e60012;
+  border-radius: 8px;
 }
 
 .clear-border{
@@ -90,14 +99,25 @@ h6{
 
 .border-green{
   border: 1px solid #1edc00;
+  border-radius: 8px;
+  
 }
 
 .border-yellow{
   border: 1px solid #e6ff00;
+  border-radius: 8px;
+  
+
 }
 
 .border-danger{
   border: 1px solid #e60012;
+}
+
+.border-danger-icon{
+  border: 2px solid #e60012;
+  border-radius: 8px;
+  
 }
 
 .clear-border{

@@ -93,11 +93,11 @@ class Home extends Component {
         <div className="row justify-content-center justify-content-md-between text-info">
           <div className="col col-md-3 col-lg-2 text-center text-md-left">
             <p className="text-info text-left">Player:</p>
-            <div className="name-scroll bg-secondary rounded flexBox mt-n2">
+            <div className="name-scroll bg-secondary flexBox mt-n2">
               <PlayerSelectTable characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} />
             </div>
             <p className="mt-1 text-info text-left">Opponent:</p>
-            <div className="name-scroll bg-secondary rounded flexBox mt-n2">
+            <div className="name-scroll bg-secondary flexBox mt-n2">
               <OpponentSelectTable characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} />
             </div>
             <div>
