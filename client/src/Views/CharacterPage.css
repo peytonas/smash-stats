@@ -19,6 +19,11 @@
 }
 
 @media only screen and (max-width: 767px){
+.character-container{
+  background-color: #131111;
+  min-height: 150vh;
+}
+
 .fas {
   display: none;
 }
