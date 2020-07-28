@@ -12,7 +12,9 @@ class IndividualStats extends Component {
       rosterRanks: [],
       rosterDmgAverage: 0,
       rosterMobilityAverage: 0,
-      characterRank: 0
+      characterRank: 0,
+      damageWeight: 30,
+      mobilityWeight: 70
     }
     setTimeout(() => {
       this.averageFunctions()
@@ -22,11 +24,11 @@ class IndividualStats extends Component {
       this.sortMobility()
       this.sortDamage()
       this.characterRank()
-    }, 1100)
+    }, 1500)
   }
   averageFunctions() {
-    this.averageDmgCalculator()
-    this.averageMobilityCalculator()
+    this.rosterDmgCalculator()
+    this.rosterMobilityCalculator()
   }
 
   playerFunctions() {
@@ -46,7 +48,7 @@ class IndividualStats extends Component {
     this.setState({ characterMobility: mobility });
   }
 
-  averageDmgCalculator() {
+  rosterDmgCalculator() {
     var score = 0
 
     for (var c in this.props.roster) {
@@ -61,7 +63,7 @@ class IndividualStats extends Component {
     this.setState({ rosterDmgAverage: score })
   }
 
-  averageMobilityCalculator() {
+  rosterMobilityCalculator() {
     var mobility = 0
 
     for (var c in this.props.roster) {
