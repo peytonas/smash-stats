@@ -384,7 +384,7 @@ class IndividualStats extends Component {
 
     for (var c = 0; c < this.state.rosterMobilityRanks.length; c++) {
       if (rank === this.state.rosterMobilityRanks[c]) {
-        var newRank = c;
+        var newRank = c + 1;
         this.setState({ playerMobilityRank: newRank });
       }
     }
