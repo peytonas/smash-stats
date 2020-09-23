@@ -9,8 +9,12 @@
 }
 
 .large-img{
-  height: 400px;
+  height: 350px;
   width: auto;
+}
+
+.chart-margin{
+  margin-left: 74vh;
 }
 
 .pointer {

@@ -417,7 +417,7 @@ class IndividualStats extends Component {
 
   render() {
     return (
-      <div className="col col-md-5 mobile-font stat-border ml-md-1 text-info">
+      <div className="col col-md-4 mobile-font stat-border ml-md-1 text-info">
         <h6 className="mt-1">
           Damage Rank:&nbsp;<span>{this.state.playerDamageRank}</span>&nbsp;
           Mobility Rank:&nbsp;<span>{this.state.playerMobilityRank}</span>

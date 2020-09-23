@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Axios from 'axios'
 import CharacterPageImage from '../Components/CharacterPageImage'
 import IndividualStats from '../Components/IndividualStats'
+import RosterDPA from '../Components/RosterDPA'
+import RosterMobility from '../Components/RosterMobility'
 import Navbar from '../Components/Navbar'
 import GameChart from '../Components/GameRepresentationChart'
 import "./CharacterPage.css"
@@ -43,8 +45,12 @@ class CharacterPage extends Component {
         <div className="text-primary row justify-content-between text-center text-md-left">
           <IndividualStats character={this.state.character} roster={this.state.roster} />
         </div>
-        <div className="text-primary row justify-content-md-end">
+        <div className="text-primary row justify-content-md-left">
+          <RosterDPA/>
+          <RosterMobility/>
+          <div className="chart-margin">
           <GameChart character={this.state.character} />
+          </div>
         </div>
       </div>
     )
