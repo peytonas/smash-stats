@@ -1,17 +1,54 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import { Chart } from "react-google-charts";
 
 class GameChart extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      series: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
-    }
+      series: [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+      ],
+    };
   }
 
   slice = 1;
   slices = [
-    ["Series", 'Number of Fighters'],
+    ["Series", "Number of Fighters"],
     ["Super Mario Brothers", 9],
     ["Pokemon", 8],
     ["Fire Emblem", 8],
@@ -46,24 +83,26 @@ class GameChart extends Component {
     ["Dragon Quest", 1],
     ["Banjo-Kazooie", 1],
     ["Fatal Fury", 1],
-    ["Arms", 1]]
+    ["Arms", 1],
+    ["Minecraft", 1],
+  ];
 
   characterSeries() {
     var c;
     for (c = 0; c < this.slices.length; c++) {
       if (this.props.character.series === this.slices[c][0]) {
-        this.slice = c - 1
-        const newArr = this.state.series.slice(0, 36);
-        newArr[this.slice] = { offset: 0.2 }
-        this.setState({ series: newArr })
+        this.slice = c - 1;
+        const newArr = this.state.series.slice(0, 37);
+        newArr[this.slice] = { offset: 0.2 };
+        this.setState({ series: newArr });
       }
     }
   }
 
   componentDidMount() {
     setTimeout(() => {
-      this.characterSeries()
-    }, 2000)
+      this.characterSeries();
+    }, 2000);
   }
 
   render() {
@@ -71,29 +110,28 @@ class GameChart extends Component {
       <div className={"my-pretty-chart-container mr-md-2 mt-md-n5"}>
         <Chart
           className="fill"
-          height={'400px'}
+          height={"400px"}
           chartType="PieChart"
           loader={<div>Loading Chart...</div>}
           data={this.slices}
           options={{
-            title: 'Series Representation',
+            title: "Series Representation",
             is3D: true,
-            backgroundColor: '#131111',
+            backgroundColor: "#131111",
             titleTextStyle: {
-              color: '#b5b6e4'
+              color: "#b5b6e4",
             },
-            pieSliceText: 'label',
+            pieSliceText: "label",
             slices: this.state.series,
             legend: {
-              position: 'none'
-            }
-          }
-          }
-          rootProps={{ 'data-testid': '1' }}
+              position: "none",
+            },
+          }}
+          rootProps={{ "data-testid": "1" }}
         />
       </div>
-    )
+    );
   }
 }
 
-export default GameChart
+export default GameChart;
