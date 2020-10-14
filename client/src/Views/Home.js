@@ -1,59 +1,53 @@
-import React, { Component } from 'react';
-import Axios from 'axios';
-import swal from 'sweetalert2'
-import '../SWITCH-bootstrap.css'
-import CharacterCardColumn from '../Components/CharacterCardColumn'
-import PlayerSelectTable from '../Components/PlayerSelectTable'
-import OpponentSelectTable from '../Components/OpponentSelectTable'
-import Matchup from '../Components/Matchup'
-import Key from '../Components/Key'
+import React, { Component } from "react";
+import Axios from "axios";
+import swal from "sweetalert2";
+import "../SWITCH-bootstrap.css";
+import CharacterCardColumn from "../Components/CharacterCardColumn";
+import PlayerSelectTable from "../Components/PlayerSelectTable";
+import OpponentSelectTable from "../Components/OpponentSelectTable";
+import Matchup from "../Components/Matchup";
+import Key from "../Components/Key";
 
 class Home extends Component {
   state = {
     characters: [],
     playerChoice: {},
     opponentChoice: {},
-  }
+  };
 
   constructor(props) {
-    super(props)
-    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
+    super(props);
+    let base = window.location.host.includes(
+      "localhost:8080" || "https://ssb-stats.herokuapp.com"
+    )
+      ? "//localhost:3000/"
+      : "/";
     let api = Axios.create({
-      baseURL: base + 'api/',
+      baseURL: base + "api/",
       timeout: 6000,
-      withCredentials: true
-    })
-    api.get(`/characters`)
-      .then(res => {
-        this.setState({ characters: res.data });
-      })
+      withCredentials: true,
+    });
+    api.get(`/characters`).then((res) => {
+      this.setState({ characters: res.data });
+    });
   }
 
-  selectedPlayer = (characterId) => {
-    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
-    let api = Axios.create({
-      baseURL: base + 'api/',
-      timeout: 6000,
-      withCredentials: true
-    })
-    api.get(`/characters/${characterId}`)
-      .then(res => {
-        this.setState({ playerChoice: res.data });
-      })
-  }
+  selectedPlayer = (characterName) => {
+    console.log(characterName);
+    for (var c in this.state.characters) {
+      if (this.state.characters[c].name === characterName) {
+        this.setState({ playerChoice: this.state.characters[c] });
+      }
+    }
+  };
 
-  selectedOpponent = (characterId) => {
-    let base = window.location.host.includes('localhost:8080' || 'https://ssb-stats.herokuapp.com') ? '//localhost:3000/' : '/'
-    let api = Axios.create({
-      baseURL: base + 'api/',
-      timeout: 6000,
-      withCredentials: true
-    })
-    api.get(`/characters/${characterId}`)
-      .then(res => {
-        this.setState({ opponentChoice: res.data });
-      })
-  }
+  selectedOpponent = (characterName) => {
+    for (var c in this.state.characters) {
+      if (this.state.characters[c].name === characterName) {
+        this.setState({ opponentChoice: this.state.characters[c] });
+      }
+    }
+  };
 
   viewInfo() {
     swal.fire({
@@ -70,13 +64,13 @@ class Home extends Component {
       background: "#211a21",
       backdrop: "rgba(33,26,33,0.3)",
       showConfirmButton: false,
-      showCloseButton: true
+      showCloseButton: true,
     });
   }
 
   resetChoices() {
-    this.setState({ playerChoice: {} })
-    this.setState({ opponentChoice: {} })
+    this.setState({ playerChoice: {} });
+    this.setState({ opponentChoice: {} });
   }
 
   render() {
@@ -84,38 +78,68 @@ class Home extends Component {
       <div id="characters" className="container-fluid">
         <div className="row text-primary">
           <div className="order-2 order-md-1 col col-md-1 align-self-center text-center">
-            <i className="far fa-question-circle pointer text-info" onClick={this.viewInfo.bind(this)}></i>
+            <i
+              className="far fa-question-circle pointer text-info"
+              onClick={this.viewInfo.bind(this)}
+            ></i>
           </div>
           <div className="order-1 order-lg-2 col-12 col-md-8 col-lg-4 offset-md-1 offset-lg-3 text-center">
-            <h1 className="size mt-2 border border-primary rounded pl-1 pr-1">SMASH STATS</h1>
+            <h1 className="size mt-2 border border-primary rounded pl-1 pr-1">
+              SMASH STATS
+            </h1>
           </div>
         </div>
         <div className="row justify-content-center justify-content-md-between text-info">
           <div className="col col-md-3 col-lg-2 text-center text-md-left">
-            <p className="text-info text-left"><b>Player:</b></p>
+            <p className="text-info text-left">
+              <b>Player:</b>
+            </p>
             <div className="name-scroll bg-secondary flexBox mt-n2">
-              <PlayerSelectTable characters={this.state.characters} characterPasser={this.selectedPlayer} player={this.state.playerChoice} />
+              <PlayerSelectTable
+                characters={this.state.characters}
+                characterPasser={this.selectedPlayer}
+                player={this.state.playerChoice}
+              />
             </div>
-            <p className="mt-1 text-info text-left"><b>Opponent:</b></p>
+            <p className="mt-1 text-info text-left">
+              <b>Opponent:</b>
+            </p>
             <div className="name-scroll bg-secondary flexBox mt-n2">
-              <OpponentSelectTable characters={this.state.characters} characterPasser={this.selectedOpponent} opponent={this.state.opponentChoice} />
+              <OpponentSelectTable
+                characters={this.state.characters}
+                characterPasser={this.selectedOpponent}
+                opponent={this.state.opponentChoice}
+              />
             </div>
             <div>
-              <button className="btn fab btn-info mt-1" title="clear selections" onClick={this.resetChoices.bind(this)}><i className="fa fa-trash-alt"></i></button>
+              <button
+                className="btn fab btn-info mt-1"
+                title="clear selections"
+                onClick={this.resetChoices.bind(this)}
+              >
+                <i className="fa fa-trash-alt"></i>
+              </button>
             </div>
           </div>
-          <Matchup player={this.state.playerChoice} opponent={this.state.opponentChoice} />
+          <Matchup
+            player={this.state.playerChoice}
+            opponent={this.state.opponentChoice}
+          />
           <div className="col-4 col-md-3 col-lg-2 text-center text-danger">
-            <h6 className="text-center text-md-left"><b>Character Stats:</b></h6>
+            <h6 className="text-center text-md-left">
+              <b>Character Stats:</b>
+            </h6>
             <div className="card-scroll flexBox">
               <CharacterCardColumn characters={this.state.characters} />
             </div>
-            <h5><i className="fas fa-sort-down pulse" title="scroll down!"></i></h5>
+            <h5>
+              <i className="fas fa-sort-down pulse" title="scroll down!"></i>
+            </h5>
           </div>
         </div>
         <Key />
       </div>
-    )
+    );
   }
 }
 
