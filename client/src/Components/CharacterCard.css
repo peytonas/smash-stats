@@ -2,12 +2,12 @@
   border: 1px solid red
 } */
 
-img{
+img {
   height: 100px;
   width: 100px;
 }
 
-.cards{
+.cards {
   cursor: pointer;
   background-color: #cec9cc;
   border: 2px solid #e60012;
@@ -16,45 +16,45 @@ img{
   margin-top: 4px;
 }
 
-.terryClass{
+.terryClass {
   display: none;
 }
 
 .cards:active {
   transform: translateY(4px);
-  background-color: #908a99
-}
-
-.overflow{
-  overflow: scroll;
-}
-
-@media only screen and (max-width: 767px){
-  img{
-  height: 50px;
-  width: 50px;
-}
-
-.cardName{
-  font-size: .5rem;
-}
-
-.cards{
-  cursor: pointer;
   background-color: #cec9cc;
-  border: 1px solid #e60012;
-  font-size: 1rem;
-  border-radius: 8px;
-  height: auto;
-  margin-top: 2px;
 }
 
-.cards:active {
-  transform: translateY(4px);
-  background-color: #908a99
-}
-
-.overflow{
+.overflow {
   overflow: scroll;
 }
+
+@media only screen and (max-width: 767px) {
+  img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .cardName {
+    font-size: 0.5rem;
+  }
+
+  .cards {
+    cursor: pointer;
+    background-color: #cec9cc;
+    border: 1px solid #e60012;
+    font-size: 1rem;
+    border-radius: 8px;
+    height: auto;
+    margin-top: 2px;
+  }
+
+  .cards:active {
+    transform: translateY(4px);
+    background-color: #908a99;
+  }
+
+  .overflow {
+    overflow: scroll;
+  }
 }

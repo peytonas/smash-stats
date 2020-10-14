@@ -1,127 +1,127 @@
-.vs{
+.vs {
   font-size: 4rem;
 }
 
-.overflow{
+.overflow {
   overflow: scroll;
 }
 
-.stat-size{
-  font-size: .6rem;
+.stat-size {
+  font-size: 0.6rem;
   font-weight: bold;
 }
 
-.smaller-text{
-  font-size: .55rem;
+.smaller-text {
+  font-size: 0.55rem;
 }
 
-.stat-scroll{
+.stat-scroll {
   max-height: 49vh;
   overflow: scroll;
 }
 
-.text-green{
+.text-green {
   color: #1edc00;
 }
 
-.text-yellow{
+.text-yellow {
   color: #e6ff00;
 }
 
-.border:active{
+.border-danger-icon:active {
   transform: translateY(2px);
-  background-color: #211a21
+  background-color: #211a21;
 }
 
-.border-green{
+.border-danger:active {
+  transform: translateY(2px);
+  background-color: #211a21;
+}
+
+.border-green {
   border: 2px solid #1edc00;
   border-radius: 8px;
-
 }
 
-.border-yellow{
+.border-yellow {
   border: 2px solid #e6ff00;
   border-radius: 8px;
 }
 
-.border-danger{
+.border-danger {
   border: 2px solid #e60012;
   border-radius: 8px;
 }
 
-.border-danger-icon{
+.border-danger-icon {
   border: 2px solid #e60012;
   border-radius: 8px;
 }
 
-.clear-border{
+.clear-border {
   border: 2px solid transparent;
 }
 
-@media only screen and (max-width: 767px){
-  .vs{
-  font-size: 2rem;
-}
+@media only screen and (max-width: 767px) {
+  .vs {
+    font-size: 2rem;
+  }
 
-.overflow{
-  overflow: scroll;
-}
+  .overflow {
+    overflow: scroll;
+  }
 
-h6{
-  font-size: .7rem;
-}
+  h6 {
+    font-size: 0.7rem;
+  }
 
-.bg-transparent{
-  background-color: transparent;
-}
+  .bg-transparent {
+    background-color: transparent;
+  }
 
-.stat-size{
-  font-size: 7px;
-}
+  .stat-size {
+    font-size: 7px;
+  }
 
-.stat-scroll{
-  max-height: 25vh;
-  overflow: scroll;
-}
+  .stat-scroll {
+    max-height: 25vh;
+    overflow: scroll;
+  }
 
-.text-green{
-  color: #1edc00;
-}
+  .text-green {
+    color: #1edc00;
+  }
 
-.text-yellow{
-  color: #e6ff00;
-}
+  .text-yellow {
+    color: #e6ff00;
+  }
 
-.border:active{
-  transform: translateY(2px);
-  background-color: #211a21
-}
+  .border:active {
+    transform: translateY(2px);
+    background-color: #211a21;
+  }
 
-.border-green{
-  border: 1px solid #1edc00;
-  border-radius: 8px;
-  
-}
+  .border-green {
+    border: 1px solid #1edc00;
+    border-radius: 8px;
+  }
 
-.border-yellow{
-  border: 1px solid #e6ff00;
-  border-radius: 8px;
-  
+  .border-yellow {
+    border: 1px solid #e6ff00;
+    border-radius: 8px;
+  }
 
-}
+  .border-danger {
+    border: 1px solid #e60012;
+  }
 
-.border-danger{
-  border: 1px solid #e60012;
-}
+  .border-danger-icon {
+    border: 2px solid #e60012;
+    border-radius: 8px;
+  }
 
-.border-danger-icon{
-  border: 2px solid #e60012;
-  border-radius: 8px;
-  
-}
-
-.clear-border{
-  border: 1px solid transparent;
-  font-size: 7px;
-}
+  .clear-border {
+    border: 1px solid transparent;
+    font-size: 7px;
+  }
 }
