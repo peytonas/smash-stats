@@ -10,7 +10,7 @@ import Key from "../Components/Key";
 
 class Home extends Component {
   state = {
-    characters: [],
+    roster: [],
     playerChoice: {},
     opponentChoice: {},
   };
@@ -28,23 +28,23 @@ class Home extends Component {
       withCredentials: true,
     });
     api.get(`/characters`).then((res) => {
-      this.setState({ characters: res.data });
+      this.setState({ roster: res.data });
     });
   }
 
   selectedPlayer = (characterName) => {
     console.log(characterName);
-    for (var c in this.state.characters) {
-      if (this.state.characters[c].name === characterName) {
-        this.setState({ playerChoice: this.state.characters[c] });
+    for (var c in this.state.roster) {
+      if (this.state.roster[c].name === characterName) {
+        this.setState({ playerChoice: this.state.roster[c] });
       }
     }
   };
 
   selectedOpponent = (characterName) => {
-    for (var c in this.state.characters) {
-      if (this.state.characters[c].name === characterName) {
-        this.setState({ opponentChoice: this.state.characters[c] });
+    for (var c in this.state.roster) {
+      if (this.state.roster[c].name === characterName) {
+        this.setState({ opponentChoice: this.state.roster[c] });
       }
     }
   };
@@ -96,7 +96,7 @@ class Home extends Component {
             </p>
             <div className="name-scroll bg-secondary flexBox mt-n2">
               <PlayerSelectTable
-                characters={this.state.characters}
+                characters={this.state.roster}
                 characterPasser={this.selectedPlayer}
                 player={this.state.playerChoice}
               />
@@ -106,7 +106,7 @@ class Home extends Component {
             </p>
             <div className="name-scroll bg-secondary flexBox mt-n2">
               <OpponentSelectTable
-                characters={this.state.characters}
+                characters={this.state.roster}
                 characterPasser={this.selectedOpponent}
                 opponent={this.state.opponentChoice}
               />
@@ -124,13 +124,14 @@ class Home extends Component {
           <Matchup
             player={this.state.playerChoice}
             opponent={this.state.opponentChoice}
+            roster={this.state.roster}
           />
           <div className="col-4 col-md-3 col-lg-2 text-center text-danger">
             <h6 className="text-center text-md-left">
               <b>Character Stats:</b>
             </h6>
             <div className="card-scroll flexBox">
-              <CharacterCardColumn characters={this.state.characters} />
+              <CharacterCardColumn characters={this.state.roster} />
             </div>
             <h5>
               <i className="fas fa-sort-down pulse" title="scroll down!"></i>
