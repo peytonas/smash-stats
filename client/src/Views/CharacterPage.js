@@ -9,13 +9,38 @@ import GameChart from "../Components/GameRepresentationChart";
 import "./CharacterPage.css";
 
 class CharacterPage extends Component {
-  constructor(props) {
-    super(props);
+  constructor(state) {
+    super(state);
     this.state = {
       character: {},
       roster: [],
+      characterMobility: 0,
+      characterDmg: 0,
+      rosterDmgAverage: 0,
+      rosterMobilityAverage: 0,
+      playerMobilityRank: 0,
+      playerDamageRank: 0,
+      rosterDmgAverages: [],
+      rosterMobilityAverages: [],
+      rosterDamageRanks: [],
+      rosterMobilityRanks: [],
     };
-    const characterId = this.props.match.params.characterId;
+    setTimeout(() => {
+      this.rosterDmgCalculator();
+      this.rosterMobilityCalculator();
+      this.playerDmgCalculator();
+      this.playerMobilityCalculator();
+      this.rosterDamageRankCalculator();
+      this.rosterMobilityRankCalculator();
+      this.sortRosterMobility();
+      this.sortRosterDamage();
+      this.sortMobilityRanks();
+      this.sortDamageRanks();
+      this.playerMobilityRank();
+      this.playerDamageRank();
+    }, 1100);
+
+    const characterId = state.match.params.characterId;
 
     let base = window.location.host.includes(
       "localhost:8080" || "https://ssb-stats.herokuapp.com"
@@ -37,6 +62,381 @@ class CharacterPage extends Component {
     });
   }
 
+  playerDmgCalculator() {
+    let score =
+      (this.state.character.neutral +
+        this.state.character.forwardTilt +
+        this.state.character.upTilt +
+        this.state.character.downTilt +
+        this.state.character.dashAttack +
+        this.state.character.forwardSmash +
+        this.state.character.upSmash +
+        this.state.character.downSmash +
+        this.state.character.nair +
+        this.state.character.fair +
+        this.state.character.bair +
+        this.state.character.uair +
+        this.state.character.dair +
+        this.state.character.zair +
+        this.state.character.pummel +
+        this.state.character.forwardThrow +
+        this.state.character.backThrow +
+        this.state.character.upThrow +
+        this.state.character.downThrow +
+        this.state.character.floorAttackFront +
+        this.state.character.floorAttackBack +
+        this.state.character.floorAttackTrip +
+        this.state.character.edgeAttack +
+        this.state.character.neutralSpecial +
+        this.state.character.sideSpecial +
+        this.state.character.upSpecial +
+        this.state.character.downSpecial) /
+      27;
+
+    this.setState({ characterDmg: score });
+  }
+
+  playerMobilityCalculator() {
+    var mobility =
+      (this.state.character.weight +
+        this.state.character.forwardRollLag +
+        this.state.character.backRollLag +
+        this.state.character.spotDodgeLag +
+        this.state.character.airDodgeLag +
+        this.state.character.downThrowLag +
+        this.state.character.upThrowLag +
+        this.state.character.backThrowLag +
+        this.state.character.forwardThrowLag +
+        this.state.character.pummelLag +
+        this.state.character.zairLag +
+        this.state.character.bairLag +
+        this.state.character.fairLag +
+        this.state.character.dairLag +
+        this.state.character.uairLag +
+        this.state.character.nairLag +
+        this.state.character.forwardSmashLag +
+        this.state.character.downSmashLag +
+        this.state.character.upSmashLag +
+        this.state.character.dashAttackLag +
+        this.state.character.forwardTiltLag +
+        this.state.character.downTiltLag +
+        this.state.character.upTiltLag +
+        this.state.character.downSpecialLag +
+        this.state.character.upSpecialLag +
+        this.state.character.sideSpecialLag +
+        this.state.character.neutralSpecialLag +
+        this.state.character.neutralLag +
+        this.state.character.neutralStartup +
+        this.state.character.forwardTiltStartup +
+        this.state.character.upTiltStartup +
+        this.state.character.downTiltStartup +
+        this.state.character.dashAttackStartup +
+        this.state.character.forwardSmashStartup +
+        this.state.character.upSmashStartup +
+        this.state.character.downSmashStartup +
+        this.state.character.nairStartup +
+        this.state.character.fairStartup +
+        this.state.character.bairStartup +
+        this.state.character.uairStartup +
+        this.state.character.dairStartup +
+        this.state.character.zairStartup +
+        this.state.character.pummelStartup +
+        this.state.character.forwardThrowStartup +
+        this.state.character.backThrowStartup +
+        this.state.character.upThrowStartup +
+        this.state.character.downThrowStartup +
+        this.state.character.neutralSpecialStartup +
+        this.state.character.sideSpecialStartup +
+        this.state.character.upSpecialStartup +
+        this.state.character.downSpecialStartup -
+        (this.state.character.walkSpeed +
+          this.state.character.runSpeed +
+          this.state.character.dashSpeed +
+          this.state.character.airSpeed +
+          this.state.character.fallingSpeed)) /
+      56;
+
+    this.setState({ characterMobility: mobility });
+  }
+
+  rosterDmgCalculator() {
+    var score = 0;
+
+    for (var c in this.state.roster) {
+      var playerScore =
+        (this.state.roster[c].neutral +
+          this.state.roster[c].forwardTilt +
+          this.state.roster[c].upTilt +
+          this.state.roster[c].downTilt +
+          this.state.roster[c].dashAttack +
+          this.state.roster[c].forwardSmash +
+          this.state.roster[c].upSmash +
+          this.state.roster[c].downSmash +
+          this.state.roster[c].nair +
+          this.state.roster[c].fair +
+          this.state.roster[c].bair +
+          this.state.roster[c].uair +
+          this.state.roster[c].dair +
+          this.state.roster[c].zair +
+          this.state.roster[c].pummel +
+          this.state.roster[c].forwardThrow +
+          this.state.roster[c].backThrow +
+          this.state.roster[c].upThrow +
+          this.state.roster[c].downThrow +
+          this.state.roster[c].floorAttackFront +
+          this.state.roster[c].floorAttackBack +
+          this.state.roster[c].floorAttackTrip +
+          this.state.roster[c].edgeAttack +
+          this.state.roster[c].neutralSpecial +
+          this.state.roster[c].sideSpecial +
+          this.state.roster[c].upSpecial +
+          this.state.roster[c].downSpecial) /
+        27;
+
+      score += playerScore;
+
+      this.state.rosterDmgAverages.push(playerScore);
+    }
+    score = score / this.state.roster.length;
+
+    this.setState({ rosterDmgAverage: score });
+  }
+
+  rosterMobilityCalculator() {
+    var mobility = 0;
+
+    for (var c in this.state.roster) {
+      var characterMobility =
+        (this.state.roster[c].weight +
+          this.state.roster[c].forwardRollLag +
+          this.state.roster[c].backRollLag +
+          this.state.roster[c].spotDodgeLag +
+          this.state.roster[c].airDodgeLag +
+          this.state.roster[c].downThrowLag +
+          this.state.roster[c].upThrowLag +
+          this.state.roster[c].backThrowLag +
+          this.state.roster[c].forwardThrowLag +
+          this.state.roster[c].pummelLag +
+          this.state.roster[c].zairLag +
+          this.state.roster[c].bairLag +
+          this.state.roster[c].fairLag +
+          this.state.roster[c].dairLag +
+          this.state.roster[c].uairLag +
+          this.state.roster[c].nairLag +
+          this.state.roster[c].forwardSmashLag +
+          this.state.roster[c].downSmashLag +
+          this.state.roster[c].upSmashLag +
+          this.state.roster[c].dashAttackLag +
+          this.state.roster[c].forwardTiltLag +
+          this.state.roster[c].downTiltLag +
+          this.state.roster[c].upTiltLag +
+          this.state.roster[c].downSpecialLag +
+          this.state.roster[c].upSpecialLag +
+          this.state.roster[c].sideSpecialLag +
+          this.state.roster[c].neutralSpecialLag +
+          this.state.roster[c].neutralLag +
+          this.state.roster[c].neutralStartup +
+          this.state.roster[c].forwardTiltStartup +
+          this.state.roster[c].upTiltStartup +
+          this.state.roster[c].downTiltStartup +
+          this.state.roster[c].dashAttackStartup +
+          this.state.roster[c].forwardSmashStartup +
+          this.state.roster[c].upSmashStartup +
+          this.state.roster[c].downSmashStartup +
+          this.state.roster[c].nairStartup +
+          this.state.roster[c].fairStartup +
+          this.state.roster[c].bairStartup +
+          this.state.roster[c].uairStartup +
+          this.state.roster[c].dairStartup +
+          this.state.roster[c].zairStartup +
+          this.state.roster[c].pummelStartup +
+          this.state.roster[c].forwardThrowStartup +
+          this.state.roster[c].backThrowStartup +
+          this.state.roster[c].upThrowStartup +
+          this.state.roster[c].downThrowStartup +
+          this.state.roster[c].neutralSpecialStartup +
+          this.state.roster[c].sideSpecialStartup +
+          this.state.roster[c].upSpecialStartup +
+          this.state.roster[c].downSpecialStartup -
+          (this.state.roster[c].walkSpeed +
+            this.state.roster[c].runSpeed +
+            this.state.roster[c].dashSpeed +
+            this.state.roster[c].airSpeed +
+            this.state.roster[c].fallingSpeed)) /
+        56;
+
+      this.setState({ characterMobility: mobility });
+
+      mobility += characterMobility;
+
+      this.state.rosterMobilityAverages.push(characterMobility);
+    }
+    mobility = mobility / this.state.roster.length;
+
+    this.setState({ rosterMobilityAverage: mobility });
+  }
+
+  rosterDamageRankCalculator() {
+    for (var c in this.state.roster) {
+      var rank = 0;
+
+      var characterDmg =
+        this.state.roster[c].neutral +
+        this.state.roster[c].forwardTilt +
+        this.state.roster[c].upTilt +
+        this.state.roster[c].downTilt +
+        this.state.roster[c].dashAttack +
+        this.state.roster[c].forwardSmash +
+        this.state.roster[c].upSmash +
+        this.state.roster[c].downSmash +
+        this.state.roster[c].nair +
+        this.state.roster[c].fair +
+        this.state.roster[c].bair +
+        this.state.roster[c].uair +
+        this.state.roster[c].dair +
+        this.state.roster[c].zair +
+        this.state.roster[c].pummel +
+        this.state.roster[c].forwardThrow +
+        this.state.roster[c].backThrow +
+        this.state.roster[c].upThrow +
+        this.state.roster[c].downThrow +
+        this.state.roster[c].floorAttackFront +
+        this.state.roster[c].floorAttackBack +
+        this.state.roster[c].floorAttackTrip +
+        this.state.roster[c].edgeAttack +
+        this.state.roster[c].neutralSpecial +
+        this.state.roster[c].sideSpecial +
+        this.state.roster[c].upSpecial +
+        this.state.roster[c].downSpecial;
+
+      var dmg = characterDmg / 27;
+
+      rank = dmg;
+
+      this.state.rosterDamageRanks.push(rank);
+    }
+  }
+
+  rosterMobilityRankCalculator() {
+    for (var c in this.state.roster) {
+      var rank = 0;
+
+      var characterMobility =
+        this.state.roster[c].weight +
+        this.state.roster[c].forwardRollLag +
+        this.state.roster[c].backRollLag +
+        this.state.roster[c].spotDodgeLag +
+        this.state.roster[c].airDodgeLag +
+        this.state.roster[c].downThrowLag +
+        this.state.roster[c].upThrowLag +
+        this.state.roster[c].backThrowLag +
+        this.state.roster[c].forwardThrowLag +
+        this.state.roster[c].pummelLag +
+        this.state.roster[c].zairLag +
+        this.state.roster[c].bairLag +
+        this.state.roster[c].fairLag +
+        this.state.roster[c].dairLag +
+        this.state.roster[c].uairLag +
+        this.state.roster[c].nairLag +
+        this.state.roster[c].forwardSmashLag +
+        this.state.roster[c].downSmashLag +
+        this.state.roster[c].upSmashLag +
+        this.state.roster[c].dashAttackLag +
+        this.state.roster[c].forwardTiltLag +
+        this.state.roster[c].downTiltLag +
+        this.state.roster[c].upTiltLag +
+        this.state.roster[c].downSpecialLag +
+        this.state.roster[c].upSpecialLag +
+        this.state.roster[c].sideSpecialLag +
+        this.state.roster[c].neutralSpecialLag +
+        this.state.roster[c].neutralLag +
+        this.state.roster[c].neutralStartup +
+        this.state.roster[c].forwardTiltStartup +
+        this.state.roster[c].upTiltStartup +
+        this.state.roster[c].downTiltStartup +
+        this.state.roster[c].dashAttackStartup +
+        this.state.roster[c].forwardSmashStartup +
+        this.state.roster[c].upSmashStartup +
+        this.state.roster[c].downSmashStartup +
+        this.state.roster[c].nairStartup +
+        this.state.roster[c].fairStartup +
+        this.state.roster[c].bairStartup +
+        this.state.roster[c].uairStartup +
+        this.state.roster[c].dairStartup +
+        this.state.roster[c].zairStartup +
+        this.state.roster[c].pummelStartup +
+        this.state.roster[c].forwardThrowStartup +
+        this.state.roster[c].backThrowStartup +
+        this.state.roster[c].upThrowStartup +
+        this.state.roster[c].downThrowStartup +
+        this.state.roster[c].neutralSpecialStartup +
+        this.state.roster[c].sideSpecialStartup +
+        this.state.roster[c].upSpecialStartup +
+        this.state.roster[c].downSpecialStartup -
+        (this.state.roster[c].walkSpeed +
+          this.state.roster[c].runSpeed +
+          this.state.roster[c].dashSpeed +
+          this.state.roster[c].airSpeed +
+          this.state.roster[c].fallingSpeed);
+
+      var mobility = characterMobility / 56;
+
+      rank = mobility;
+
+      this.state.rosterMobilityRanks.push(rank);
+    }
+  }
+
+  sortRosterMobility() {
+    var mobility = this.state.rosterMobilityAverages;
+    mobility.sort((a, b) => a - b);
+
+    this.setState({ rosterMobilityAverages: mobility });
+  }
+
+  sortRosterDamage() {
+    var damage = this.state.rosterDmgAverages;
+    damage.sort((a, b) => a - b);
+
+    this.setState({ rosterDmgAverages: damage });
+  }
+
+  playerMobilityRank() {
+    var rank = this.state.characterMobility;
+
+    for (var c = 0; c < this.state.rosterMobilityRanks.length; c++) {
+      if (rank === this.state.rosterMobilityRanks[c]) {
+        var newRank = c + 1;
+        this.setState({ playerMobilityRank: newRank });
+      }
+    }
+  }
+
+  playerDamageRank() {
+    var rank = this.state.characterDmg;
+
+    for (var c = 0; c < this.state.rosterDamageRanks.length; c++) {
+      if (rank === this.state.rosterDamageRanks[c]) {
+        var newRank = this.state.rosterDamageRanks.length - c;
+        this.setState({ playerDamageRank: newRank });
+      }
+    }
+  }
+
+  sortMobilityRanks() {
+    var ranks = this.state.rosterMobilityRanks;
+    ranks.sort((a, b) => a - b);
+
+    this.setState({ rosterMobilityRanks: ranks });
+  }
+
+  sortDamageRanks() {
+    var ranks = this.state.rosterDamageRanks;
+    ranks.sort((a, b) => a - b);
+
+    this.setState({ rosterDamageRanks: ranks });
+  }
+
   render() {
     return (
       <div className="character-container">
@@ -46,6 +446,7 @@ class CharacterPage extends Component {
           <IndividualStats
             character={this.state.character}
             roster={this.state.roster}
+            stateProp={this.state}
           />
         </div>
         <div className="text-primary row justify-content-md-left">

@@ -9,7 +9,6 @@ class Matchup extends Component {
   render() {
     const player = this.props.player;
     const opponent = this.props.opponent;
-    const roster = this.props.roster;
     return (
       <div className="col-12 col-md-5 text-center mt-4">
         <div className="row justify-content-between text-primary">

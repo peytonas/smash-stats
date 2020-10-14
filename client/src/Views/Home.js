@@ -33,7 +33,6 @@ class Home extends Component {
   }
 
   selectedPlayer = (characterName) => {
-    console.log(characterName);
     for (var c in this.state.roster) {
       if (this.state.roster[c].name === characterName) {
         this.setState({ playerChoice: this.state.roster[c] });
@@ -124,7 +123,6 @@ class Home extends Component {
           <Matchup
             player={this.state.playerChoice}
             opponent={this.state.opponentChoice}
-            roster={this.state.roster}
           />
           <div className="col-4 col-md-3 col-lg-2 text-center text-danger">
             <h6 className="text-center text-md-left">
