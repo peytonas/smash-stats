@@ -14,15 +14,15 @@ class IndividualStats extends Component {
           DPA/Average DPA:&nbsp;
           <span
             className={
-              this.props.stateProp.characterDmg >
-              this.props.stateProp.rosterDmgAverage
+              this.props.stateProp.characterDamage >
+              this.props.stateProp.rosterDamageAverage
                 ? "text-green"
                 : "text-danger"
             }
           >
-            {this.props.stateProp.characterDmg.toFixed(2)}
+            {this.props.stateProp.characterDamage.toFixed(2)}
           </span>
-          /{this.props.stateProp.rosterDmgAverage.toFixed(2)}
+          /{this.props.stateProp.rosterDamageAverage.toFixed(2)}
         </h6>
         <h6>
           Mobility/Average Mobility:&nbsp;

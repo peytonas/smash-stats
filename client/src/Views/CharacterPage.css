@@ -20,6 +20,15 @@
   .pointer {
     cursor: pointer;
   }
+
+  .rankings-scroll {
+    max-height: 49vh;
+    overflow: scroll;
+  }
+
+  .overflow {
+    overflow: scroll;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -39,5 +48,14 @@
 
   .large-img {
     display: none;
+  }
+
+  .rankings-scroll {
+    max-height: 49vh;
+    overflow: scroll;
+  }
+
+  .overflow {
+    overflow: scroll;
   }
 }

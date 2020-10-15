@@ -14,9 +14,12 @@ class CharacterPage extends Component {
     this.state = {
       character: {},
       roster: [],
+      characterNames: [],
+      rosterNamesAndDamageAverages: [],
+      rosterNamesAndMobilityAverages: [],
       characterMobility: 0,
-      characterDmg: 0,
-      rosterDmgAverage: 0,
+      characterDamage: 0,
+      rosterDamageAverage: 0,
       rosterMobilityAverage: 0,
       playerMobilityRank: 0,
       playerDamageRank: 0,
@@ -32,7 +35,7 @@ class CharacterPage extends Component {
       this.sortRosterDamage();
       this.playerMobilityRank();
       this.playerDamageRank();
-    }, 1100);
+    }, 1500);
 
     const characterId = state.match.params.characterId;
 
@@ -87,7 +90,7 @@ class CharacterPage extends Component {
         this.state.character.downSpecial) /
       27;
 
-    this.setState({ characterDmg: score });
+    this.setState({ characterDamage: score });
   }
 
   playerMobilityCalculator() {
@@ -190,10 +193,11 @@ class CharacterPage extends Component {
       score += playerScore;
 
       this.state.rosterDamageAverages.push(playerScore);
+      this.state.characterNames.push(this.state.roster[c].name)
     }
     score = score / this.state.roster.length;
 
-    this.setState({ rosterDmgAverage: score });
+    this.setState({ rosterDamageAverage: score });
   }
 
   rosterMobilityCalculator() {
@@ -270,36 +274,52 @@ class CharacterPage extends Component {
 
   sortRosterMobility() {
     var mobility = this.state.rosterMobilityAverages;
-    mobility.sort((a, b) => a - b);
+    var names = this.state.characterNames
+    var namesAndAverages = this.state.rosterNamesAndMobilityAverages
 
-    this.setState({ rosterMobilityAverages: mobility });
+    for (var j in mobility) {
+      namesAndAverages.push({'name': names[j], 'mobility': mobility[j]})
+    }
+    namesAndAverages.sort((a, b) => a.mobility-b.mobility)
+
+    this.setState({ rosterNamesAndMobilityAverages: namesAndAverages });
   }
 
   sortRosterDamage() {
     var damage = this.state.rosterDamageAverages;
-    damage.sort((a, b) => a - b);
+    var names = this.state.characterNames
+    var namesAndAverages = this.state.rosterNamesAndDamageAverages
 
-    this.setState({ rosterDamageAverages: damage });
+    for (var j in damage) {
+      namesAndAverages.push({'name': names[j], 'damage': damage[j]})
+    }
+    namesAndAverages.sort((a, b) => a.damage-b.damage)
+
+    this.setState({ rosterNamesAndDamageAverages: namesAndAverages })
   }
 
   playerMobilityRank() {
-    var rank = this.state.characterMobility;
+    var name = this.state.character.name;
+    var namesAndAverages = this.state.rosterNamesAndMobilityAverages
+    var rank
 
-    for (var c = 0; c < this.state.rosterMobilityAverages.length; c++) {
-      if (rank === this.state.rosterMobilityAverages[c]) {
-        var newRank = c + 1;
-        this.setState({ playerMobilityRank: newRank });
+    for (var c = 0; c < namesAndAverages.length; c++) {
+      if (name === namesAndAverages[c].name) {
+        rank = c + 1;
+        this.setState({ playerMobilityRank: rank });
       }
     }
   }
 
   playerDamageRank() {
-    var rank = this.state.characterDmg;
+    var name = this.state.character.name;
+    var namesAndAverages = this.state.rosterNamesAndDamageAverages
+    var rank;
 
-    for (var c = 0; c < this.state.rosterDamageAverages.length; c++) {
-      if (rank === this.state.rosterDamageAverages[c]) {
-        var newRank = this.state.rosterDamageAverages.length - c;
-        this.setState({ playerDamageRank: newRank });
+    for (var c = 0; c < namesAndAverages.length; c++) {
+      if (name === namesAndAverages[c].name) {
+        rank = this.state.rosterNamesAndDamageAverages.length - c;
+        this.setState({ playerDamageRank: rank });
       }
     }
   }
@@ -319,12 +339,33 @@ class CharacterPage extends Component {
         <div className="text-primary row justify-content-md-left">
           <div className="col-md">
             <div className="row">
-              <RosterDPA />
-              <RosterMobility />
+              <div className="rankings-scroll overflow col col-md-2 mobile-font stat-border ml-md-1 mr-md-1 text-info mt-1">
+                <h6>Damage Rankings:</h6>
+              <RosterDPA
+                damageAverages={this.state.rosterNamesAndDamageAverages}
+                />
+              </div>
+              <div className="rankings-scroll overflow col col-md-2 mobile-font stat-border ml-md-1 mr-md-1 text-info mt-1">
+                <h6>Mobility Rankings:</h6>
+              <RosterMobility
+                  mobilityAverages={this.state.rosterNamesAndMobilityAverages} />
+                </div>
               <div className="col-md-5">
                 <GameChart character={this.state.character} />
               </div>
             </div>
+          </div>
+        </div>
+        <div className="text-primary row justify-content-md-left mt-n3">
+          <div className="col-2 text-center">
+            <i
+            className="fas fa-sort-down pulse text-info"
+            title="scroll down!"></i>
+          </div>
+          <div className="col-2 text-center">
+            <i
+            className="fas fa-sort-down pulse text-info"
+            title="scroll down!"></i>
           </div>
         </div>
       </div>

@@ -1,26 +1,22 @@
 import React, { Component } from "react";
-import "./RosterStats.css";
+import PropTypes from "prop-types";
+import RankedNamesDamage from './RankedNamesDamage'
 
 class RosterDPA extends Component {
   render() {
-    return (
-      <div className="col col-md-2 mobile-font stat-border ml-md-1 mr-md-1 text-info mt-1">
-        <h6>
-          Roster DPA:
-          <p>1.</p>
-          <p>2.</p>
-          <p>3.</p>
-          <p>4.</p>
-          <p>5.</p>
-          <p>6.</p>
-          <p>7.</p>
-          <p>8.</p>
-          <p>9.</p>
-          <p>10.</p>
-        </h6>
-      </div>
-    );
+    var n = 1
+    return this.props.damageAverages.slice(0).reverse().map((character) => (
+      <RankedNamesDamage
+        index={n++}
+        key={character.name}
+        character={character}
+        damageAverages={this.props.damageAverages}/>
+    ));
   }
 }
+
+RosterDPA.propTypes = {
+  damageAverages: PropTypes.array.isRequired,
+};
 
 export default RosterDPA;
