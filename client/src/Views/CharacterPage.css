@@ -13,6 +13,14 @@
     width: auto;
   }
 
+  .series-img {
+    height: 650px;
+    width: auto;
+    margin-left: -13vh;
+    margin-top: -18vh;
+    position: absolute;
+  }
+
   .chart-margin {
     margin-left: 74vh;
   }

@@ -65,7 +65,12 @@ class CharacterPageImage extends Component {
     return (
       <div>
         <div className="row justify-content-center">
-          <h1 className="text-danger mt-4"><b>{character.name}</b></h1>
+          <div className="col offset-4 text-center">
+            <h1 className="text-danger mt-4"><b>{character.name}</b></h1>
+          </div>
+          <div className="col">
+            <img className="series-img" alt="series icon" src={character.seriesIconUrl}/>
+          </div>
         </div>
         <div className="row justify-content-center align-items-center text-center">
           <div className="col col-md-1 text-primary">
@@ -77,6 +82,8 @@ class CharacterPageImage extends Component {
           </div>
           <div className="col col-md-1 text-primary">
             <i className="fas fa-caret-right fa-3x pulse pointer" onClick={this.cycleUp.bind(this)}></i>
+          </div>
+          <div>
           </div>
         </div>
       </div>

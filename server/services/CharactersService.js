@@ -9,6 +9,7 @@ const _schema = new Schema(
     characterNumber: { type: Number, unique: false, required: false },
 
     iconUrl: { type: String, required: false },
+    seriesIconUrl: {type: String, required: false},
     imgUrl: { type: String, required: false },
     imgUrl2: { type: String, required: false },
     imgUrl3: { type: String, required: false },
