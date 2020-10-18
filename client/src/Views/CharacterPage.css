@@ -1,3 +1,7 @@
+/* * {
+  border: solid 1px red;
+} */
+
 @media only screen and (min-width: 768px) {
   .character-container {
     background-color: #131111;
@@ -14,11 +18,12 @@
   }
 
   .series-img {
-    height: 600px;
+    height: 655px;
     width: auto;
-    margin-left: -13vh;
-    margin-top: -11vh;
+    margin-left: -20vh;
+    margin-top: -10vh;
     position: absolute;
+    z-index: 2;
   }
 
   .chart-margin {
@@ -55,6 +60,10 @@
   }
 
   .large-img {
+    display: none;
+  }
+
+  .series-img {
     display: none;
   }
 

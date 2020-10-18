@@ -65,10 +65,10 @@ class CharacterPageImage extends Component {
     return (
       <div>
         <div className="row justify-content-center">
-          <div className="col offset-4 text-center">
+          <div className="col-md offset-md-4 text-center">
             <h1 className="text-danger mt-4"><b>{character.name}</b></h1>
           </div>
-          <div className="col">
+          <div className="col-md">
             <img className="series-img" alt="series icon" src={character.seriesIconUrl}/>
           </div>
         </div>

@@ -1,7 +1,3 @@
-/* *{
-  border: 1px solid red;
-} */
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -59,6 +55,8 @@
 i {
   animation: shake 1s;
   animation-iteration-count: infinite;
+  position: relative;
+  z-index: 3;
 }
 
 @-webkit-keyframes pulse {

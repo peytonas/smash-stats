@@ -9,7 +9,8 @@ import CharacterPage from "./Views/CharacterPage";
 class App extends Component {
   render() {
     return (
-      <div id="characters" className="container-fluid">
+      <div id="characters" className="container-fluid" style={{ maxWidth: 1280, overflow: 'hidden'}
+}>
         <Route exact path="/" component={Home} />
         <Route exact path="/character/:characterId" component={CharacterPage} />
         <Footer />
