@@ -356,7 +356,7 @@ class CharacterPage extends Component {
             </div>
           </div>
         </div>
-        <div className="text-primary row justify-content-md-left mt-n3">
+        <div className="text-primary row justify-content-md-left mt-n2">
           <div className="col-2 text-center">
             <i
             className="fas fa-sort-down pulse text-info"
