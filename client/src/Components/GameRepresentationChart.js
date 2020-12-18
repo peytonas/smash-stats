@@ -77,7 +77,7 @@ class GameChart extends Component {
     ["Xenoblade Chronicles", 1],
     ["Duck Hunt", 1],
     ["Splatoon", 1],
-    ["Final Fantasy", 1],
+    ["Final Fantasy", 2],
     ["Bayonetta", 1],
     ["Persona", 1],
     ["Dragon Quest", 1],
