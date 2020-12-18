@@ -63,6 +63,7 @@ class GameChart extends Component {
     ["Animal Crossing", 2],
     ["Castlevania", 2],
     ["Street Fighter", 2],
+    ["Final Fantasy", 2],
     ["F-Zero", 1],
     ["Ice Climbers", 1],
     ["Game & Watch", 1],
@@ -77,7 +78,6 @@ class GameChart extends Component {
     ["Xenoblade Chronicles", 1],
     ["Duck Hunt", 1],
     ["Splatoon", 1],
-    ["Final Fantasy", 2],
     ["Bayonetta", 1],
     ["Persona", 1],
     ["Dragon Quest", 1],
@@ -110,7 +110,7 @@ class GameChart extends Component {
       <div className={"my-pretty-chart-container mr-md-2 mt-md-n5"}>
         <Chart
           className="fill"
-          height={"400px"}
+          height={"390px"}
           chartType="PieChart"
           loader={<div>Loading Chart...</div>}
           data={this.slices}
