@@ -328,7 +328,9 @@ class CharacterPage extends Component {
     return (
       <div className="character-container">
         <Navbar />
-        <CharacterPageImage character={this.state.character} />
+        <div className="mt-xl-5">
+        <CharacterPageImage character={this.state.character}/>
+        </div>
         <div className="text-primary row text-center text-md-left">
           <IndividualStats
             character={this.state.character}
