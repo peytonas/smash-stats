@@ -1,18 +1,21 @@
-import React, { Component } from 'react';
-import './Matchup.css'
+import React, { Component } from "react";
+import "./Matchup.css";
 
 let terry = false;
 
 class MatchupStats extends Component {
   nameCheck() {
-    if (this.props.player.name === "Terry" || this.props.opponent.name === "Terry") {
-      terry = true
+    if (
+      this.props.player.name === "Terry" ||
+      this.props.opponent.name === "Terry"
+    ) {
+      terry = true;
     } else {
-      terry = false
+      terry = false;
     }
   }
   render() {
-    this.nameCheck()
+    this.nameCheck();
     return (
       <div className="col col-md-3 text-center">
         <div className="stat-size">
@@ -32,6 +35,18 @@ class MatchupStats extends Component {
           <p className="clear-border">Dash Attack</p>
           <p className="clear-border">Dash Attack SU</p>
           <p className="clear-border">Dash Attack FAF</p>
+          <p className="clear-border">Neutral Special</p>
+          <p className="clear-border">Neutral Special SU</p>
+          <p className="clear-border smaller-text">Neutral Special FAF</p>
+          <p className="clear-border">Side Special</p>
+          <p className="clear-border">Side Special SU</p>
+          <p className="clear-border">Side Special FAF</p>
+          <p className="clear-border">Up Special</p>
+          <p className="clear-border">Up Special SU</p>
+          <p className="clear-border">Up Special FAF</p>
+          <p className="clear-border">Down Special</p>
+          <p className="clear-border">Down Special SU</p>
+          <p className="clear-border">Down Special FAF</p>
           <p className="clear-border">Forward Smash</p>
           <p className="clear-border">Forward Smash SU</p>
           <p className="clear-border smaller-text">Forward Smash FAF</p>
@@ -90,18 +105,6 @@ class MatchupStats extends Component {
           <p className="clear-border">Back Floor Attack</p>
           <p className="clear-border">Trip Floor Attack</p>
           <p className="clear-border">Edge Attack</p>
-          <p className="clear-border">Neutral Special</p>
-          <p className="clear-border">Neutral Special SU</p>
-          <p className="clear-border smaller-text">Neutral Special FAF</p>
-          <p className="clear-border">Side Special</p>
-          <p className="clear-border">Side Special SU</p>
-          <p className="clear-border">Side Special FAF</p>
-          <p className="clear-border">Up Special</p>
-          <p className="clear-border">Up Special SU</p>
-          <p className="clear-border">Up Special FAF</p>
-          <p className="clear-border">Down Special</p>
-          <p className="clear-border">Down Special SU</p>
-          <p className="clear-border">Down Special FAF</p>
           <p className="clear-border">Final Smash</p>
           <p className="clear-border">Walk Speed</p>
           <p className="clear-border">Run Speed</p>
@@ -113,22 +116,18 @@ class MatchupStats extends Component {
           <p className="clear-border">Spot Dodge Start</p>
           <p className="clear-border">Spot Dodge FAF</p>
           <p className="clear-border">Air Dodge FAF</p>
-          {terry &&
-            <p className="clear-border">Power Geyser</p>}
-          {terry &&
-            <p className="clear-border smaller-text">Power Geyser SU</p>}
-          {terry &&
-            <p className="clear-border">Power Geyser FAF</p>}
-          {terry &&
-            <p className="clear-border">Buster Wolf</p>}
-          {terry &&
-            <p className="clear-border smaller-text">Buster Wolf SU</p>}
-          {terry &&
-            <p className="clear-border">Buster Wolf FAF</p>}
+          {terry && <p className="clear-border">Power Geyser</p>}
+          {terry && (
+            <p className="clear-border smaller-text">Power Geyser SU</p>
+          )}
+          {terry && <p className="clear-border">Power Geyser FAF</p>}
+          {terry && <p className="clear-border">Buster Wolf</p>}
+          {terry && <p className="clear-border smaller-text">Buster Wolf SU</p>}
+          {terry && <p className="clear-border">Buster Wolf FAF</p>}
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default MatchupStats
+export default MatchupStats;

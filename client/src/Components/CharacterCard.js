@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import swal from 'sweetalert2'
-import './CharacterCard.css'
-import PropTypes from 'prop-types'
-
+import React, { Component } from "react";
+import swal from "sweetalert2";
+import "./CharacterCard.css";
+import PropTypes from "prop-types";
 
 class CharacterCard extends Component {
   async viewStats(characterStats) {
     if (characterStats.name === "Terry") {
       swal.fire({
-      title: `<span style="color:#00c3e3;font-size:.7rem" className="overflow">
+        title: `<span style="color:#00c3e3;font-size:.7rem" className="overflow">
       <span style="font-size:1.5rem; font-weight:bold">${characterStats.name}</span> </br> 
       Series: ${characterStats.series}</br>
       Introduced: ${characterStats.introduced}</br>
@@ -29,6 +28,18 @@ class CharacterCard extends Component {
       Dash Attack: ${characterStats.dashAttack} dmg</br>
       Dash Attack SU: ${characterStats.dashAttackStartup}</br>
       Dash Attack FAF: ${characterStats.dashAttackLag}</br>
+      Neutral Special: ${characterStats.neutralSpecial} dmg</br>
+      Neutral Special SU: ${characterStats.neutralSpecialStartup}</br>
+      Neutral Special FAF: ${characterStats.neutralSpecialLag}</br>
+      Side Special: ${characterStats.sideSpecial} dmg</br>
+      Side Special SU: ${characterStats.sideSpecialStartup}</br>
+      Side Special FAF: ${characterStats.sideSpecialLag}</br>
+      Up Special: ${characterStats.upSpecial} dmg</br>
+      Up Special SU: ${characterStats.upSpecialStartup}</br>
+      Up Special FAF: ${characterStats.upSpecialLag}</br>
+      Down Special: ${characterStats.downSpecial} dmg</br>
+      Down Special SU: ${characterStats.downSpecialStartup}</br>
+      Down Special FAF: ${characterStats.downSpecialLag}</br>
       Forward Smash: ${characterStats.forwardSmash} dmg</br>
       Forward Smash SU: ${characterStats.forwardSmashStartup}</br>
       Forward Smash FAF: ${characterStats.forwardSmashLag}</br>
@@ -87,43 +98,31 @@ class CharacterCard extends Component {
       Back Floor Attack: ${characterStats.floorAttackBack} dmg</br>
       Trip Floor Attack: ${characterStats.floorAttackTrip} dmg</br>
       Edge Attack: ${characterStats.edgeAttack} dmg</br>
-      Neutral Special: ${characterStats.neutralSpecial} dmg</br>
-      Neutral Special SU: ${characterStats.neutralSpecialStartup}</br>
-      Neutral Special FAF: ${characterStats.neutralSpecialLag}</br>
-      Side Special: ${characterStats.sideSpecial} dmg</br>
-      Side Special SU: ${characterStats.sideSpecialStartup}</br>
-      Side Special FAF: ${characterStats.sideSpecialLag}</br>
-      Up Special: ${characterStats.upSpecial} dmg</br>
-      Up Special SU: ${characterStats.upSpecialStartup}</br>
-      Up Special FAF: ${characterStats.upSpecialLag}</br>
-      Down Special: ${characterStats.downSpecial} dmg</br>
-      Down Special SU: ${characterStats.downSpecialStartup}</br>
-      Down Special FAF: ${characterStats.downSpecialLag}</br>
       Final Smash: ${characterStats.finalSmash} dmg</br>
       Walk Speed: ${characterStats.walkSpeed} </br>
       Run Speed: ${characterStats.runSpeed} </br>
       Dash Speed: ${characterStats.dashSpeed} </br>
       Air Speed: ${characterStats.airSpeed} </br>
       Falling Speed: ${characterStats.fallingSpeed} </br>
-      Forward Roll Lag (FAF): ${characterStats.forwardRollLag}</br>
-      Back Roll Lag (FAF): ${characterStats.backRollLag}</br>
+      Forward Roll Lag FAF: ${characterStats.forwardRollLag}</br>
+      Back Roll Lag FAF: ${characterStats.backRollLag}</br>
       Spot Dodge Startup: ${characterStats.spotDodgeStart}</br>
-      Spot Dodge Lag (FAF): ${characterStats.spotDodgeLag}</br>
-      Air Dodge Lag (FAF): ${characterStats.airDodgeLag}</br>
+      Spot Dodge Lag FAF: ${characterStats.spotDodgeLag}</br>
+      Air Dodge Lag FAF: ${characterStats.airDodgeLag}</br>
       Power Geyser: ${characterStats.superSpecial1}</br >
-      Power Geyser Startup: ${ characterStats.superSpecial1Startup}</br >
-      Power Geyser Lag(FAF): ${ characterStats.superSpecial1Lag}</br >
-      Buster Wolf: ${ characterStats.superSpecial2}</br >
-      Buster Wolf Startup: ${ characterStats.superSpecial2Startup}</br >
-      Buster Wolf Lag(FAF): ${ characterStats.superSpecial2Lag}</br >
+      Power Geyser Startup: ${characterStats.superSpecial1Startup}</br >
+      Power Geyser Lag FAF: ${characterStats.superSpecial1Lag}</br >
+      Buster Wolf: ${characterStats.superSpecial2}</br >
+      Buster Wolf Startup: ${characterStats.superSpecial2Startup}</br >
+      Buster Wolf Lag FAF: ${characterStats.superSpecial2Lag}</br >
       </span >`,
-      imageUrl: characterStats.iconUrl,
-      imageAlt: "character icon",
-      background: "#131111",
-      backdrop: "rgba(19,17,17,0.5)",
-      showConfirmButton: false,
-      showCloseButton: true
-    });
+        imageUrl: characterStats.iconUrl,
+        imageAlt: "character icon",
+        background: "#131111",
+        backdrop: "rgba(19,17,17,0.5)",
+        showConfirmButton: false,
+        showCloseButton: true,
+      });
     } else {
       swal.fire({
         title: `<span style="color:#00c3e3;font-size:.7rem" className="overflow">
@@ -147,6 +146,18 @@ class CharacterCard extends Component {
         Dash Attack: ${characterStats.dashAttack} dmg</br>
         Dash Attack SU: ${characterStats.dashAttackStartup}</br>
         Dash Attack FAF: ${characterStats.dashAttackLag}</br>
+        Neutral Special: ${characterStats.neutralSpecial} dmg</br>
+        Neutral Special SU: ${characterStats.neutralSpecialStartup}</br>
+        Neutral Special FAF: ${characterStats.neutralSpecialLag}</br>
+        Side Special: ${characterStats.sideSpecial} dmg</br>
+        Side Special SU: ${characterStats.sideSpecialStartup}</br>
+        Side Special FAF: ${characterStats.sideSpecialLag}</br>
+        Up Special: ${characterStats.upSpecial} dmg</br>
+        Up Special SU: ${characterStats.upSpecialStartup}</br>
+        Up Special FAF: ${characterStats.upSpecialLag}</br>
+        Down Special: ${characterStats.downSpecial} dmg</br>
+        Down Special SU: ${characterStats.downSpecialStartup}</br>
+        Down Special FAF: ${characterStats.downSpecialLag}</br>
         Forward Smash: ${characterStats.forwardSmash} dmg</br>
         Forward Smash SU: ${characterStats.forwardSmashStartup}</br>
         Forward Smash FAF: ${characterStats.forwardSmashLag}</br>
@@ -205,53 +216,47 @@ class CharacterCard extends Component {
         Back Floor Attack: ${characterStats.floorAttackBack} dmg</br>
         Trip Floor Attack: ${characterStats.floorAttackTrip} dmg</br>
         Edge Attack: ${characterStats.edgeAttack} dmg</br>
-        Neutral Special: ${characterStats.neutralSpecial} dmg</br>
-        Neutral Special SU: ${characterStats.neutralSpecialStartup}</br>
-        Neutral Special FAF: ${characterStats.neutralSpecialLag}</br>
-        Side Special: ${characterStats.sideSpecial} dmg</br>
-        Side Special SU: ${characterStats.sideSpecialStartup}</br>
-        Side Special FAF: ${characterStats.sideSpecialLag}</br>
-        Up Special: ${characterStats.upSpecial} dmg</br>
-        Up Special SU: ${characterStats.upSpecialStartup}</br>
-        Up Special FAF: ${characterStats.upSpecialLag}</br>
-        Down Special: ${characterStats.downSpecial} dmg</br>
-        Down Special SU: ${characterStats.downSpecialStartup}</br>
-        Down Special FAF: ${characterStats.downSpecialLag}</br>
         Final Smash: ${characterStats.finalSmash} dmg</br>
         Walk Speed: ${characterStats.walkSpeed} </br>
         Run Speed: ${characterStats.runSpeed} </br>
         Dash Speed: ${characterStats.dashSpeed} </br>
         Air Speed: ${characterStats.airSpeed} </br>
         Falling Speed: ${characterStats.fallingSpeed} </br>
-        Forward Roll Lag (FAF): ${characterStats.forwardRollLag}</br>
-        Back Roll Lag (FAF): ${characterStats.backRollLag}</br>
+        Forward Roll Lag FAF: ${characterStats.forwardRollLag}</br>
+        Back Roll Lag FAF: ${characterStats.backRollLag}</br>
         Spot Dodge Startup: ${characterStats.spotDodgeStart}</br>
-        Spot Dodge Lag (FAF): ${characterStats.spotDodgeLag}</br>
-        Air Dodge Lag (FAF): ${characterStats.airDodgeLag}</br>`,
+        Spot Dodge Lag FAF: ${characterStats.spotDodgeLag}</br>
+        Air Dodge Lag FAF: ${characterStats.airDodgeLag}</br>`,
         imageUrl: characterStats.iconUrl,
         imageAlt: "character icon",
         background: "#131111",
         backdrop: "rgba(19,17,17,0.5)",
         showConfirmButton: false,
-        showCloseButton: true
+        showCloseButton: true,
       });
     }
   }
   render() {
-    const { name, iconUrl } = this.props.character
-    const characterNumber = Math.floor(this.props.character.characterNumber)
+    const { name, iconUrl } = this.props.character;
+    const characterNumber = Math.floor(this.props.character.characterNumber);
 
     return (
-      <div className="cards text-danger" style={{ order: characterNumber }} onClick={this.viewStats.bind(this, this.props.character)}>
+      <div
+        className="cards text-danger"
+        style={{ order: characterNumber }}
+        onClick={this.viewStats.bind(this, this.props.character)}
+      >
         <img src={iconUrl} alt="character icon" className="mt-1" />
-        <p className="cardName mt-1"><b>{name}</b></p>
+        <p className="cardName mt-1">
+          <b>{name}</b>
+        </p>
       </div>
-    )
+    );
   }
 }
 
 CharacterCard.propTypes = {
-  character: PropTypes.object.isRequired
-}
+  character: PropTypes.object.isRequired,
+};
 
 export default CharacterCard;

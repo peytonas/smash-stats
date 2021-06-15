@@ -42,6 +42,7 @@ class GameChart extends Component {
         {},
         {},
         {},
+        {},
       ],
     };
   }
@@ -64,6 +65,7 @@ class GameChart extends Component {
     ["Castlevania", 2],
     ["Street Fighter", 2],
     ["Final Fantasy", 2],
+    ["Xenoblade Chronicles", 2],
     ["F-Zero", 1],
     ["Ice Climbers", 1],
     ["Game & Watch", 1],
@@ -75,7 +77,6 @@ class GameChart extends Component {
     ["Wii Fit", 1],
     ["Punch-Out", 1],
     ["Pac-Man", 1],
-    ["Xenoblade Chronicles", 1],
     ["Duck Hunt", 1],
     ["Splatoon", 1],
     ["Bayonetta", 1],
@@ -85,6 +86,7 @@ class GameChart extends Component {
     ["Fatal Fury", 1],
     ["Arms", 1],
     ["Minecraft", 1],
+    ["Tekken", 1],
   ];
 
   characterSeries() {
@@ -92,7 +94,7 @@ class GameChart extends Component {
     for (c = 0; c < this.slices.length; c++) {
       if (this.props.character.series === this.slices[c][0]) {
         this.slice = c - 1;
-        const newArr = this.state.series.slice(0, 37);
+        const newArr = this.state.series.slice(0, 38);
         newArr[this.slice] = { offset: 0.2 };
         this.setState({ series: newArr });
       }
