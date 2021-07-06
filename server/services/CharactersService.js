@@ -9,7 +9,7 @@ const _schema = new Schema(
     characterNumber: { type: Number, unique: false, required: false },
 
     iconUrl: { type: String, required: false },
-    seriesIconUrl: {type: String, required: false},
+    seriesIconUrl: { type: String, required: false },
     imgUrl: { type: String, required: false },
     imgUrl2: { type: String, required: false },
     imgUrl3: { type: String, required: false },
@@ -61,9 +61,49 @@ const _schema = new Schema(
     forwardTiltStartup: { type: Number, required: false },
     forwardTiltLag: { type: Number, required: false },
 
+    backTilt: { type: Number, required: false },
+    backTiltStartup: { type: Number, required: false },
+    backTiltLag: { type: Number, required: false },
+
+    upBackTilt: { type: Number, required: false },
+    upBackTiltStartup: { type: Number, required: false },
+    upBackTiltLag: { type: Number, required: false },
+
+    downBackTilt: { type: Number, required: false },
+    downBackTiltStartup: { type: Number, required: false },
+    downBackTiltLag: { type: Number, required: false },
+
+    upForwardTilt: { type: Number, required: false },
+    upForwardTiltStartup: { type: Number, required: false },
+    upForwardTiltLag: { type: Number, required: false },
+
+    downForwardTilt: { type: Number, required: false },
+    downForwardTiltStartup: { type: Number, required: false },
+    downForwardTiltLag: { type: Number, required: false },
+
+    crouchAttack: { type: Number, required: false },
+    crouchAttackStartup: { type: Number, required: false },
+    crouchAttackLag: { type: Number, required: false },
+
+    forwardCrouch: { type: Number, required: false },
+    forwardCrouchStartup: { type: Number, required: false },
+    forwardCrouchLag: { type: Number, required: false },
+
+    backCrouch: { type: Number, required: false },
+    backCrouchStartup: { type: Number, required: false },
+    backCrouchLag: { type: Number, required: false },
+
+    uncrouchAttack: { type: Number, required: false },
+    uncrouchAttackStartup: { type: Number, required: false },
+    uncrouchAttackLag: { type: Number, required: false },
+
     dashAttack: { type: Number, required: false },
     dashAttackStartup: { type: Number, required: false },
     dashAttackLag: { type: Number, required: false },
+
+    doubleDashAttack: { type: Number, required: false },
+    doubleDashAttackStartup: { type: Number, required: false },
+    doubleDashAttackLag: { type: Number, required: false },
 
     upSmash: { type: Number, required: false },
     upSmashStartup: { type: Number, required: false },
@@ -142,6 +182,22 @@ const _schema = new Schema(
     downThrowStartup: { type: Number, required: false },
     downThrowLag: { type: Number, required: false },
 
+    commandInput1: { type: Number, required: false },
+    commandInput1Startup: { type: Number, required: false },
+    commandInput1Lag: { type: Number, required: false },
+
+    commandInput2: { type: Number, required: false },
+    commandInput2Startup2: { type: Number, required: false },
+    commandInput2Lag: { type: Number, required: false },
+
+    commandInput3: { type: Number, required: false },
+    commandInput3Startup: { type: Number, required: false },
+    commandInput3Lag: { type: Number, required: false },
+
+    commandInputThrow: { type: Number, required: false },
+    commandInputThrowStartup: { type: Number, required: false },
+    commandInputThrowLag: { type: Number, required: false },
+
     floorAttackFront: { type: Number, required: false },
     floorAttackBack: { type: Number, required: false },
     floorAttackTrip: { type: Number, required: false },
@@ -159,13 +215,14 @@ const _schema = new Schema(
     backRollLag: { type: Number, required: false },
     spotDodgeStart: { type: Number, required: false },
     spotDodgeLag: { type: Number, required: false },
-    airDodgeLag: { type: Number, required: false }
+    airDodgeLag: { type: Number, required: false },
+    jumpSquat: { type: Number, required: false },
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
 
 export default class CharactersService {
   get repository() {
-    return mongoose.model('character', _schema)
+    return mongoose.model("character", _schema);
   }
 }

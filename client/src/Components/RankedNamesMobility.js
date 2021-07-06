@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 
 class RankedNamesMobility extends Component {
   render() {
-    const { name } = this.props.character
-    const mobilityRank = this.props.mobilityAverages.indexOf() 
+    const { name } = this.props.character;
+    // const mobilityRank = this.props.mobilityAverages.indexOf()
     return (
-        <p className="ml-1">{this.props.index}. {name}</p>
+      <p className="ml-1">
+        {this.props.index}. {name}
+      </p>
     );
   }
 }
