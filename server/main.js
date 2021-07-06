@@ -4,7 +4,7 @@ const bp = require("body-parser");
 import DbContext from "./db/DbConfig";
 const path = require("path");
 
-const port = 3000;
+const port = process.env.port || 3000;
 
 let server = express();
 
