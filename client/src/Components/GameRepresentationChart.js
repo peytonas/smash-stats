@@ -43,6 +43,7 @@ class GameChart extends Component {
         {},
         {},
         {},
+        {}
       ],
     };
   }
@@ -87,6 +88,7 @@ class GameChart extends Component {
     ["Arms", 1],
     ["Minecraft", 1],
     ["Tekken", 1],
+    ["Kingdom Hearts", 1]
   ];
 
   characterSeries() {
@@ -94,7 +96,7 @@ class GameChart extends Component {
     for (c = 0; c < this.slices.length; c++) {
       if (this.props.character.series === this.slices[c][0]) {
         this.slice = c - 1;
-        const newArr = this.state.series.slice(0, 38);
+        const newArr = this.state.series.slice(0, 39);
         newArr[this.slice] = { offset: 0.2 };
         this.setState({ series: newArr });
       }
